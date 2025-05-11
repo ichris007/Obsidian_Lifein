@@ -60,7 +60,7 @@ Lifein适合追求**内在成长、长期主义**的朋友。
 如果你之前没用过Obsidian，或了解不深，请先学习：
 - [黑曜石（Obsidian）崇拜：为什么人们痴迷于此款笔记应用程序](https://github.com/ichris007/Obsidian_Lifein/blob/main/Settings/Obsidian%E8%B5%84%E6%96%99/%E9%BB%91%E6%9B%9C%E7%9F%B3%E5%B4%87%E6%8B%9C%EF%BC%9A%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BA%BA%E4%BB%AC%E7%97%B4%E8%BF%B7%E4%BA%8E%E6%AD%A4%E6%AC%BE%E7%AC%94%E8%AE%B0%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F.md)
 - [MarkDown超级教程](https://github.com/ichris007/Obsidian_Lifein/blob/main/Settings/Obsidian%E8%B5%84%E6%96%99/MarkDown%E8%B6%85%E7%BA%A7%E6%95%99%E7%A8%8B.md)
-- [Obsidian从入门到精通](https://github.com/ichris007/Obsidian_Lifein/blob/main/Settings/Obsidian%E8%B5%84%E6%96%99/Obsidian%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A.md)。
+- [Obsidian从入门到精通](https://github.com/ichris007/Obsidian_Lifein/blob/main/Settings/Obsidian%E8%B5%84%E6%96%99/Obsidian%E4%BB%8E%E5%85%A5%E9%97%A8%E5%88%B0%E7%B2%BE%E9%80%9A.md)
 
 你现在准备动手了，了解以下内容用起来更快！
 - [一些技巧](https://github.com/ichris007/Obsidian_Lifein/blob/main/Settings/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE/%E4%B8%80%E4%BA%9B%E6%8A%80%E5%B7%A7.md)
@@ -71,6 +71,8 @@ Lifein适合追求**内在成长、长期主义**的朋友。
 - 本系统也适配AnuPpuccin主题。
 - 其它主题原则上也适配，但本系统未经测试，如有问题可提出反馈，以使完善。
 - 无法提供将本系统集成到您当前库的指南，因为这在很大程度上取决于您的设置。如果您想整合到另一个库，我建议您逐步复制到这个库，以免意外导致数据损失。
+
+本系统构建中借鉴、采用和学习了诸多网友和作品的技巧、经验和代码，包括但不限于[Blue Topaz](https://github.com/PKM-er/Blue-topaz-example)、[Minimal](https://github.com/kepano/obsidian-minimal)、[Border](https://github.com/Akifyss/obsidian-border)、[熊猫别熬夜](https://forum-zh.obsidian.md/u/%E7%86%8A%E7%8C%AB%E5%88%AB%E7%86%AC%E5%A4%9C)、[Moy](https://forum-zh.obsidian.md/u/moy/summary)、[TfT Hacker](https://tfthacker.com/)、[CyanVoxel](https://github.com/CyanVoxel/)、[efemkay](https://github.com/efemkay)、[replete - Obsidian CSS snippets](https://github.com/replete/obsidian-minimal-theme-css-snippets)，在此对他们表示感谢！
 
 （以下无文字内容）
 ### 5）以下是示例库部分截图
