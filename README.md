@@ -89,7 +89,11 @@ Lifein适合这些人：
 （以下无文字内容）
 ### 5）以下是示例库部分截图
 #### 首页
+<details>
+<summary>点击看详情</summary>
+
 ![首页_完整_深浅色对比jpg](https://github.com/user-attachments/assets/a78cf803-2dc6-4d2b-928a-ebf0ccf88178)
+</details>
 
 #### 日记系统
 <details>
