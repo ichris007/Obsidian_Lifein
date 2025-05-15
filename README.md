@@ -1,29 +1,34 @@
 
 Lifein是一个基于Obsidian构建的「生产力系统 & 人生管理系统」示例库。
 
-Lifein意指”进入生活核心、融入人生系统“的意思，也寓意”生活在其中“。它不只是用于项目、任务、知识管理，而是打造一款「**个人生产力系统**」（Productivity OS），甚至随着系统的积累，进而成为「**管理人生的系统**」(Life OS)。
-
+Lifein寓意是“进入生活核心、融入人生系统”，也象征着 “生活在其中”。它不只是为了项目、任务、知识管理这类功能性的「个人生产力系统」（Productivity OS），而是希望它能在长期积累中，成为真正陪伴我成长的「人生管理系统」(Life OS)。
 > 工具不仅是外部辅助，更是生活方式的有机组成部分。
-
-Lifein适合追求**内在成长、长期主义**的朋友。
 
 ## 1. 说在前面
 
 你好，我是科叔。欢迎使用我出品的**Lifein**。
 
-在过去的2年多时间里，我使用[Obsidian](https://obsidian.md)构建的「生产力系统」管理我的工作、生活、个人成长等方方面面，而基于Obsidian的[[Lifein]]就是一个定制化构建的数字世界，帮助我轻松应对工作、生活甚至人生中的诸多挑战，使我成为更好的自己。
+在过去的2年多时间里，我使用[Obsidian](https://obsidian.md)构建了自己的「生产力 & 人生管理系统」让我轻松应对工作、生活、个人成长等方方面面。
 
-这次发布的[[Lifein]]v0.5是我现有生产力系统的基础部分，接下来会陆续更新更多功能。
+Lifein适合这些人：
+
+- 想系统性提升效率和思考能力的人
+- 追求长期成长和持续精进的人
+- 想建立属于自己的知识体系和人生导航系统的人
+- 对Obsidian感兴趣，但不知道如何入门的人
+
+这次发布的[Lifein](https://github.com/ichris007/Obsidian_Lifein)v0.5是我现有系统的基础部分，接下来会陆续更新更多功能。
 
 也欢迎大家提出需求和相互交流。
 
 ## 2. 关于Lifein示例库
 
 本系统是一个包含生产力系统基本功能的入门库，并内置了 Obsidian 的常用插件。 需要用 [Obsidian](https://obsidian.md/) 软件打开本库，开箱即用。
+- *系统基本都是模块化的，可以根据自己的需求灵活调整。* 希望你把它变成自己的成长系统。
 
 ### 1）核心功能和亮点
 [更新日志](https://github.com/ichris007/Obsidian_Lifein/blob/main/Settings/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97.md)：
-- 系统构建：人生三大领域（工作、生活、个人成长） + 项目管理 + 任务管理 + 日记系统，一站式的数字空间；
+- 系统构建：聚焦在人生三大领域系统构建聚焦在人生三大领域：工作、生活、个人成长，并结合项目管理、任务管理、日记系统、内容创作系统、书籍/读书笔记管理、影视剧/观后感记录、习惯追踪、知识管理，打造一个一站式的数字空间。
 - 本次示例库包含功能：日记及周回顾、项目管理、任务管理、习惯追踪、书籍管理、影视剧管理；
 	- 卡片式任务管理面版，清晰查看、追踪待办任务；
 	- 简单清晰的日记模板，让每天的输入有法可循；
@@ -31,22 +36,27 @@ Lifein适合追求**内在成长、长期主义**的朋友。
 	- 书籍库、影视库自动添加新书/新剧，畅游知识海洋、纵览影视佳片；
 	- 轻易上手的知识管理体验，从信息收集到知识关联，消除信息孤岛，沉浸式、体系化学习；
 - 其它亮点
-	- 方便从标题栏修改文件名
-	- 更紧凑的标签标题
-	- 更小的固定标签宽度
-	- 文件浏览器分割线，美观分类文件夹
-	- 隐藏侧边栏固定标签按钮，美观且防止误点
-	- 侧边栏笔记内容最大化显示，呈现更多内容
-	- Callout实现边注功能，轻松给笔记做批注
-	- 搜索框、命令面版关键词和选定行高亮
-	- 属性变两列，减少属性占据的页面空间
-	- 阅读模式下可隐藏属性面版
-	- 激活窗口增加边框，多窗口操作易辨识
-	- 更紧凑、美观的任务列表和图标
-	- 改善笔记链接超长网址编辑体验
-	- 减小无序/有序列表在文字/标题后的空白
-	- 多彩有序/无序列表
-	- 给库（Vault）和新建标签页（New Tab）加logo和背景图
+<details>	
+
+<summary>点击展开详情</summary>
+
+- 方便从标题栏修改文件名
+- 更紧凑的标签标题
+- 更小的固定标签宽度
+- 文件浏览器分割线，美观分类文件夹
+- 隐藏侧边栏固定标签按钮，美观且防止误点
+- 侧边栏笔记内容最大化显示，呈现更多内容
+- Callout实现边注功能，轻松给笔记做批注
+- 搜索框、命令面版关键词和选定行高亮
+- 属性变两列，减少属性占据的页面空间
+- 阅读模式下可隐藏属性面版
+- 激活窗口增加边框，多窗口操作易辨识
+- 更紧凑、美观的任务列表和图标
+- 改善笔记链接超长网址编辑体验
+- 减小无序/有序列表在文字/标题后的空白
+- 多彩有序/无序列表
+- 给库（Vault）和新建标签页（New Tab）加logo和背景图
+ </details>
 
 ### 2）本库的系统配置和说明
 使用本系统前，请了解系统配置和说明，便于更好地上手。
@@ -77,21 +87,29 @@ Lifein适合追求**内在成长、长期主义**的朋友。
 （以下无文字内容）
 ### 5）以下是示例库部分截图
 #### 首页
-![首页_深色](https://github.com/user-attachments/assets/6fcda342-b6aa-4369-a557-46e0fd70f3f3)
-![首页_浅色](https://github.com/user-attachments/assets/65349a22-15da-45ee-9f75-c311838cfc2b)
+![首页_深浅色对比](https://github.com/user-attachments/assets/db70a208-1e20-4dea-8cca-99d7b2cc1f69)
 
-![首页_完整_深色](https://github.com/user-attachments/assets/411dbb5b-e5af-4659-8fba-7de24aa6166c)
-![首页_完整_浅色](https://github.com/user-attachments/assets/c797c08b-3bc9-42f1-93c5-961961d0d7aa)
+![首页_完整_深浅色对比jpg](https://github.com/user-attachments/assets/a78cf803-2dc6-4d2b-928a-ebf0ccf88178)
 
 #### 日记系统
-![日记_浅色](https://github.com/user-attachments/assets/b509a74f-bea6-4b95-9b75-9ca748128e18)
-![周记_浅色](https://github.com/user-attachments/assets/528d8f88-737e-4fa2-be25-9be33861c6da)
+<details>
+<summary>点击看详情</summary>
+
+![日记_浅色](https://github.com/user-attachments/assets/b509a74f-bea6-4b95-9b75-9ca748128e18) ![周记_浅色](https://github.com/user-attachments/assets/528d8f88-737e-4fa2-be25-9be33861c6da)
+</details>
 
 #### 书籍
+<details>
+<summary>点击看详情</summary>
+
 ![我的书架1_浅色](https://github.com/user-attachments/assets/fa734ec3-76cb-4d87-96f9-5985697c4869)
 ![我的书架2_浅色](https://github.com/user-attachments/assets/9965cb36-aced-4641-bf62-fb7e4cd3182e)
+</details>
 
 #### 影视
+<details>
+<summary>点击看详情</summary>
+
 ![我的影视库1_深色](https://github.com/user-attachments/assets/d4d6c3b1-ed48-4764-9b04-bd71782396bd)
 ![我的影视库2_深色](https://github.com/user-attachments/assets/dae1f9f4-3204-413b-9a94-a576c8411b55)
-
+</details>
