@@ -1,4 +1,6 @@
 
+![首页_深浅色对比](https://github.com/user-attachments/assets/db70a208-1e20-4dea-8cca-99d7b2cc1f69)
+
 Lifein是一个基于Obsidian构建的「生产力系统 & 人生管理系统」示例库。
 
 Lifein寓意是“进入生活核心、融入人生系统”，也象征着 “生活在其中”。它不只是为了项目、任务、知识管理这类功能性的「个人生产力系统」（Productivity OS），而是希望它能在长期积累中，成为真正陪伴我成长的「人生管理系统」(Life OS)。
@@ -87,8 +89,6 @@ Lifein适合这些人：
 （以下无文字内容）
 ### 5）以下是示例库部分截图
 #### 首页
-![首页_深浅色对比](https://github.com/user-attachments/assets/db70a208-1e20-4dea-8cca-99d7b2cc1f69)
-
 ![首页_完整_深浅色对比jpg](https://github.com/user-attachments/assets/a78cf803-2dc6-4d2b-928a-ebf0ccf88178)
 
 #### 日记系统
