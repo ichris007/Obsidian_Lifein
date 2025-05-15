@@ -1,0 +1,33 @@
+/*! dust Calendar by 熊猫别熬夜 2024-06-21_15-18 */
+.calendar-header-container {
+  display: flex;
+  flex-direction: row;
+
+  & .calendar-header-row>div {
+    flex: 1;
+  }
+
+  & .calendar-header-row:hover svg {
+    visibility: visible !important;
+  }
+
+  & .calendar-header-content-year {
+    width: 4rem;
+  }
+
+  & .calendar-header-block-quarter {
+    margin-left: 10px;
+  }
+
+  & .calendar-header-content-quarter {
+    width: 1rem;
+  }
+
+  & .calendar-header-content-month {
+    width: 2rem;
+  }
+
+  & .calendar-header-row .statistic-label:empty {
+    display: none;
+  }
+}

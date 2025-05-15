@@ -1,0 +1,58 @@
+/*----------------------方便从标题栏修改文件名----------------------*/
+.workspace-leaf.mod-active .view-header-title:after {
+	content: " ";
+	width: 100%;
+	height: 1em;
+	position: absolute;
+}
+
+/*------------------------笔记路径和名称（note header）左对齐，默认是居中显示-----------------*/
+.view-header-title-container {
+  justify-content: start;
+}
+
+
+/*------------------------显示笔记名称和路径-------------------------------*/
+/*
+    Tab Headder show path and title
+    https://github.com/replete/obsidian-minimal-theme-css-snippets
+    默认会在鼠标离开笔记路径位置后隐藏路径和名称
+*/
+
+.view-header {
+  .view-header-title-container {
+      opacity:1;
+  }
+}
+
+/*------------------------优化Tab Title 样式，使其更紧凑-------------------------------*/
+.view-header {
+  height: 25px; /* 高度调整为25px */
+  display: flex;
+  border-top: 1px solid var(--background-secondary-alt);
+  border-bottom: 2px solid var(--background-secondary-alt);
+  background-color: var(--background-secondary);
+  z-index: 1;
+ }
+ 
+ 
+ /*------------------------缩小已固定标签页宽度（Shrink Pinned Tabs）-----------------------*/
+/* 在原有代码前添加主题强制覆盖 */
+body {
+  --tab-max-width: 110px !important; /* 主题变量覆盖 */
+}
+
+.workspace-tab-header.mod-pinned {
+  width: 40px !important;
+  min-width: unset !important;
+  transition: 0.3s ease;
+  /* 强制覆盖主题样式 */
+  flex-grow: 0 !important;
+  padding: 0 !important;
+}
+ 
+
+/*------------------------隐藏状态栏，鼠标悬停显示-------------------------------*/
+.status-bar:not(:hover){
+    opacity: 0;
+}

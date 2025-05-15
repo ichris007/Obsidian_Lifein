@@ -1,0 +1,526 @@
+{
+  "choices": [
+    {
+      "id": "c4742f44-abeb-48e2-acfb-a6f0895b6172",
+      "name": "新增笔记或项目",
+      "type": "Multi",
+      "command": false,
+      "choices": [
+        {
+          "id": "73ac15cb-181f-4fa0-a4c8-054a2928c974",
+          "name": "新建笔记",
+          "type": "Macro",
+          "command": true,
+          "macroId": "1161d5e1-2c5f-481a-bbbb-ac6680d6cd6f"
+        },
+        {
+          "id": "2cf0b727-189c-4b3d-bb0d-482b54492753",
+          "name": "新建项目",
+          "type": "Template",
+          "command": true,
+          "templatePath": "Templates/T-项目模板.md",
+          "fileNameFormat": {
+            "enabled": true,
+            "format": "{{NAME}}"
+          },
+          "folder": {
+            "enabled": true,
+            "folders": [
+              "01Projects"
+            ],
+            "chooseWhenCreatingNote": false,
+            "createInSameFolderAsActiveFile": false,
+            "chooseFromSubfolders": true
+          },
+          "appendLink": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": true,
+          "openFileInMode": "default",
+          "fileExistsMode": "Increment the file name",
+          "setFileExistsBehavior": true
+        }
+      ],
+      "collapsed": true
+    },
+    {
+      "id": "fc4e11b8-3e58-44fa-beeb-8e66ea1d9a4b",
+      "name": "添加待办任务",
+      "type": "Multi",
+      "command": false,
+      "choices": [
+        {
+          "id": "f1d9515c-a1d2-4ea0-9426-36209f5db8ca",
+          "name": "T添加任务到当前文件",
+          "type": "Capture",
+          "command": true,
+          "appendLink": false,
+          "captureTo": "",
+          "captureToActiveFile": true,
+          "createFileIfItDoesntExist": {
+            "enabled": false,
+            "createWithTemplate": false,
+            "template": ""
+          },
+          "format": {
+            "enabled": true,
+            "format": "```js quickadd\nreturn await this.app.plugins.plugins['obsidian-tasks-plugin'].apiV1.createTaskLineModal() + '\\n';\n```"
+          },
+          "insertAfter": {
+            "enabled": true,
+            "after": "## 任务清单",
+            "insertAtEnd": false,
+            "considerSubsections": true,
+            "createIfNotFound": false,
+            "createIfNotFoundLocation": "bottom"
+          },
+          "prepend": false,
+          "task": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": false,
+          "openFileInMode": "default"
+        },
+        {
+          "id": "808d9437-6d58-4229-800c-07ab9578d404",
+          "name": "T添加任务到任何文件",
+          "type": "Capture",
+          "command": true,
+          "appendLink": false,
+          "captureTo": "",
+          "captureToActiveFile": false,
+          "createFileIfItDoesntExist": {
+            "enabled": false,
+            "createWithTemplate": false,
+            "template": ""
+          },
+          "format": {
+            "enabled": true,
+            "format": "```js quickadd\nreturn await this.app.plugins.plugins['obsidian-tasks-plugin'].apiV1.createTaskLineModal() + '\\n';\n```"
+          },
+          "insertAfter": {
+            "enabled": true,
+            "after": "## 任务清单",
+            "insertAtEnd": false,
+            "considerSubsections": true,
+            "createIfNotFound": false,
+            "createIfNotFoundLocation": "bottom"
+          },
+          "prepend": false,
+          "task": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": false,
+          "openFileInMode": "default"
+        },
+        {
+          "id": "fd3f1701-bdf8-4afe-88a6-5530ce2f0548",
+          "name": "T日常事务",
+          "type": "Capture",
+          "command": true,
+          "appendLink": false,
+          "captureTo": "00Todolist/0日常List.md",
+          "captureToActiveFile": false,
+          "createFileIfItDoesntExist": {
+            "enabled": false,
+            "createWithTemplate": false,
+            "template": ""
+          },
+          "format": {
+            "enabled": true,
+            "format": "```js quickadd\nreturn await this.app.plugins.plugins['obsidian-tasks-plugin'].apiV1.createTaskLineModal() + '\\n';\n```"
+          },
+          "insertAfter": {
+            "enabled": true,
+            "after": "## 任务清单",
+            "insertAtEnd": false,
+            "considerSubsections": true,
+            "createIfNotFound": false,
+            "createIfNotFoundLocation": "bottom"
+          },
+          "prepend": false,
+          "task": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": false,
+          "openFileInMode": "default"
+        },
+        {
+          "id": "5633572f-2607-4c38-9004-770ca4d8f1c1",
+          "name": "T工作事务",
+          "type": "Capture",
+          "command": true,
+          "appendLink": false,
+          "captureTo": "00Todolist/0工作List.md",
+          "captureToActiveFile": false,
+          "createFileIfItDoesntExist": {
+            "enabled": false,
+            "createWithTemplate": false,
+            "template": ""
+          },
+          "format": {
+            "enabled": true,
+            "format": "```js quickadd\nreturn await this.app.plugins.plugins['obsidian-tasks-plugin'].apiV1.createTaskLineModal() + '\\n';\n```"
+          },
+          "insertAfter": {
+            "enabled": true,
+            "after": "## 任务清单",
+            "insertAtEnd": false,
+            "considerSubsections": true,
+            "createIfNotFound": false,
+            "createIfNotFoundLocation": "bottom"
+          },
+          "prepend": false,
+          "task": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": false,
+          "openFileInMode": "default"
+        }
+      ],
+      "collapsed": true
+    },
+    {
+      "id": "66a0a130-3db1-475a-94ba-746b563dd4f4",
+      "name": "快捷输入",
+      "type": "Multi",
+      "command": false,
+      "choices": [
+        {
+          "id": "cb3077a6-118e-4b3f-ab78-fb6e1ad85efb",
+          "name": "插入当前时间",
+          "type": "Capture",
+          "command": true,
+          "appendLink": false,
+          "captureTo": "",
+          "captureToActiveFile": true,
+          "createFileIfItDoesntExist": {
+            "enabled": false,
+            "createWithTemplate": false,
+            "template": ""
+          },
+          "format": {
+            "enabled": true,
+            "format": "#### {{DATE:HH:mm}}"
+          },
+          "insertAfter": {
+            "enabled": false,
+            "after": "",
+            "insertAtEnd": false,
+            "considerSubsections": false,
+            "createIfNotFound": false,
+            "createIfNotFoundLocation": "top"
+          },
+          "prepend": false,
+          "task": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": false,
+          "openFileInMode": "default"
+        },
+        {
+          "id": "cafc95fd-2a61-4d66-8269-b261c4fab5ab",
+          "name": "插入Callout",
+          "type": "Capture",
+          "command": true,
+          "appendLink": false,
+          "captureTo": "",
+          "captureToActiveFile": true,
+          "createFileIfItDoesntExist": {
+            "enabled": false,
+            "createWithTemplate": false,
+            "template": ""
+          },
+          "format": {
+            "enabled": true,
+            "format": "> [!note]- 这是标题 \n> 这里是callout模块"
+          },
+          "insertAfter": {
+            "enabled": false,
+            "after": "",
+            "insertAtEnd": false,
+            "considerSubsections": false,
+            "createIfNotFound": false,
+            "createIfNotFoundLocation": "top"
+          },
+          "prepend": false,
+          "task": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": false,
+          "openFileInMode": "default"
+        },
+        {
+          "id": "04a7e322-4088-4000-8bc5-0242620941a9",
+          "name": "插入多栏",
+          "type": "Capture",
+          "command": true,
+          "appendLink": false,
+          "captureTo": "",
+          "captureToActiveFile": true,
+          "createFileIfItDoesntExist": {
+            "enabled": false,
+            "createWithTemplate": false,
+            "template": ""
+          },
+          "format": {
+            "enabled": true,
+            "format": "> [!multi-column]\n>\n>> [!note]+ 待办事项\n>> your notes or lists here. using markdown formatting\n>\n>> [!warning|right-small]+ 进行中事项\n>> your notes or lists here. using markdown formatting\n"
+          },
+          "insertAfter": {
+            "enabled": false,
+            "after": "",
+            "insertAtEnd": false,
+            "considerSubsections": false,
+            "createIfNotFound": false,
+            "createIfNotFoundLocation": "top"
+          },
+          "prepend": false,
+          "task": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": false,
+          "openFileInMode": "default"
+        },
+        {
+          "id": "83a9e764-599c-4752-92e3-5a8f17efbc70",
+          "name": "添加Tabs",
+          "type": "Capture",
+          "command": true,
+          "appendLink": false,
+          "captureTo": "",
+          "captureToActiveFile": true,
+          "createFileIfItDoesntExist": {
+            "enabled": false,
+            "createWithTemplate": false,
+            "template": ""
+          },
+          "format": {
+            "enabled": true,
+            "format": "~~~tabs\n---tab 第一\n---tab 第二\n~~~"
+          },
+          "insertAfter": {
+            "enabled": false,
+            "after": "",
+            "insertAtEnd": false,
+            "considerSubsections": false,
+            "createIfNotFound": false,
+            "createIfNotFoundLocation": "top"
+          },
+          "prepend": false,
+          "task": false,
+          "openFileInNewTab": {
+            "enabled": false,
+            "direction": "vertical",
+            "focus": true
+          },
+          "openFile": false,
+          "openFileInMode": "default"
+        }
+      ],
+      "collapsed": true
+    },
+    {
+      "id": "a278ccac-6774-409d-9207-8033db36a1cc",
+      "name": "搜索并创建豆瓣电影",
+      "type": "Macro",
+      "command": true,
+      "macroId": "c4d80091-456e-41bd-a7b1-35b38c6f93fa"
+    },
+    {
+      "id": "408d491d-6d73-4f9e-9c53-3c55663d5570",
+      "name": "打开书架",
+      "type": "Macro",
+      "command": true,
+      "macroId": "d820c471-3713-465d-a732-927842f06462"
+    },
+    {
+      "id": "741065fb-8e53-4dc7-a487-70d0faec688e",
+      "name": "打开电影库",
+      "type": "Macro",
+      "command": true,
+      "macroId": "36e7c722-f5a0-4733-8b0c-cd6a6c46ab76"
+    },
+    {
+      "id": "7c126092-e8ea-4d89-ac5f-8b65c83819bf",
+      "name": "快捷设置",
+      "type": "Multi",
+      "command": false,
+      "choices": [
+        {
+          "id": "776db2f2-ab07-4124-b89d-bfa55e185021",
+          "name": "切换主题深浅",
+          "type": "Macro",
+          "command": true,
+          "macroId": "3a93c496-9051-41fb-a06f-af93398fcae2"
+        }
+      ],
+      "collapsed": false
+    }
+  ],
+  "macros": [
+    {
+      "name": "打开电影库",
+      "id": "36e7c722-f5a0-4733-8b0c-cd6a6c46ab76",
+      "commands": [
+        {
+          "name": "open_movielibrary",
+          "type": "UserScript",
+          "id": "bbe174e7-28ab-435a-8c6f-8adf4f6a8ccd",
+          "path": "Settings/js/open_movielibrary.js",
+          "settings": {}
+        },
+        {
+          "name": "切换编辑/预览视图",
+          "type": "Obsidian",
+          "id": "915e06ad-7120-40da-aa3e-e868bdbb33d0",
+          "commandId": "markdown:toggle-preview"
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "添加豆瓣电影",
+      "id": "c4d80091-456e-41bd-a7b1-35b38c6f93fa",
+      "commands": [
+        {
+          "name": "Douban: 搜索豆瓣并创建文档",
+          "type": "Obsidian",
+          "id": "24a90156-1f27-4d0d-b5b9-78cd3f53cd21",
+          "commandId": "obsidian-douban-plugin:searcher-douban-import-and-create-file"
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "模板新建笔记",
+      "id": "1161d5e1-2c5f-481a-bbbb-ac6680d6cd6f",
+      "commands": [
+        {
+          "name": "new_note",
+          "type": "UserScript",
+          "id": "aa489de5-bdbf-45b8-b978-e532767e67ae",
+          "path": "Settings/js/new_note.js",
+          "settings": {}
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "打开书架",
+      "id": "d820c471-3713-465d-a732-927842f06462",
+      "commands": [
+        {
+          "name": "open_bookshelf",
+          "type": "UserScript",
+          "id": "91351076-32dd-490c-b5c9-a0f6bf436ff6",
+          "path": "Settings/js/open_bookshelf.js",
+          "settings": {}
+        },
+        {
+          "name": "切换编辑/预览视图",
+          "type": "Obsidian",
+          "id": "fe5fd2c7-249f-4621-8e11-38d52c399836",
+          "commandId": "markdown:toggle-preview"
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "Theme_dark_light",
+      "id": "3a93c496-9051-41fb-a06f-af93398fcae2",
+      "commands": [
+        {
+          "name": "theme_dark_light",
+          "type": "UserScript",
+          "id": "de946631-ea75-427b-9e5c-09c373bd5456",
+          "path": "Settings/js/theme_dark_light.js",
+          "settings": {}
+        }
+      ],
+      "runOnStartup": false
+    }
+  ],
+  "inputPrompt": "multi-line",
+  "devMode": false,
+  "templateFolderPath": "",
+  "announceUpdates": false,
+  "version": "1.13.2",
+  "disableOnlineFeatures": true,
+  "enableRibbonIcon": false,
+  "ai": {
+    "defaultModel": "Ask me",
+    "defaultSystemPrompt": "As an AI assistant within Obsidian, your primary goal is to help users manage their ideas and knowledge more effectively. Format your responses using Markdown syntax. Please use the [[Obsidian]] link format. You can write aliases for the links by writing [[Obsidian|the alias after the pipe symbol]]. To use mathematical notation, use LaTeX syntax. LaTeX syntax for larger equations should be on separate lines, surrounded with double dollar signs ($$). You can also inline math expressions by wrapping it in $ symbols. For example, use $$w_{ij}^{\text{new}}:=w_{ij}^{\text{current}}+etacdotdelta_jcdot x_{ij}$$ on a separate line, but you can write \"($eta$ = learning rate, $delta_j$ = error term, $x_{ij}$ = input)\" inline.",
+    "promptTemplatesFolderPath": "",
+    "showAssistant": true,
+    "providers": [
+      {
+        "name": "OpenAI",
+        "endpoint": "https://api.openai.com/v1",
+        "apiKey": "",
+        "models": [
+          {
+            "name": "gpt-3.5-turbo",
+            "maxTokens": 4096
+          },
+          {
+            "name": "gpt-3.5-turbo-16k",
+            "maxTokens": 16384
+          },
+          {
+            "name": "gpt-3.5-turbo-1106",
+            "maxTokens": 16385
+          },
+          {
+            "name": "gpt-4",
+            "maxTokens": 8192
+          },
+          {
+            "name": "gpt-4-32k",
+            "maxTokens": 32768
+          },
+          {
+            "name": "gpt-4-1106-preview",
+            "maxTokens": 128000
+          },
+          {
+            "name": "text-davinci-003",
+            "maxTokens": 4096
+          }
+        ]
+      }
+    ]
+  },
+  "migrations": {
+    "migrateToMacroIDFromEmbeddedMacro": true,
+    "useQuickAddTemplateFolder": true,
+    "incrementFileNameSettingMoveToDefaultBehavior": true,
+    "mutualExclusionInsertAfterAndWriteToBottomOfFile": true,
+    "setVersionAfterUpdateModalRelease": true,
+    "addDefaultAIProviders": true
+  }
+}

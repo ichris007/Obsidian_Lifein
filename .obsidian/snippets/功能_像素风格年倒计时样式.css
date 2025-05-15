@@ -1,0 +1,68 @@
+/* 标题样式（支持对齐） */
+.year-title {
+  margin-bottom: 0.5em;
+  font-size: 1.2em;
+  color: var(--text-muted);
+}
+
+/* 通过 cssclasses 控制标题对齐 */
+.align-left .year-title {
+  text-align: left;
+}
+.align-center .year-title {
+  text-align: center;
+}
+.align-right .year-title {
+  text-align: right;
+}
+
+/* 日历整体容器 */
+.year-calendar {
+  display: flex;
+  flex-wrap: wrap;         /* 自动换行 */
+  justify-content: start; /* 默认start左对齐，center是居中，end是右对齐 */
+  gap: 0.5px;
+}
+
+/* 单个日期方块 */
+.day-box {
+  width: 10px;
+  height: 10px;
+  border-radius: 1px;
+  margin: 1px;
+  background-color: white;
+  transition: transform 0.2s;
+}
+
+.day-box.past {
+  background-color: black;
+}
+
+.day-box.today {
+  background-color: orange;
+}
+
+.day-box.future {
+  background-color: white;
+  border: 0.5px solid #ddd;
+}
+
+/* 悬停效果：日期 tooltip 和缩放 */
+.day-box:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* 响应式调整：小屏自动缩放并保持居中 */
+@media (max-width: 600px) {
+  .year-calendar {
+    justify-content: center;
+    gap: 1px;
+  }
+
+  .day-box {
+    width: 8px;
+    height: 8px;
+    margin: 0.5px;
+  }
+}

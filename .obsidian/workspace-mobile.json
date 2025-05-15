@@ -1,0 +1,227 @@
+{
+  "main": {
+    "id": "c819580e0cb2f5ed",
+    "type": "split",
+    "children": [
+      {
+        "id": "62b717c51d8e8e89",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4bf9179ce221a1fd",
+            "type": "leaf",
+            "pinned": true,
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00Dashboard/Homepage.md",
+                "mode": "preview",
+                "backlinks": false,
+                "source": false
+              },
+              "pinned": true
+            }
+          },
+          {
+            "id": "ca9e9c5f5ef7d32b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "00Dashboard/MOC/首页moc/待办个人任务.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e561d1fb83098b74",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "26d39fedb4e0d374",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "6fb50c311ea0313b",
+        "type": "leaf",
+        "state": {
+          "type": "recent-files",
+          "state": {}
+        }
+      },
+      {
+        "id": "1da04f0b91ecba29",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "cad6edfe7f0a9449",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true
+          }
+        }
+      },
+      {
+        "id": "fa71f0f4a41648c7",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "1053ac9a6223d3b8",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "d675d11084d7a0f4",
+        "type": "leaf",
+        "state": {
+          "type": "calendar",
+          "state": {}
+        }
+      },
+      {
+        "id": "e7d5e391c958e9af",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "00Dashboard/MOC/首页moc/待办个人任务.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "031e273adbf97368",
+        "type": "leaf",
+        "state": {
+          "type": "outgoing-link",
+          "state": {
+            "file": "00Dashboard/MOC/首页moc/待办个人任务.md",
+            "linksCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "e0b2ed45a418aa39",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "00Dashboard/MOC/首页moc/待办个人任务.md"
+          }
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "oz-clear-unused-images:Clear Unused Images": false,
+      "obsidian-projects:Open projects": false,
+      "obsidian-omnivore:Omnivore": false,
+      "random-note:开始漫游笔记": false,
+      "canvas:新建白板": false,
+      "zk-prefixer:创建时间戳笔记": false,
+      "homepage:Open homepage": false,
+      "graph:查看关系图谱": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "command-palette:打开命令面板": false,
+      "obsidian42-brat:BRAT": false,
+      "workspaces:管理工作区布局": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "markdown-importer:打开 Markdown 格式转换器": false,
+      "darlal-switcher-plus:Open in Headings Mode": false,
+      "darlal-switcher-plus:Open Symbols for the active editor": false,
+      "templater-obsidian:Templater": false
+    }
+  },
+  "active": "ca9e9c5f5ef7d32b",
+  "lastOpenFiles": [
+    "Templates/T-bai'wan.md",
+    "00Dashboard/Homepage.md",
+    "00Dashboard/待完成的个人任务.md",
+    "06Movies/国内纪录片网站.md",
+    "00Dashboard/MOC/首页moc/稍后读及未完成的摘录.md",
+    "00Dashboard/MOC/首页moc/未开始的笔记.md",
+    "00Dashboard/MOC/首页moc/进行中的笔记.md",
+    "00Dashboard/MOC/首页moc/正在进行的项目work.md",
+    "00Dashboard/MOC/首页moc/未完成的blog.md",
+    "00Dashboard/MOC/首页moc/待完成的个人任务.md",
+    "00Todolist/个人List.md",
+    "00Dashboard/MOC/首页moc/最近修改.md",
+    "00Dashboard/MOC/首页moc/最近创建.md",
+    "00Dashboard/MOC/首页moc/重点笔记文章.md",
+    "0Inbox/0闪念卡片盒.md",
+    "06Movies/我的电影库.md",
+    "00Dashboard/MOC/软件工具moc.md",
+    "00Dashboard/MOC/医疗健康moc.md",
+    "00Dashboard/看板.md",
+    "05Books/我的书架.md",
+    "00Dashboard/MOC/首页moc/在读想读的书籍.md",
+    "00Dashboard/MOC/首页moc/在看想看的电影.md",
+    "06Movies/纪录片待整理.md",
+    "06Movies/历史/中国通史.md",
+    "06Movies/纪录片/这货哪来的.md",
+    "Templates/MovieNote.md",
+    "Templates/doubanInOne.js",
+    "Templates/bookfromdouban.js",
+    "06Movies/纪录片",
+    "06Movies/历史",
+    "03Life/0写作/食物相关",
+    "03Life/0写作",
+    "02Businessspaces/行业资料/AI人工智能/AIGC/中国ChatGPT领域首个并购案！王慧文“光年之外”收购了高瓴资本的portfolio/光年之外/assets/image-20230402233316-oc8eelm.png",
+    "02Businessspaces/行业资料/AI人工智能/AIGC/中国ChatGPT领域首个并购案！王慧文“光年之外”收购了高瓴资本的portfolio/光年之外/assets/image-20230402233305-9vzoaqt.png",
+    "02Businessspaces/行业资料/AI人工智能/AIGC/中国ChatGPT领域首个并购案！王慧文“光年之外”收购了高瓴资本的portfolio/光年之外/assets/image-20230402233254-xdc286j.png",
+    "02Businessspaces/行业资料/AI人工智能/AIGC/中国ChatGPT领域首个并购案！王慧文“光年之外”收购了高瓴资本的portfolio/光年之外/assets/image-20230402233254-xdc286j.png.tacitpart",
+    "02Businessspaces/行业资料/AI人工智能/AIGC/中国ChatGPT领域首个并购案！王慧文“光年之外”收购了高瓴资本的portfolio/光年之外/assets",
+    "02Businessspaces/行业资料/互联网/互联网公司/微软Microsoft/新闻/看好中国市场机会：微软Azure正式启用在华第五个数据中心.md.tacitpart",
+    "02Businessspaces/行业资料/互联网/互联网公司/微软Microsoft/新闻/小冰成立游戏工作室 让NPC摆脱工具人宿命成为“有情生物”.md.tacitpart",
+    "02Businessspaces/行业资料/AI人工智能/AIGC/中国ChatGPT领域首个并购案！王慧文“光年之外”收购了高瓴资本的portfolio/assets/image-20230401001105-86v74uz.png",
+    "02Businessspaces/行业资料/AI人工智能/AIGC/Stability.ai/assets/net-img-366-20230403014616-9gzdr84.jpg",
+    "02Businessspaces/行业资料/AI人工智能/AIGC/Stability.ai/assets/net-img-364-20230403014616-mgg92sj.jpg",
+    "02Businessspaces/行业资料/AI人工智能/AIGC/Minimax 名之梦/assets/EADE59195804D324C74B86351AD58304B092C80B_size430_w500_h992-20230412154013-r6tij6u.png",
+    "02Businessspaces/行业资料/AI人工智能/AIGC/Minimax 名之梦/assets/C7626AFF0352E77063F56AE1D878314366A52C97_size425_w500_h834-20230412154013-ydn02k6.png",
+    "02Businessspaces/行业资料/AI人工智能/AIGC/Minimax 名之梦/assets/A001F89D00B2F3FD08CF91400827F16DF80C99BF_size166_w1000_h796-20230412154013-y6i5tby.jpg",
+    "02Businessspaces/行业资料/AI人工智能/AIGC/Minimax 名之梦/assets/60E895A0D1FEA5F49C05E881B4C8B8B1F8FB77CC_size181_w1000_h562-20230412154013-gc7bbcn.jpg"
+  ]
+}

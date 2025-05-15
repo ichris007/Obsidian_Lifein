@@ -1,0 +1,349 @@
+/*----------------------OB设置面板拖动缩放----------------------*/
+.modal.mod-sidebar-layout{
+  resize:auto;
+}
+
+
+/*------------------------缩小左侧ribbon的宽度-------------------------------*/
+body {
+  --ribbon-width: 35px;
+  }
+.workspace-ribbon.mod-left.is-collapsed {
+  --ribbon-width: 35px;
+  }
+
+
+
+/*---------------调整弹出框宽度Prompt model size--------------------*/
+.prompt {
+    width: 700px;
+}
+
+
+
+/*------------------------淡化块引用ID------------------------*/
+div.cm-line > span.cm-blockid {
+	margin-top: 0px;
+	margin-bottom: 0px;
+    display:visible;
+    opacity: 0.5;
+}
+
+/*----------------------可滚动dateview查询结果----------------------*/
+/* 可滚动的Dataview查询结果 - 编辑&预览模式都生效 */ 
+.block-language-dataviewjs,
+.block-language-dataview {
+  max-height: 1000px; /*可按需修改显示高度*/
+  overflow: auto;
+}
+
+
+/*------------------------命令面板样式（高亮关键词和选定行）-------------------------------*/
+.suggestion-item.is-selected {
+  background-color: --color-cyan; /*原始值：hsla(var(--interactive-normal-hsl), 0.2); /*选中行的背景色*/
+  border-radius: 3px; /*选中行的圆角*/
+}
+
+.prompt {
+  border-radius: 5px; /* 弹出框圆角 */
+}
+
+.suggestion-highlight {
+  color: var(--text-accent);
+}
+
+.suggestion-item.is-selected .suggestion-highlight {
+  color: orangered !important; /*高亮文字颜色*/
+}
+/* 弹出框背景和字体颜色*/
+/*input.prompt-input {
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 60px 40px -7px !important;
+}*/
+
+
+/*====================属性Properties变成两列（开始）===============================*/
+/*
+author: sailKite
+source: https://discord.com/channels/686053708261228577/702656734631821413/1155496243691266158
+*/
+
+[data-type="markdown"] .metadata-properties {
+  display: grid;
+  grid: auto-flow / 50% 50%;
+  gap: 3px 0px;
+}
+
+[data-type="markdown"] .metadata-properties .metadata-property-value {
+  align-items: start;
+}
+
+body {
+  --metadata-label-width: 7em;
+}
+
+/*-----------------「文档属性properties」靠右，并缩减与上下块的间距----------------------------*/
+.metadata-properties-heading {
+  display: block;
+  margin-top: -10px; /* 减去顶部的margin，距离titile的距离 */
+  margin-bottom: 18px; /* 底部的margin，距离属性内容的距离 */
+  font-size: 14px;
+  }
+.metadata-container {
+  padding: 0 0 0 0; 
+  margin-bottom: -8px; /* 减去底部的margin，「文档属性」距离正文内容的距离 */
+  }
+.metadata-properties-title {
+  float: right; /* 「文档属性」左浮动 */
+  }
+/*修改列表左侧的收起和展开按钮*/
+.collapse-indicator.collapse-icon svg.svg-icon {
+	width: 0.5em;/*修改按钮宽度*/
+	height: 0.5em;/*修改按钮高度*/
+	color: #8c5ba3;/*修改按钮颜色，没生效*/
+}
+
+/*-----------------设置“属性”样式----------------*/
+
+/* 隐藏"Properties"标题，同时隐藏下拉菜单 
+.metadata-properties-heading {
+  display: none;
+}*/
+
+
+/*.metadata-properties, .metadata-properties *, .metadata-add-button, .metadata-properties-heading {
+  font-family: var(--font-monospace), "azeret mono", "space mono", "jetbrains mono";
+} */
+
+body {
+  --metadata-label-font-weight: 500;
+  --metadata-label-text-color: #78ba7e;
+  --metadata-label-font-size: 14px;
+  --metadata-input-font-size: 14px;
+  --metadata-gap: 0;
+  --metadata-padding: 0 0 .25rem 0;
+  --metadata-label-width: max(22.5%, 8rem);
+  --metadata-input-height: calc(var(--metadata-label-font-size) * 2.1);
+}
+
+.metadata-property-key .metadata-property-icon {
+  --icon-color: #78ba7e;
+  --icon-size: 1rem;
+}
+
+.metadata-container {
+  border-bottom: dashed .12rem var(--background-modifier-border);
+  margin-bottom: 1rem;
+  /* for minimal theme */
+  --input-height: var(--metadata-input-height);
+}
+
+
+/*-------------Properties在编辑/预览模式下自动折叠，鼠标悬停显示------------------*/
+/*
+author: The Useful Walrus
+source: https://discord.com/channels/686053708261228577/702656734631821413/1144209029464342538
+自动折叠影响属性编辑，因此注释掉悬停显示，只保留标题悬停显示功能。
+*/
+.metadata-properties-title {
+  transition: 500ms; 
+  opacity: 0.2;
+}
+.metadata-container:hover .metadata-properties-title { 
+  opacity: 1;
+  color: var(--text-accent); 
+}
+
+/*以下为自动隐藏后悬停显示控制，因为影响编辑，所以注释掉不用了，需要的可以去掉注释打开*/
+/*.metadata-content {
+  transition: 300ms cubic-bezier(0.25, 1, 0.5, 1); 
+  opacity: 0;
+  height: 0;
+  margin-bottom: -1.8em;
+}
+.metadata-container:hover .metadata-content { 
+  opacity: 1;
+  height: auto;
+  margin-bottom: 0.5em;
+}
+*/
+
+/*-----------------去除弹窗悬浮预览中的「文档属性properties」----------------------------*/
+.popover.hover-editor .markdown-preview-view.show-properties .metadata-container {
+  display: none;
+}
+/*=====================属性Properties变成两列（结束）================================*/
+
+/*------------------------通过CSSClasses在阅读模式下隐藏属性面版-------------------------------*/
+.hide-properties{
+    --metadata-display-reading: none;
+}
+
+/*------------------------百分比进度条（不用访问外部资源）-------------------------------*/
+/*在书籍笔记中应用*/
+.baiFenBi{
+  height: 20px;  /*---高度---*/
+  width: 100%;   /*---宽度---*/
+  background-color: #b9b9b9; /*---空白部分颜色---*/
+  box-shadow: 1px 1px 5px #000000;
+  border-radius: 10px;  /*---圆角程度，上面高度20的一半，刚好是个⚪---*/
+  overflow: hidden;
+
+
+}
+.baiFenBi::before{
+  display: block !important ;
+
+  height: 20px;   /*---与上面的高度保持一致---*/
+  font-size: 0.6em;  /*---字大小---*/
+  line-height: 20px;   /*---与上面的高度保持一致---*/
+
+  counter-reset: progress var(--precent); 
+  content: counter(progress) '%';
+  width: calc(1% * var(--precent));
+  color: #fff;
+  background-color: #6B88F4;  /*---百分比部分颜色---*/
+  text-align: center ;
+  white-space: nowrap ;
+  overflow: hidden;
+  float:left; 
+}
+
+/*------------------------激活窗口添加边框，显示当前聚焦的窗口-------------------------------*/
+/* ! 模仿Colorful Note Borders插件，针对激活的窗口进行添加边框*/
+.markdown-preview-view:focus,
+.view-content
+  > .markdown-source-view.mod-cm6
+  > .cm-editor
+  > .cm-scroller,
+.markdown-preview-view {
+  border: 1px solid rgba(255, 0, 0, 0);
+}
+
+.markdown-preview-view:focus {
+  border: 1px solid rgba(249, 178, 37, 0.255);
+  border-radius: 2px; /* 圆角半径为 8px */
+  
+}
+.markdown-preview-view:focus,
+.view-content
+  > .markdown-source-view.mod-cm6
+  > .cm-editor
+  > .cm-scroller:focus-within {
+  border: 1px solid rgba(249, 178, 37, 0.255);
+  border-radius: 2px; /* 圆角半径为 8px */
+}
+
+/*------------------------Markdown打印PDF样式-------------------------------*/
+/* 文件名可以命名为 print.css */
+@media print {
+
+	/* 页边距 */
+	@page {
+	margin: 0.3in;
+	}
+	
+	body, p, li{
+	/* 行间距 */
+	line-height: 1.8;
+	/* 字体 */
+	font-family: Avenir next, -apple-system, "Segoe UI", "Helvetica Neue", sans-serif;
+	/* 段后间距 */
+	padding-bottom: 3px;
+	}
+	
+	/* callouts行间距 */
+	div.callout-title-inner{
+	line-height: 1.8;
+	}
+	
+	/* 首行缩进 */
+	p{
+	text-indent: 0em;
+	}
+	
+	/* 标题居中 */
+	h1,h2{
+	text-align: center;
+	}
+	
+	/* 标题防页面截断、标题段落间距 */
+	h1, h2, h3, h4, h5, h6 {
+	page-break-after: avoid;
+	padding: 8px 0 ;
+	}
+	  
+	img {
+	display:block;
+	margin: 1em 0
+	}
+	
+	a img {
+	border: none
+	}
+	
+	/* 表格居中 */
+	table {
+	margin: 1px;
+	width: 100%;
+	border-collapse: collapse;
+	}
+	
+	/* 表格文字居中 */
+	table,tr,th,td{
+	text-align: center !important;
+	}
+}
+
+/* ================= 定义Banner图及相关配置 Start============== */
+
+/* ---------- 1. 定义 Banner 及高度变量 --------- */
+body {
+  --bannerimg-height: 15em;  /* 可根据需要修改 banner 高度 */
+}
+
+
+/* ---------- 2. Banner 图定位与遮罩效果 ---------- */
+span[src$="bannerimg"] img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+  max-width: 100%;
+  max-height: 20em;
+  min-height: 9em;
+  object-fit: cover;
+  margin-top: 0;
+
+  /* 上圆角 */
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+
+  /* 下遮罩渐变 */
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%); /*第一个X%控制遮罩开始变透明的位置（越大，遮罩越低）; 第二个Y%控制完全透明的位置（越小，遮罩越短）*/
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+}
+
+
+/* ---------- 3. 留出 Banner 顶部空间，仅作用于主阅读模式 ---------- */
+.markdown-reading-view:not(.markdown-embed):not(.canvas-node-content) .bannerimg {
+  padding-top: var(--bannerimg-height) !important;
+  padding-bottom: 4em !important;
+}
+
+
+/* ---------- 4. 特例：Excalidraw 笔记也可兼容（如需） ---------- */
+.Excalidraw-Markdown .bannerimg {
+  padding-top: var(--bannerimg-height) !important;
+  padding-bottom: 4em !important;
+}
+
+
+/* ---------- 5. 嵌入块与 Canvas 节点中不增加顶部空白 ---------- */
+.markdown-embed .bannerimg,
+.canvas-node-content .bannerimg {
+  padding-top: 0 !important;
+  padding-bottom: 1em !important;
+}
+
+/* ================= 定义Banner图及相关配置 End ============== */

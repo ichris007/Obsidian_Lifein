@@ -1,0 +1,75 @@
+/* --------------------- Vault（库） logo-------------------*/
+/*Last updated 2024-11-18
+This solution is provided by TfT Hacker. Learn more at https://tfthacker.com
+*/
+
+/* Embed an image to the right of the div */
+div[data-path="00Alogo"] * {
+  display: none;
+}
+
+div[data-path="00Alogo"] {
+  order: -1;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 15px;
+  width: 100%;
+  min-height: 100px;
+  border-radius: 5px;
+  border: none;
+  content: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDc4Ljc3OCIgaGVpZ2h0PSIxODguOTc2IiB2aWV3Qm94PSIwIDAgMTI2LjY3NyA1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNC41MTIgLTU2LjkyNikiPjxlbGxpcHNlIGN4PSIyOS43MTUiIGN5PSI4MS45MjYiIHJ4PSIyNS4yMDMiIHJ5PSIyNSIgZmlsbD0iIzE4ZjJiMSIgc3Ryb2tlLXdpZHRoPSIuMjA1Ii8+PHRleHQgc3R5bGU9InRleHQtYWxpZ246c3RhcnQiIHg9IjkuMjI0IiB5PSI4My41IiB0cmFuc2Zvcm09InNjYWxlKDEuMDA0MDYgLjk5NTk2KSIgZm9udC1zaXplPSIxMi43NTIiIGZpbGw9IiMxOGYyYjEiIHN0cm9rZS13aWR0aD0iLjA2NiI+PHRzcGFuIHN0eWxlPSItaW5rc2NhcGUtZm9udC1zcGVjaWZpY2F0aW9uOicuU2FuYSBQVUEgQm9sZCciIHg9IjkuMjI0IiB5PSI4My41IiBmb250LXdlaWdodD0iNzAwIiBmb250LWZhbWlseT0iLlNhbmEgUFVBIiBmaWxsPSIjZmZmIj5MaWZlaW48L3RzcGFuPjwvdGV4dD48dGV4dCBzdHlsZT0idGV4dC1hbGlnbjpzdGFydCIgeD0iMTMuNjA3IiB5PSI5My41OTgiIHRyYW5zZm9ybT0ic2NhbGUoMS4wMDQwNiAuOTk1OTYpIiBmb250LXNpemU9IjcuMDU2IiBmaWxsPSIjMThmMmIxIiBzdHJva2Utd2lkdGg9Ii4wNjYiPjx0c3BhbiBzdHlsZT0iLWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonSGFybW9ueU9TIFNhbnMgU0MgQm9sZCciIHg9IjEzLjYwNyIgeT0iOTMuNTk4IiBmb250LXdlaWdodD0iNzAwIiBmb250LWZhbWlseT0iSGFybW9ueU9TIFNhbnMgU0MiIGZpbGw9IiNmZmYiPuaglui6q8K357K+6L+bPC90c3Bhbj48L3RleHQ+PHRleHQgc3R5bGU9Ii1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246Jy5TYW5hIFBVQSBCb2xkJzt0ZXh0LWFsaWduOnN0YXJ0IiB4PSI1Ny4xNzkiIHk9Ijc2LjkzOCIgdHJhbnNmb3JtPSJzY2FsZSgxLjAwNDA2IC45OTU5NikiIGZvbnQtd2VpZ2h0PSI3MDAiIGZvbnQtc2l6ZT0iOC40NjciIGZvbnQtZmFtaWx5PSIuU2FuYSBQVUEiIGZpbGw9IiMxM2I1ODEiIHN0cm9rZS13aWR0aD0iLjA2NiI+PHRzcGFuIHg9IjU3LjE3OSIgeT0iNzYuOTM4Ij5Qcm9kdWN0aXZpdHkgT1M8L3RzcGFuPjwvdGV4dD48dGV4dCBzdHlsZT0iLWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonLlNhbmEgUFVBIEJvbGQnO3RleHQtYWxpZ246c3RhcnQiIHg9IjYxLjk1OSIgeT0iODguMDc0IiB0cmFuc2Zvcm09InNjYWxlKDEuMDA0MDYgLjk5NTk2KSIgZm9udC13ZWlnaHQ9IjcwMCIgZm9udC1zaXplPSI3LjA1NiIgZm9udC1mYW1pbHk9Ii5TYW5hIFBVQSIgZmlsbD0iI2RlOGEyMyIgc3Ryb2tlLXdpZHRoPSIuMDY2Ij48dHNwYW4geD0iNjEuOTU5IiB5PSI4OC4wNzQiPkxpdmUgaW4sIExldmVsIHVwPC90c3Bhbj48L3RleHQ+PC9nPjwvc3ZnPg==");
+   
+}
+
+/* --------------------- 新建标签页（New Tab）背景美化-------------------*/
+
+.empty-state-container {
+  max-height: unset;
+  opacity: 1 !important;
+}
+
+.theme-dark .empty-state-container::before {
+  content: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDYuMDMyIiBoZWlnaHQ9IjI0My40NjkiIHZpZXdCb3g9IjAgMCA2NS4wOTYgNjQuNDE4Ij48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjguNDg2IC05My4yMzYpIiBmaWxsPSIjMThmMmIxIj48ZWxsaXBzZSBjeD0iMTAxLjAzNCIgY3k9IjEyNS40NDUiIHJ4PSIzMi41NDgiIHJ5PSIzMi4yMDkiLz48dGV4dCB4PSI3MS41MzgiIHk9IjEzMy4yNDMiIHN0eWxlPSJ0ZXh0LWFsaWduOnN0YXJ0IiBmb250LXNpemU9IjIyLjU3OCIgc3Ryb2tlLXdpZHRoPSIuMjY1Ij48dHNwYW4geD0iNzEuNTM4IiB5PSIxMzMuMjQzIiBzdHlsZT0iLWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjomcXVvdDsuU2FuYSBQVUEmcXVvdDsiIGZvbnQtd2VpZ2h0PSI0MDAiIGZvbnQtZmFtaWx5PSIuU2FuYSBQVUEiIGZpbGw9IiNmZmYiPkxpZmVpbjwvdHNwYW4+PC90ZXh0PjwvZz48L3N2Zz4=")"\A""栖身·精进 \A Live in, Level up";/* \A 是换行符，下面的white-space: pre; 保持换行的格式。*/
+  font-size: 26pt !important;
+  font-weight: bolder;
+  opacity: 30%; /* adjust the opacity to make it more visible */
+  white-space: pre; /* Preserve the line breaks */
+}
+
+
+.theme-light .empty-state-container::before {
+  content: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNDYuMDMyIiBoZWlnaHQ9IjI0My40NjkiIHZpZXdCb3g9IjAgMCA2NS4wOTYgNjQuNDE4Ij48ZyB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjguNDg2IC05My4yMzYpIiBmaWxsPSIjMThmMmIxIj48ZWxsaXBzZSBjeD0iMTAxLjAzNCIgY3k9IjEyNS40NDUiIHJ4PSIzMi41NDgiIHJ5PSIzMi4yMDkiLz48dGV4dCB4PSI3MS41MzgiIHk9IjEzMy4yNDMiIHN0eWxlPSJ0ZXh0LWFsaWduOnN0YXJ0IiBmb250LXNpemU9IjIyLjU3OCIgc3Ryb2tlLXdpZHRoPSIuMjY1Ij48dHNwYW4geD0iNzEuNTM4IiB5PSIxMzMuMjQzIiBzdHlsZT0iLWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjomcXVvdDsuU2FuYSBQVUEmcXVvdDsiIGZvbnQtd2VpZ2h0PSI0MDAiIGZvbnQtZmFtaWx5PSIuU2FuYSBQVUEiIGZpbGw9IiNmZmYiPkxpZmVpbjwvdHNwYW4+PC90ZXh0PjwvZz48L3N2Zz4=")"\A""栖身·精进 \A Live in, Level up"; /* \A 是换行符，下面的white-space: pre; 保持换行的格式。*/
+  font-size: 26pt !important;
+  font-weight: bolder;
+  color: var(--text-accent);
+  opacity: 30%; /* adjust the opacity to make it more visible */
+  white-space: pre; /* Preserve the line breaks */
+}
+
+/* hover effect */
+.empty-state-container:hover::before {
+  content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='246.032' height='243.469' viewBox='0 0 65.096 64.418'%3E%3Cg transform='translate(-68.486 -93.236)' fill='%2318f2b1'%3E%3Cellipse cx='101.034' cy='125.445' rx='32.548' ry='32.209'/%3E%3Ctext x='71.538' y='133.243' style='text-align:start' font-size='22.578' stroke-width='.265'%3E%3Ctspan x='71.538' y='133.243' style='-inkscape-font-specification:".Sana PUA"' font-weight='400' font-family='.Sana PUA' fill='%23fff'%3ELifein%3C/tspan%3E%3C/text%3E%3C/g%3E%3C/svg%3E")"\A""栖身·精进 \A Live in, Level up";/* \A 是换行符，下面的white-space: pre; 保持换行的格式。*/
+  font-size: 26pt !important;
+  font-weight: bolder;
+  opacity: 100%; 
+  transition: opacity 1000ms cubic-bezier(0.25, 0.8, 0.25, 1);
+  white-space: pre; /* Preserve the line breaks */
+}
+
+.empty-state-title {
+  display: none;
+}
+
+/* Hide redundant "Go to file (⌘O)" and "See recent files (⌘O)" */
+.empty-state-action-list > :nth-child(1) { /* 创建新文件 ⌘N */
+  display: none;
+}
+
+.empty-state-action-list > :nth-child(3) { /* 查看近期文件 ⌘O */
+  display: inline;
+}
+
+.empty-state-action-list > :nth-child(4) { /* 关闭标签页 */
+  display: none;
+}

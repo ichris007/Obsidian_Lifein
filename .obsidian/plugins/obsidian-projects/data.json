@@ -1,0 +1,218 @@
+{
+  "version": 2,
+  "projects": [
+    {
+      "fieldConfig": {},
+      "defaultName": "",
+      "templates": [],
+      "excludedNotes": [
+        "05Books/电子书资源.md",
+        "05Books/我的书架.md",
+        "05Books/整理图书用.md"
+      ],
+      "isDefault": false,
+      "dataSource": {
+        "kind": "folder",
+        "config": {
+          "path": "05Books",
+          "recursive": true
+        }
+      },
+      "newNotesFolder": "",
+      "views": [
+        {
+          "config": {
+            "coverField": "封面",
+            "fitStyle": "cover",
+            "includeFields": [
+              "豆瓣评分"
+            ],
+            "cardWidth": 120
+          },
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "sort": {
+            "criteria": []
+          },
+          "id": "d41bf243-796d-4cd5-a74e-6691805b0c2c",
+          "name": "Gallery",
+          "type": "gallery"
+        },
+        {
+          "config": {
+            "fieldConfig": {
+              "path": {
+                "hide": true
+              },
+              "豆瓣页面": {
+                "hide": true
+              },
+              "分类": {
+                "hide": true
+              },
+              "封面": {
+                "hide": true
+              },
+              "复读": {
+                "hide": true
+              },
+              "副标题": {
+                "hide": true
+              },
+              "领域": {
+                "hide": true
+              },
+              "译者": {
+                "hide": true
+              },
+              "原作名": {
+                "hide": true
+              },
+              "总页数": {
+                "hide": true
+              },
+              "ISBN": {
+                "hide": true
+              },
+              "出版社": {
+                "hide": true
+              },
+              "丛书": {
+                "hide": true
+              },
+              "书名": {
+                "hide": true
+              },
+              "读完时间": {
+                "hide": true
+              },
+              "开始时间": {
+                "hide": true
+              }
+            },
+            "orderFields": [
+              "name",
+              "作者",
+              "状态",
+              "出版时间",
+              "豆瓣评分",
+              "读完时间",
+              "介质",
+              "开始时间",
+              "我标记的时间",
+              "我的评分",
+              "我的评论",
+              "tag"
+            ]
+          },
+          "filter": {
+            "conditions": [
+              {
+                "field": "状态",
+                "operator": "contains",
+                "enabled": true,
+                "value": "已读"
+              }
+            ]
+          },
+          "colors": {
+            "conditions": []
+          },
+          "sort": {
+            "criteria": [
+              {
+                "field": "name",
+                "order": "asc",
+                "enabled": true
+              }
+            ]
+          },
+          "id": "396e75b8-3328-4159-b775-3e9ac8d74511",
+          "name": "Table",
+          "type": "table"
+        }
+      ],
+      "id": "a345fa54-504d-49b4-a03e-47a9f7c338c2",
+      "name": "我的书架"
+    },
+    {
+      "fieldConfig": {},
+      "defaultName": "",
+      "templates": [],
+      "excludedNotes": [
+        ""
+      ],
+      "isDefault": false,
+      "dataSource": {
+        "kind": "folder",
+        "config": {
+          "path": "06Movies",
+          "recursive": false
+        }
+      },
+      "newNotesFolder": "",
+      "views": [
+        {
+          "config": {
+            "fieldConfig": {
+              "path": {
+                "hide": false
+              }
+            }
+          },
+          "filter": {
+            "conjunction": "and",
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "sort": {
+            "criteria": []
+          },
+          "id": "3992dbcd-3423-447d-be92-6cbd87590c80",
+          "name": "表格",
+          "type": "table"
+        },
+        {
+          "config": {
+            "coverField": "cover",
+            "fitStyle": "contain",
+            "cardWidth": 120
+          },
+          "filter": {
+            "conjunction": "and",
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "sort": {
+            "criteria": []
+          },
+          "id": "c153778b-9e78-48d1-ace6-9aa8be2efd71",
+          "name": "画册",
+          "type": "gallery"
+        }
+      ],
+      "id": "63722fc9-0e92-435b-b2ba-accc1815a724",
+      "name": "我的电影库"
+    }
+  ],
+  "archives": [],
+  "preferences": {
+    "projectSizeLimit": 1000,
+    "frontmatter": {
+      "quoteStrings": "PLAIN"
+    },
+    "locale": {
+      "firstDayOfWeek": "default"
+    },
+    "commands": [],
+    "linkBehavior": "open-editor"
+  }
+}

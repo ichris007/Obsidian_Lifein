@@ -1,0 +1,410 @@
+{
+  "workspaces": {
+    "首页+从这里开始": {
+      "main": {
+        "id": "e926bcbbe6caf985",
+        "type": "split",
+        "children": [
+          {
+            "id": "31dbb22f6d4409f0",
+            "type": "tabs",
+            "dimension": 50.06868131868132,
+            "children": [
+              {
+                "id": "e396f2b32cf25848",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "00Dashboard/Homepage.md",
+                    "mode": "preview",
+                    "source": false,
+                    "backlinks": false
+                  },
+                  "pinned": true,
+                  "icon": "lucide-file",
+                  "title": "Homepage"
+                }
+              }
+            ]
+          },
+          {
+            "id": "26531c99216265b5",
+            "type": "tabs",
+            "dimension": 49.93131868131868,
+            "children": [
+              {
+                "id": "27077bfebdb3112c",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "从这里开始.md",
+                    "mode": "preview",
+                    "source": false,
+                    "backlinks": false
+                  },
+                  "pinned": true,
+                  "icon": "lucide-file",
+                  "title": "从这里开始"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical"
+      },
+      "left": {
+        "id": "01ed5e353016d256",
+        "type": "split",
+        "children": [
+          {
+            "id": "c7380bfa7d3267c0",
+            "type": "tabs",
+            "dimension": 64.76578411405295,
+            "children": [
+              {
+                "id": "118844ee0da72a97",
+                "type": "leaf",
+                "state": {
+                  "type": "file-explorer",
+                  "state": {
+                    "sortOrder": "alphabetical",
+                    "autoReveal": false
+                  },
+                  "icon": "lucide-folder-closed",
+                  "title": "文件列表"
+                }
+              },
+              {
+                "id": "ae5d0d213c1c7693",
+                "type": "leaf",
+                "state": {
+                  "type": "search",
+                  "state": {
+                    "query": "",
+                    "matchingCase": true,
+                    "explainSearch": false,
+                    "collapseAll": false,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical"
+                  },
+                  "icon": "lucide-search",
+                  "title": "搜索"
+                }
+              },
+              {
+                "id": "df0ae48b16721edb",
+                "type": "leaf",
+                "state": {
+                  "type": "bookmarks",
+                  "state": {},
+                  "icon": "lucide-bookmark",
+                  "title": "书签"
+                }
+              }
+            ]
+          },
+          {
+            "id": "7aff005c91d7ce1a",
+            "type": "tabs",
+            "dimension": 35.234215885947044,
+            "children": [
+              {
+                "id": "324044ed78e86c68",
+                "type": "leaf",
+                "state": {
+                  "type": "recent-files",
+                  "state": {},
+                  "icon": "clock",
+                  "title": "Recent Files"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 203.5
+      },
+      "right": {
+        "id": "a62bbf9e091b1b90",
+        "type": "split",
+        "children": [
+          {
+            "id": "3d225506e7f68edd",
+            "type": "tabs",
+            "dimension": 31.640625,
+            "children": [
+              {
+                "id": "1e13ff760f4a55b4",
+                "type": "leaf",
+                "state": {
+                  "type": "calendar-view",
+                  "state": {},
+                  "icon": "lucide-calendar-check",
+                  "title": "日历"
+                }
+              },
+              {
+                "id": "1c020a5935e6f6dc",
+                "type": "leaf",
+                "state": {
+                  "type": "file-properties",
+                  "state": {
+                    "file": "01Projects/Obsidian生产力系统/系统设置规则/从这里开始.md"
+                  },
+                  "icon": "lucide-info",
+                  "title": "从这里开始的笔记属性"
+                }
+              },
+              {
+                "id": "81fbfe4ab230fa93",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "localgraph",
+                  "state": {
+                    "options": {
+                      "collapse-filter": true,
+                      "search": "",
+                      "localJumps": 2,
+                      "localBacklinks": true,
+                      "localForelinks": true,
+                      "localInterlinks": true,
+                      "showTags": true,
+                      "showAttachments": true,
+                      "hideUnresolved": false,
+                      "collapse-color-groups": true,
+                      "colorGroups": [
+                        {
+                          "query": "tag:#Movie  ",
+                          "color": {
+                            "a": 1,
+                            "rgb": 14048348
+                          }
+                        },
+                        {
+                          "query": "path:05Books  ",
+                          "color": {
+                            "a": 1,
+                            "rgb": 13850092
+                          }
+                        },
+                        {
+                          "query": "tag:#note  ",
+                          "color": {
+                            "a": 1,
+                            "rgb": 6490069
+                          }
+                        },
+                        {
+                          "query": "tag:#blog  ",
+                          "color": {
+                            "a": 1,
+                            "rgb": 14260237
+                          }
+                        },
+                        {
+                          "query": "tag:影视",
+                          "color": {
+                            "a": 1,
+                            "rgb": 595667
+                          }
+                        }
+                      ],
+                      "collapse-display": true,
+                      "showArrow": true,
+                      "textFadeMultiplier": 0,
+                      "nodeSizeMultiplier": 1,
+                      "lineSizeMultiplier": 1,
+                      "collapse-forces": true,
+                      "centerStrength": 0.518713248970312,
+                      "repelStrength": 10,
+                      "linkStrength": 1,
+                      "linkDistance": 250,
+                      "scale": 3.8677074496525576,
+                      "close": true
+                    }
+                  },
+                  "pinned": true,
+                  "icon": "lucide-git-fork",
+                  "title": "关系图谱"
+                }
+              },
+              {
+                "id": "c7ac4d2f77a17611",
+                "type": "leaf",
+                "state": {
+                  "type": "all-properties",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-archive",
+                  "title": "添加笔记属性"
+                }
+              },
+              {
+                "id": "4049dd83fed4cc9d",
+                "type": "leaf",
+                "state": {
+                  "type": "tag",
+                  "state": {
+                    "sortOrder": "frequency",
+                    "useHierarchy": true,
+                    "showSearch": false,
+                    "searchQuery": ""
+                  },
+                  "icon": "lucide-tags",
+                  "title": "标签"
+                }
+              },
+              {
+                "id": "e015731128baaa1b",
+                "type": "leaf",
+                "state": {
+                  "type": "calendar-view",
+                  "state": {},
+                  "icon": "lucide-calendar-check",
+                  "title": "日历"
+                }
+              }
+            ],
+            "currentTab": 5
+          },
+          {
+            "id": "2f8f9f15ce5d7be2",
+            "type": "tabs",
+            "dimension": 20.21484375,
+            "children": [
+              {
+                "id": "d3054c5efa4ee8bd",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "00Dashboard/侧边栏/快捷导航.md",
+                    "mode": "preview",
+                    "source": false,
+                    "backlinks": false
+                  },
+                  "pinned": true,
+                  "icon": "lucide-file",
+                  "title": "快捷导航"
+                }
+              }
+            ]
+          },
+          {
+            "id": "edb3d7a867870758",
+            "type": "tabs",
+            "dimension": 21.97265625,
+            "children": [
+              {
+                "id": "3b596a7fb3f85be8",
+                "type": "leaf",
+                "pinned": true,
+                "state": {
+                  "type": "markdown",
+                  "state": {
+                    "file": "00Dashboard/侧边栏/当日日程.md",
+                    "mode": "preview",
+                    "source": false,
+                    "backlinks": false
+                  },
+                  "pinned": true,
+                  "icon": "lucide-file",
+                  "title": "当日日程"
+                }
+              },
+              {
+                "id": "4e7f7e3d498ed4a3",
+                "type": "leaf",
+                "state": {
+                  "type": "reminder-list",
+                  "state": {},
+                  "icon": "clock",
+                  "title": "Reminders"
+                }
+              }
+            ]
+          },
+          {
+            "id": "8ce126a014b7219a",
+            "type": "tabs",
+            "dimension": 26.171875,
+            "children": [
+              {
+                "id": "32a08aa15e831123",
+                "type": "leaf",
+                "state": {
+                  "type": "quiet-outline",
+                  "state": {},
+                  "icon": "lines-of-text",
+                  "title": "Quiet Outline"
+                }
+              },
+              {
+                "id": "b02052b38c863f45",
+                "type": "leaf",
+                "state": {
+                  "type": "outgoing-link",
+                  "state": {
+                    "file": "Settings/Obsidian资料/MarkDown超级教程.md",
+                    "linksCollapsed": false,
+                    "unlinkedCollapsed": true
+                  },
+                  "icon": "links-going-out",
+                  "title": "MarkDown超级教程 的出链列表"
+                }
+              },
+              {
+                "id": "d101b2828b23a980",
+                "type": "leaf",
+                "state": {
+                  "type": "backlink",
+                  "state": {
+                    "file": "00Dashboard/Homepage.md",
+                    "collapseAll": true,
+                    "extraContext": false,
+                    "sortOrder": "alphabetical",
+                    "showSearch": false,
+                    "searchQuery": "",
+                    "backlinkCollapsed": false,
+                    "unlinkedCollapsed": true
+                  },
+                  "icon": "links-coming-in",
+                  "title": "Homepage 的反向链接列表"
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "horizontal",
+        "width": 225.5
+      },
+      "left-ribbon": {
+        "hiddenItems": {
+          "switcher:打开快速切换": false,
+          "graph:查看关系图谱": false,
+          "canvas:新建白板": false,
+          "daily-notes:打开/创建今天的日记": false,
+          "command-palette:打开命令面板": false,
+          "markdown-importer:打开 Markdown 格式转换器": false,
+          "workspaces:管理工作区布局": false,
+          "obsidian-projects:打开项目": false,
+          "cmdr:QuickAdd: 打开书架": false,
+          "cmdr:QuickAdd: 打开电影库": false,
+          "templater-obsidian:Templater": false
+        }
+      },
+      "active": "27077bfebdb3112c",
+      "mtime": "2025-05-11T12:22:40+08:00"
+    }
+  },
+  "active": "首页+从这里开始"
+}

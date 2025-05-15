@@ -1,0 +1,25 @@
+{
+  "debounceTimeout": 200,
+  "ignoreOpenFiles": true,
+  "ignoreForceViewAll": false,
+  "folders": [
+    {
+      "folder": "Settings",
+      "viewMode": "obsidianUIMode: preview"
+    },
+    {
+      "folder": "00Dashboard",
+      "viewMode": "obsidianUIMode: preview"
+    }
+  ],
+  "files": [
+    {
+      "filePattern": "从这里开始",
+      "viewMode": "obsidianUIMode: preview"
+    },
+    {
+      "filePattern": "Lifein",
+      "viewMode": "obsidianUIMode: preview"
+    }
+  ]
+}

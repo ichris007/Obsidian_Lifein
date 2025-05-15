@@ -1,0 +1,54 @@
+{
+  "items": [
+    {
+      "type": "file",
+      "ctime": 1688704619038,
+      "path": "Templates/tp-panel-plugs.md",
+      "title": "0插件开关"
+    },
+    {
+      "type": "group",
+      "ctime": 1700046224875,
+      "items": [
+        {
+          "type": "file",
+          "path": "03Life/Software/Obsidian/插件及使用/插件其它/插件目录.md",
+          "ctime": 1683128709061
+        },
+        {
+          "type": "folder",
+          "ctime": 1686122280985,
+          "path": "03Life/Software/Obsidian",
+          "title": "Obsidian资料"
+        },
+        {
+          "type": "file",
+          "ctime": 1716620620333,
+          "path": "03Life/Software/Obsidian/Obsidian技巧/Obsidian技巧汇总.md"
+        },
+        {
+          "type": "folder",
+          "ctime": 1743475983806,
+          "path": "03Life/Software/Obsidian/Obsidian技巧"
+        },
+        {
+          "type": "folder",
+          "ctime": 1743475994743,
+          "path": "03Life/Software/Obsidian/Obsidian主题与样式"
+        }
+      ],
+      "title": "Obsidian"
+    },
+    {
+      "type": "file",
+      "ctime": 1700046292720,
+      "path": "Longform/小红书/科学育儿_中国儿科循证指南和专家共识汇总.md"
+    },
+    {
+      "type": "file",
+      "ctime": 1700537234017,
+      "path": "Attachments/肺炎支原体肺炎20231107.pdf",
+      "title": "肺炎支原体肺炎专家指南2023"
+    }
+  ]
+}

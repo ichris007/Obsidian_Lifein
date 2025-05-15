@@ -1,0 +1,58 @@
+{
+  "collapse-filter": true,
+  "search": "",
+  "showTags": true,
+  "showAttachments": false,
+  "hideUnresolved": true,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "tag:#Movie  ",
+      "color": {
+        "a": 1,
+        "rgb": 14048348
+      }
+    },
+    {
+      "query": "path:05Books  ",
+      "color": {
+        "a": 1,
+        "rgb": 13850092
+      }
+    },
+    {
+      "query": "tag:#note  ",
+      "color": {
+        "a": 1,
+        "rgb": 6490069
+      }
+    },
+    {
+      "query": "tag:#blog  ",
+      "color": {
+        "a": 1,
+        "rgb": 14260237
+      }
+    },
+    {
+      "query": "tag:影视",
+      "color": {
+        "a": 1,
+        "rgb": 595667
+      }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": false,
+  "textFadeMultiplier": 0,
+  "nodeSizeMultiplier": 1,
+  "lineSizeMultiplier": 1,
+  "collapse-forces": false,
+  "centerStrength": 0.518713248970312,
+  "repelStrength": 10,
+  "linkStrength": 1,
+  "linkDistance": 250,
+  "scale": 0.06861271852772331,
+  "close": true
+}

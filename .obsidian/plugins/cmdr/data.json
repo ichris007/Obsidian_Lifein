@@ -1,0 +1,135 @@
+{
+  "confirmDeletion": false,
+  "showAddCommand": true,
+  "debug": false,
+  "editorMenu": [
+    {
+      "id": "editor:insert-embed",
+      "icon": "lucide-sticky-note",
+      "name": "嵌入内容",
+      "mode": "any"
+    },
+    {
+      "id": "number-headings-obsidian:remove-number-headings",
+      "icon": "bookmark-minus",
+      "name": "Number Headings: Remove numbering from all headings in document",
+      "mode": "any"
+    },
+    {
+      "id": "number-headings-obsidian:number-headings-with-options",
+      "icon": "bookmark-plus",
+      "name": "Number Headings: Number all headings in document (and show options)",
+      "mode": "any"
+    },
+    {
+      "id": "file-explorer:duplicate-file",
+      "icon": "lucide-files",
+      "name": "Duplicate",
+      "mode": "any"
+    }
+  ],
+  "fileMenu": [
+    {
+      "id": "file-explorer:duplicate-file",
+      "icon": "lucide-files",
+      "name": "Duplicate",
+      "mode": "any"
+    }
+  ],
+  "leftRibbon": [
+    {
+      "id": "quickadd:choice:408d491d-6d73-4f9e-9c53-3c55663d5570",
+      "icon": "book-open",
+      "name": "QuickAdd: 打开书架",
+      "mode": "any"
+    },
+    {
+      "id": "quickadd:choice:741065fb-8e53-4dc7-a487-70d0faec688e",
+      "icon": "database",
+      "name": "QuickAdd: 打开电影库",
+      "mode": "any"
+    }
+  ],
+  "rightRibbon": [],
+  "titleBar": [],
+  "statusBar": [
+    {
+      "id": "workspaces:open-modal",
+      "icon": "lucide-layout",
+      "name": "工作区: 管理工作区布局",
+      "mode": "any"
+    }
+  ],
+  "pageHeader": [
+    {
+      "id": "editor:toggle-source",
+      "icon": "lucide-code-2",
+      "name": "切换实时阅览/源码模式",
+      "mode": "any"
+    },
+    {
+      "id": "file-explorer:duplicate-file",
+      "icon": "lucide-files",
+      "name": "复制",
+      "mode": "any"
+    },
+    {
+      "id": "workspace:split-vertical",
+      "icon": "lucide-separator-vertical",
+      "name": "左右分屏",
+      "mode": "any"
+    },
+    {
+      "id": "quickadd:choice:73ac15cb-181f-4fa0-a4c8-054a2928c974",
+      "icon": "lucide-notebook-pen",
+      "name": "QuickAdd: 新建笔记",
+      "mode": "any"
+    },
+    {
+      "id": "quickadd:choice:776db2f2-ab07-4124-b89d-bfa55e185021",
+      "icon": "lucide-switch-camera",
+      "name": "切换深浅色",
+      "mode": "any"
+    }
+  ],
+  "macros": [],
+  "explorer": [
+    {
+      "id": "file-recovery:open",
+      "icon": "lucide-rotate-ccw",
+      "name": "文件恢复: 打开快照列表",
+      "mode": "any"
+    },
+    {
+      "id": "file-explorer:reveal-active-file",
+      "icon": "lucide-navigation",
+      "name": "文件列表: 在文件列表中显示当前文件",
+      "mode": "any"
+    }
+  ],
+  "hide": {
+    "statusbar": [
+      "better-word-count",
+      "backlink",
+      "properties",
+      "editing-toolbar"
+    ],
+    "leftRibbon": [
+      "打开命令面板",
+      "查看关系图谱",
+      "打开快速切换",
+      "打开 Markdown 格式转换器"
+    ]
+  },
+  "spacing": "6",
+  "advancedToolbar": {
+    "rowHeight": 48,
+    "rowCount": 1,
+    "spacing": 0,
+    "buttonWidth": 48,
+    "columnLayout": false,
+    "mappedIcons": [],
+    "tooltips": false,
+    "heightOffset": 0
+  }
+}

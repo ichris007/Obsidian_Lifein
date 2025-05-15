@@ -1,0 +1,53 @@
+{
+  "command_timeout": 5,
+  "templates_folder": "Templates",
+  "templates_pairs": [
+    [
+      "",
+      ""
+    ]
+  ],
+  "trigger_on_file_creation": true,
+  "auto_jump_to_cursor": false,
+  "enable_system_commands": false,
+  "shell_path": "",
+  "user_scripts_folder": "Settings/js",
+  "enable_folder_templates": true,
+  "folder_templates": [
+    {
+      "folder": "02Businessspaces/客户",
+      "template": "Templates/T-企业资料.md"
+    },
+    {
+      "folder": "02Business/0自媒体/0合作项目",
+      "template": "Templates/T-项目模板-自媒体.md"
+    },
+    {
+      "folder": "03Life",
+      "template": "Templates/T-笔记模板.md"
+    },
+    {
+      "folder": "04Growth",
+      "template": "Templates/T-笔记模板.md"
+    },
+    {
+      "folder": "",
+      "template": ""
+    }
+  ],
+  "enable_file_templates": false,
+  "file_templates": [
+    {
+      "regex": ".*",
+      "template": ""
+    }
+  ],
+  "syntax_highlighting": true,
+  "syntax_highlighting_mobile": false,
+  "enabled_templates_hotkeys": [
+    "Templates/打开首页H.md",
+    ""
+  ],
+  "startup_templates": [],
+  "enable_ribbon_icon": true
+}

@@ -1,0 +1,235 @@
+
+/*------------------------隐藏附件文件夹-------------------------------*/
+div[data-path='Attachments'], 
+div[data-path='Attachments'] + div.nav-folder-children 
+{
+    display: none;
+}
+
+
+/*------------------------紧凑的sidebar header-------------------------------*/
+/*
+    Condensed Tab Header Icons
+    Make icons in tab headers more compact, for smaller screens
+    https://github.com/replete/obsidian-minimal-theme-css-snippets
+*/
+
+.workspace-tab-header-inner{
+  padding-left:3px;
+  padding-right:3px;
+}
+
+.nav-buttons-container {
+  justify-content:start !important;
+  margin-left:-4px
+}
+
+.nav-buttons-container .clickable-icon {
+  padding-left:8px;
+  padding-right:3px;
+}
+
+.nav-buttons-container .clickable-icon{
+  color:var(--tx2, var(--text-normal)) !important;
+  transition: .2s color ease-in;
+}
+
+.nav-buttons-container .view-actions:hover .clickable-icon {
+  color: var(--tx1, var(--text-faint)) !important;
+}
+
+/*------------------------隐藏/显示文件浏览器器顶部按钮-------------------------------*/
+.nav-header .clickable-icon.nav-action-button[aria-label="New note"]{
+	display: none;
+    }
+/*.nav-header .clickable-icon.nav-action-button[aria-label="New folder"]{
+	display: none;
+    }*/
+.nav-header .clickable-icon.nav-action-button[aria-label="Change sort order"]{
+	display: none;
+    }
+/*.nav-header .clickable-icon.nav-action-button[aria-label="Collapse all"]{
+	display: none;
+    }*/
+.nav-header .clickable-icon.nav-action-button[aria-label="新建笔记"]{
+	display: none !important;
+    }
+/*.nav-header .clickable-icon.nav-action-button[aria-label="新建文件夹"]{
+	display: none !important;
+    }*/
+.nav-header .clickable-icon.nav-action-button[aria-label="排序"]{
+	display: none !important;
+    }
+/*.nav-header .clickable-icon.nav-action-button[aria-label="全部折叠"]{
+	display: none !important;
+    }*/
+
+
+
+/*------------------------拖动窗口分割线时，显示柔和的分界线-------------------------------*/
+/*
+    Resize handles tweaks
+    The resize handles when you resize sidebars use the accent colour which makes no sense to me
+    https://github.com/replete/obsidian-minimal-theme-css-snippets
+*/
+.workspace-leaf-resize-handle {
+  transition: all .2s ease-in;
+}
+.workspace-leaf-resize-handle:hover {
+  border-color:var(--text-muted);
+  background-color:var(--text-muted);
+}
+
+
+
+/* ==========================/* 文件浏览器添加分隔线 */============================== */
+/* 原始代码来自： https://github.com/replete/obsidian-minimal-theme-css-snippets */
+
+/* 这里填写间距的尺寸 */
+:root {
+    --replete-custom-separators-vertical-padding: 6px;
+    --replete-custom-separators-left-margin: -12px;
+}
+
+/* 这里填写文件夹名称 */
+/* 例如，你填写了”学习笔记“，那就会在学习笔记后面添加分隔线 */
+.nav-folder:has([data-path="0Inbox"])::after,
+.nav-folder:has([data-path="01Projects"])::after,
+.nav-folder:has([data-path="04Growth"])::after,
+.nav-folder:has([data-path="06Movies"])::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: calc(100% + 32px);
+    background: var(--tab-outline-color);
+    margin: var(--replete-custom-separators-vertical-padding) 0 var(--replete-custom-separators-vertical-padding) var(--replete-custom-separators-left-margin);
+}
+
+
+/* ==========================!在左右侧边栏中不显示固定标签按钮📌 ==========================*/  
+.workspace-split.mod-horizontal.mod-right-split,  
+.workspace-split.mod-horizontal.mod-left-split {  
+  .workspace-tab-header-status-container {  
+    display: none;  
+  }  
+  /* 缩减底部空白 不然可能加载成空白页 */  
+  .markdown-preview-section {  
+    padding-bottom: 0px !important;  
+    min-height: unset !important;  
+  }  
+  
+  .embedded-backlinks {  
+    display: none;  
+  }  
+}
+
+/*-------------------侧边栏内容显示最大化的优化--------------------*/
+/*预览模式减少文档左右上下的空白*/
+
+.markdown-preview-view.sidetools
+{
+  padding: 0px 0px 0px 8px!important;
+  
+}
+
+.markdown-preview-view.sidetools .markdown-preview-section
+{
+  padding: 0!important;
+}
+
+
+/*隐藏滚动条*/
+.markdown-preview-view.sidetools::-webkit-scrollbar{
+display:none;
+}
+ 
+/*隐藏yaml区域*/
+.markdown-preview-view.sidetools  div>.language-yaml
+{	
+  display: none;
+}
+
+/*隐藏行号*/
+.workspace-split:not(.mod-root) .markdown-source-view.sidetools  div.cm-gutters
+{	
+  display: none;
+}
+
+.workspace-split:not(.mod-root) .markdown-preview-view.sidetools p
+{
+ 
+  font-size: smaller;
+ 
+}
+
+/*编辑模式缩小行距*/
+.workspace-split:not(.mod-root) .markdown-source-view.sidetools .markdown-preview-section  .cm-content,
+.workspace-split:not(.mod-root) .markdown-source-view.sidetools  .cm-editor,
+.workspace-split:not(.mod-root) .markdown-source-view.sidetools  .cm-scroller
+{	
+  font-size: 12px;
+  margin: 0;
+  padding: 0!important;
+}
+
+
+/*-----------------侧边栏文档图标自定义--------------------*/
+
+/*快捷导航*/
+.workspace-tab-header[aria-label="快捷导航"]
+.workspace-tab-header-inner-icon
+> svg{
+  display: none;
+}
+
+.workspace-tab-header.is-active[aria-label="快捷导航"]
+.workspace-tab-header-inner-icon:before{
+  content: " ";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-color: var(--text-normal) ;
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 365.033 365.033"><g>	<g>		<path d="M182.517,0C81.877,0,0,81.877,0,182.518c0,100.64,81.877,182.516,182.517,182.516			c100.639,0,182.516-81.876,182.516-182.516C365.033,81.877,283.156,0,182.517,0z M195.018,339.539v-17.225			c0-6.902-5.598-12.5-12.5-12.5s-12.5,5.598-12.5,12.5v17.225c-76.908-6.068-138.454-67.613-144.521-144.521h17.223			c6.903,0,12.5-5.598,12.5-12.5c0-6.903-5.597-12.5-12.5-12.5H25.496C31.563,93.109,93.109,31.563,170.017,25.496v17.223			c0,6.903,5.597,12.5,12.5,12.5s12.5-5.597,12.5-12.5V25.496c76.908,6.067,138.453,67.613,144.521,144.521h-17.225			c-6.902,0-12.5,5.597-12.5,12.5c0,6.902,5.598,12.5,12.5,12.5h17.225C333.471,271.926,271.926,333.471,195.018,339.539z"/>		<path d="M217.753,187.658c1.556-10.749-1.794-22.077-10.047-30.331c-6.729-6.729-15.674-10.434-25.189-10.434			c-1.743,0-3.467,0.127-5.161,0.372l-53.493-40.926c-4.979-3.809-12.005-3.341-16.435,1.089			c-4.431,4.431-4.896,11.457-1.089,16.435l40.941,53.514c-1.555,10.749,1.794,22.077,10.047,30.331			c6.729,6.729,15.674,10.435,25.189,10.435c1.744,0,3.466-0.127,5.162-0.373l53.492,40.926c2.256,1.726,4.93,2.572,7.592,2.572			c3.219,0,6.42-1.236,8.844-3.66c4.43-4.432,4.896-11.457,1.088-16.436L217.753,187.658z"/>	</g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>');   
+}
+
+.workspace-tab-header[aria-label="快捷导航"]
+.workspace-tab-header-inner-icon::before{
+  content: " ";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-color: gray;
+  -webkit-mask-image: url('data:image/svg+xml;utf8,<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 365.033 365.033"><g>	<g>		<path d="M182.517,0C81.877,0,0,81.877,0,182.518c0,100.64,81.877,182.516,182.517,182.516			c100.639,0,182.516-81.876,182.516-182.516C365.033,81.877,283.156,0,182.517,0z M195.018,339.539v-17.225			c0-6.902-5.598-12.5-12.5-12.5s-12.5,5.598-12.5,12.5v17.225c-76.908-6.068-138.454-67.613-144.521-144.521h17.223			c6.903,0,12.5-5.598,12.5-12.5c0-6.903-5.597-12.5-12.5-12.5H25.496C31.563,93.109,93.109,31.563,170.017,25.496v17.223			c0,6.903,5.597,12.5,12.5,12.5s12.5-5.597,12.5-12.5V25.496c76.908,6.067,138.453,67.613,144.521,144.521h-17.225			c-6.902,0-12.5,5.597-12.5,12.5c0,6.902,5.598,12.5,12.5,12.5h17.225C333.471,271.926,271.926,333.471,195.018,339.539z"/>		<path d="M217.753,187.658c1.556-10.749-1.794-22.077-10.047-30.331c-6.729-6.729-15.674-10.434-25.189-10.434			c-1.743,0-3.467,0.127-5.161,0.372l-53.493-40.926c-4.979-3.809-12.005-3.341-16.435,1.089			c-4.431,4.431-4.896,11.457-1.089,16.435l40.941,53.514c-1.555,10.749,1.794,22.077,10.047,30.331			c6.729,6.729,15.674,10.435,25.189,10.435c1.744,0,3.466-0.127,5.162-0.373l53.492,40.926c2.256,1.726,4.93,2.572,7.592,2.572			c3.219,0,6.42-1.236,8.844-3.66c4.43-4.432,4.896-11.457,1.088-16.436L217.753,187.658z"/>	</g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g></svg>');   
+}
+
+/* 每日日程图标 */
+
+.workspace-tab-header[aria-label="当日日程"]
+.workspace-tab-header-inner-icon
+> svg{
+  display: none;
+}
+
+
+.workspace-tab-header[aria-label="当日日程"]
+.workspace-tab-header-inner-icon::before {
+  content: " ";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-color: gray;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyIDJDNi40ODYgMiAyIDYuNDg2IDIgMTJzNC40ODYgMTAgMTAgMTAgMTAtNC40ODYgMTAtMTBTMTcuNTE0IDIgMTIgMnptMCAxOGMtNC40MTEgMC04LTMuNTg5LTgtOHMzLjU4OS04IDgtOCA4IDMuNTg5IDggOC0zLjU4OSA4LTggOHoiLz48cGF0aCBkPSJNMTMgNmgtMnY3aDdWOWgtNXoiLz48L3N2Zz4=');
+}
+
+
+.workspace-tab-header[aria-label="当日日程"]
+.workspace-tab-header-inner-icon::before{
+  content: " ";
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  background-color: gray;
+  -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyIDJDNi40ODYgMiAyIDYuNDg2IDIgMTJzNC40ODYgMTAgMTAgMTAgMTAtNC40ODYgMTAtMTBTMTcuNTE0IDIgMTIgMnptMCAxOGMtNC40MTEgMC04LTMuNTg5LTgtOHMzLjU4OS04IDgtOCA4IDMuNTg5IDggOC0zLjU4OSA4LTggOHoiLz48cGF0aCBkPSJNMTMgNmgtMnY3aDdWOWgtNXoiLz48L3N2Zz4=');
+}
+
+

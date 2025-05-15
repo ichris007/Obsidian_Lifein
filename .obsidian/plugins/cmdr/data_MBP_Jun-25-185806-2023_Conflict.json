@@ -1,0 +1,58 @@
+{
+  "confirmDeletion": true,
+  "showAddCommand": true,
+  "debug": false,
+  "editorMenu": [],
+  "fileMenu": [],
+  "leftRibbon": [
+    {
+      "id": "quickadd:choice:eb661cfb-edb9-4bcf-a83f-5beb27c1526e",
+      "icon": "video",
+      "name": "QuickAdd: 豆瓣电影笔记自动生成",
+      "mode": "any"
+    },
+    {
+      "id": "quickadd:choice:548800f1-d6f5-44b2-8489-189f8aa8ca38",
+      "icon": "book-open",
+      "name": "QuickAdd: 自动生成读书笔记",
+      "mode": "any"
+    },
+    {
+      "id": "quickadd:choice:dc84e7bf-7bc7-46d4-bc0e-445074adcf63",
+      "icon": "library",
+      "name": "QuickAdd: 打开书架",
+      "mode": "any"
+    },
+    {
+      "id": "quickadd:choice:9490dde2-b821-42df-9bbc-20b4da1c9248",
+      "icon": "database",
+      "name": "QuickAdd: 打开电影库",
+      "mode": "any"
+    }
+  ],
+  "rightRibbon": [],
+  "titleBar": [],
+  "statusBar": [],
+  "pageHeader": [],
+  "macros": [],
+  "explorer": [],
+  "hide": {
+    "statusbar": [],
+    "leftRibbon": [
+      "打开 Markdown 格式转换器",
+      "打开命令面板",
+      "查看关系图谱"
+    ]
+  },
+  "spacing": "6",
+  "advancedToolbar": {
+    "rowHeight": 48,
+    "rowCount": 1,
+    "spacing": 0,
+    "buttonWidth": 48,
+    "columnLayout": false,
+    "mappedIcons": [],
+    "tooltips": false,
+    "heightOffset": 0
+  }
+}

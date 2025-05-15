@@ -1,0 +1,79 @@
+
+/* ------ 卡片式任务面板样式（深浅主题自适应） ----- */
+.dropdown-container {
+  margin-bottom: 1em;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 1px; /* 控制卡片左右间距 */
+  row-gap: 2px;     /* 控制卡片上下间距 */
+  margin: 1px 0px;
+}
+
+.card {
+  background: var(--background-secondary);
+  border-radius: 4px;
+  box-shadow: var(--shadow-s);
+  padding: 8px 0px;
+  margin: 0px 1px;
+  width: 60px;
+  height: 60px;
+  min-width: 45px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.card:hover {
+  transform: scale(1.05); /*鼠标划过卡片时的放大倍数，1不变*/
+  background: var(--background-modifier-hover);
+}
+
+.card .number {
+  font-size: 1em;
+  font-weight: bold;
+  margin-top: -7px;
+  padding-top: 0px;
+}
+
+.card .label {
+  font-size: 0.8em;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.underline {
+  width: 36px;
+  height: 1.5px;
+  margin: 1px auto 0;
+  border-radius: 1px;
+  background-color: var(--text-muted);
+}
+
+.task-list {
+  margin-top: 2px;
+  padding-top: 0px;
+  border-top: 1.5px solid var(--divider-color);
+}
+
+.task-item {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+/* 激活状态卡片：背景强调色，自适应文本色 */
+.cards-container .card.active {
+  background-color: var(--interactive-accent);
+  color: var(--text-on-accent);
+}
+
+.cards-container .card.active .number,
+.cards-container .card.active .label {
+  color: var(--text-on-accent);
+}
+
+.cards-container .card.active .underline {
+  background-color: var(--text-on-accent);
+}

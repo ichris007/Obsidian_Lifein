@@ -1,0 +1,476 @@
+
+/*------------------------修改page preview的popover框大小（预览悬浮框）------------------------ */
+
+.theme-light, .theme-dark { 
+  --popover-width: 750px;
+  --popover-height: 500px;
+  --popover-scale: 0.9; /* 调整为你想要的缩放比例，例如 0.9 表示 90% 大小；不安装hover editor插件 用0.8很好 */
+}
+
+.popover {
+  width: var(--popover-width);
+  height: var(--popover-height);
+  transform: scale(var(--popover-scale));
+  transform-origin: top left; /* 确保缩放从左上角开始 */
+}
+
+/*------------------------改善笔记链接超长网址编辑体验、临时禁用链接跳转------------------------ */
+
+/* Moy Link Optimize.css */
+/* 点击链接的时候不跳转 */
+/* 相关帖子：https://forum-zh.obsidian.md/t/topic/38000/6 */
+
+/* 更新时间：2024.11.16 */
+/* 版本：1.1  不对编辑模式生效 */
+
+
+
+/* Style Settings 开关 */
+/* @settings
+
+name: Moy Link Mods
+id: moy-link-mods
+settings:
+    - 
+        id: link-editing-mode
+        title: Link Editing Mode
+        title.zh: 链接编辑模式
+        description: Cancel the link left mouse button click event
+        description.zh: 是否取消链接的左键点击功能
+        type: class-toggle
+        default: true
+        addCommand: true
+    - 
+        id: link-shorten
+        title: Link Shorten
+        title.zh: 缩短链接
+        description: Shorten the link, unless mouse hover
+        description.zh: 将链接缩短为 emoji，鼠标经过才完整显示
+        type: class-toggle
+        default: true
+        addCommand: true
+
+*/
+
+
+.link-editing-mode .cm-link .cm-underline:not(:hover),
+.link-editing-mode .cm-hmd-internal-link .cm-underline {
+  pointer-events: none;
+}
+
+
+/* .markdown-reading-view */
+
+/* 隐藏过长的链接网址部分 */
+/* Src: https://forum.obsidian.md/t/how-to-hide-url-link-in-edit-mode-until-hovered-on/82827 */
+/* Hide the URL text and show the symbol */
+.link-shorten .markdown-source-view.is-live-preview div.cm-line .cm-string.cm-url:not(.cm-formatting) {
+    font-size: 0;
+    transition: font-size .2s cubic-bezier(1,0,.9,1) !important; 
+    transition-delay: 0.3s !important;
+    &::before {
+        content: '🔗';
+    }
+}
+
+/* Display a symbol after the URL */
+.link-shorten .markdown-source-view.is-live-preview div.cm-line .cm-string.cm-url:not(.cm-formatting)::before {
+    content: '🔗'; /* Replace with your desired symbol */
+    font-size: 1rem; /* Adjust font size as needed */
+    color: inherit; /* Inherit color from the parent element */
+/*    font-size: var(--font-adaptive-normal);*/
+}
+
+/* Ensure the URL text is visible when the cursor is over it */
+.link-shorten .markdown-source-view.is-live-preview div.cm-line .cm-string.cm-url:not(.cm-formatting):hover {
+    font-size: inherit;
+    transition: font-size 0.2s !important;
+/*  延迟一会儿再出现   */
+    transition-delay: 300ms !important; 
+}
+
+/* Hide the symbol when the cursor is over the URL */
+.link-shorten .markdown-source-view.is-live-preview div.cm-line .cm-string.cm-url:not(.cm-formatting):hover::before {
+    /* content: ''; */
+}
+
+
+/* 修改 wikilink 格式的 */
+/* Modified by Moy */
+.link-shorten .markdown-source-view.is-live-preview .cm-hmd-internal-link.cm-link-has-alias {
+    font-size: 0;
+    &:not(:hover){
+        transition: font-size .2s cubic-bezier(1,0,.9,1) !important; 
+        transition-delay: 0.3s !important;
+    }
+    &:hover {
+        font-size: inherit;
+        transition: font-size 0.2s !important;
+        transition-delay: 200ms !important;
+    }
+}
+
+/*.link-shorten .markdown-source-view.is-live-preview .cm-hmd-internal-link.cm-link-has-alias:hover {
+    font-size: inherit;
+    transition: font-size 0.1s !important; 
+}*/
+
+.link-shorten .markdown-source-view.is-live-preview .cm-hmd-internal-link.cm-link-has-alias:not(.cm-formatting)::before {
+    content: '📜'; /* Replace with your desired symbol 📄 */
+    font-size: 1rem; /* Adjust font size as needed */
+    color: inherit; /* Inherit color from the parent element */
+/*    font-size: var(--font-adaptive-normal);*/
+}
+
+/*===========================文字两端对齐==============================*/
+/* get more snippets at https://github.com/kmaasrud/awesome-obsidian */
+/* author: https://forum.obsidian.md/u/boyd/summary */
+/* source: https://forum.obsidian.md/t/meta-post-common-css-hacks/1978/25 */
+
+.cm-s-obsidian,
+.markdown-preview-view {
+  text-align: justify;
+  hyphens: auto;
+}
+
+
+/*-------------------------段、行间距(编辑/预览模式生效)----------------------------------*/
+
+/* 编辑模式下的行间距和段间距 */
+.cm-s-obsidian .cm-line {
+    line-height: 1.6; /* 行间距调整为1.5 */
+    padding-top: 1em; /* 段首间距调整为0.75em */
+    padding-bottom: 1em; /* 段尾间距调整为0.75em */
+}
+
+/* 编辑模式下非段落元素（如列表）的行间距 */
+.cm-s-obsidian .CodeMirror-line:not(.CodeMirror-line-wrapping) {
+    padding-bottom: 0.75em; /* 如果您希望这里有间距的话 */
+}
+
+/* 调整编辑模式下列表的间距，使其与预览模式类似 */
+.cm-s-obsidian .CodeMirror-line.CodeMirror-line-wrapping {
+    padding-top: 0.3em; /* 列表项之间的间距，根据需求调整 */
+    padding-bottom: 0.3em; /* 列表项之间的间距，根据需求调整 */
+}
+
+/* 编辑模式下调整标题后内容的上间距 */
+:root {
+    --header-bottom-spacing: 0em; /* 根据需要调整这个值 */
+  }
+  
+  .cm-s-obsidian .cm-line.HyperMD-header {
+    padding-bottom: var(--header-bottom-spacing) ; /* 使用 !important 确保样式覆盖 */
+  }
+  
+  .cm-s-obsidian .cm-line.HyperMD-header + .cm-line:not(.HyperMD-header):not(:has(>br:only-child)) {
+    padding-top: var(--header-bottom-spacing) ; /* 使用 !important 确保样式覆盖 */
+  }
+  
+
+/* 预览模式下的段落行间距和段间距 */
+.markdown-preview-view p {
+    line-height: 1.6; /* 行间距保持一致 */
+    margin-top: 0.5em; /* 段首间距保持一致 */
+    margin-bottom: 0.5em; /* 段尾间距保持一致 */
+}
+
+/* 预览模式下列表项的行间距和段间距 */
+.markdown-preview-view ul li, 
+.markdown-preview-view ol li {
+    line-height: 1.2em; /* 行间距保持一致 */
+    margin-top: 0.1em; /* 列表项之间的间距保持一致 */
+    margin-bottom: 0.1em; /* 列表项之间的间距保持一致 */
+}
+
+/* 预览模式下一级列表的整体边距 */
+.markdown-preview-view > ul, 
+.markdown-preview-view > ol {
+    margin-top: 0.75em; /* 一级列表与文本之间的间距保持一致 */
+    margin-bottom: 0.75em; /* 一级列表与文本之间的间距保持一致 */
+}
+
+/* 预览模式下嵌套列表的间距调整 */
+.markdown-preview-view ul ul, 
+.markdown-preview-view ul ol, 
+.markdown-preview-view ol ul, 
+.markdown-preview-view ol ol {
+    margin-top: 0.1em; /* 嵌套列表与上级列表项之间的间距保持一致 */
+    margin-bottom: 0.1em; /* 嵌套列表与上级列表项之间的间距保持一致 */
+}
+
+
+/*========================美化行内代码样式========================*/
+
+
+/* 通用行内代码基础样式 */
+.markdown-rendered code,
+.cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
+  font-weight: 500;
+  font-size: 0.95em;
+  padding: 0.15em 0.4em;
+  border-radius: 5px;
+  font-family: var(--font-monospace);
+  white-space: break-spaces;
+}
+
+/* 深色主题下的样式 */
+body.theme-dark .markdown-rendered code,
+body.theme-dark .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
+  background-color: #2e2e2e;
+  color: #f2cb6c;
+}
+
+/* 浅色主题下的样式 */
+body.theme-light .markdown-rendered code,
+body.theme-light .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-hmd-indented-code):not(.obsidian-search-match-highlight) {
+  background-color: #f4f4f4;
+  color: #b54000;
+}
+
+
+
+/* ======================== 嵌入embed样式 ：预览和编辑模式下的卡片样式======================= */
+
+/* === 基础嵌入块样式：阅读模式 === */
+.markdown-preview-view .markdown-embed,
+.markdown-preview-view .file-embed {
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 2px;
+  margin-top: 0px;
+  display: block;
+  background-color: var(--background-primary); /* 适配所有主题 */
+}
+
+/* === 实时预览模式下的嵌入块 === */
+.mod-cm6 .markdown-embed {
+  border-left: none;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 2px;
+  background-color: var(--background-primary); /* 实时预览也适配主题 */
+}
+
+/* === 隐藏嵌入标题和首个标题 === */
+.markdown-embed-title,
+.markdown-embed .mod-header + div > :is(h1, h2, h3, h4, h5, h6) {
+  display: none;
+}
+
+/* === 嵌入内容块常规样式 === */
+:is(.markdown-preview-view, .markdown-rendered) .markdown-embed-content {
+  padding: 0;
+  max-width: 100%;
+  overflow: auto;
+  background-color: inherit;
+}
+
+/* === Callout 中的嵌入块 === */
+.callout .markdown-embed-content {
+  max-height: 350px;
+  overflow: auto;
+  padding: 0;
+  background-color: inherit;
+  border-radius: 0;
+}
+
+/* === Canvas 节点中的嵌入块 === */
+.canvas-node-content .markdown-embed {
+  background-color: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+  padding: 0.5em;
+}
+
+/* === Excalidraw 中嵌入块兼容 === */
+.Excalidraw-Markdown .markdown-embed {
+  background-color: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 6px;
+  padding: 0.5em;
+}
+
+
+/*---------------------优化无序/有序列表在文字/标题后的间距--------------------------*/
+
+/* 1. 段落下方的间距（与后文的间距） */
+.markdown-rendered p {
+  margin-bottom: 1px;
+}
+
+/* 2. 无序列表（ul）与上下其它内容的间距 - 阅读模式 */
+.markdown-rendered ul.has-list-bullet {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+/* 3. 有序列表（ol）与上下其它内容的间距 - 阅读模式 */
+.markdown-rendered ol {
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+/* 4. 有序列表（ol）每项的行距与间距 - 阅读模式 */
+.markdown-rendered ol li {
+  line-height: 1.7em;       /* 行高 */
+  margin-bottom: 1px;       /* 每项之间的垂直间距 */
+}
+
+/* 5. 无序列表（ul）每项的行距与间距 - 阅读模式 */
+.markdown-rendered ul li {
+  line-height: 1.4em;
+  margin-top: 0px;
+  margin-bottom: 1px;
+}
+
+/* 6. 标题与其后的内容（包括列表）的间距 */
+.markdown-rendered h1,
+.markdown-rendered h2,
+.markdown-rendered h3,
+.markdown-rendered h4,
+.markdown-rendered h5,
+.markdown-rendered h6 {
+  margin-bottom: 0px;
+}
+
+
+/* 7. 编辑模式下的所有列表（有序 + 无序）行距和间距 */
+.mod-cm6 .HyperMD-list-line.cm-line {
+  line-height: 1.4em;
+  padding-top: 0.1em;
+  padding-bottom: 0.1em;
+  margin-bottom: 4px;
+}
+
+
+/* ========================  多彩有序列表 ======================= */
+body {
+    --rainbow-1: #E06C75;
+    --rainbow-2: #D19A66;
+    --rainbow-3: #98C379;
+    --rainbow-4: #56B6C2;
+    --rainbow-5: #AA7FB7;
+    --rainbow-6: #C678DD;
+    /* 彩色有序列表符号 */
+    ol li::marker,
+    ol li::before,
+    .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
+    .cm-formatting.cm-formatting-list.cm-formatting-list-ol,
+    .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
+        color: var(--rainbow-1);
+    }
+
+    :is(ul, ol) ol li::marker,
+    :is(ul, ol) ol li::before,
+    .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
+    .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
+        color: var(--rainbow-2);
+    }
+
+    :is(ul, ol) :is(ul, ol) ol li::marker,
+    :is(ul, ol) :is(ul, ol) ol li::before,
+    .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
+    .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
+        color: var(--rainbow-3);
+    }
+
+    :is(ul, ol) :is(ul, ol) :is(ul, ol) ol li::marker,
+    :is(ul, ol) :is(ul, ol) :is(ul, ol) ol li::before,
+    .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-4.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
+    .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-4.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
+        color: var(--rainbow-4);
+    }
+
+    :is(ul, ol)  :is(ul, ol) :is(ul, ol) :is(ul, ol) ol li::marker,
+    :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) ol li::before,
+    .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-5.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
+    .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-5.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
+        color: var(--rainbow-5);
+    }
+
+    :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) :is(ul, ol) ol li::marker,
+    :is(ul, ol)  :is(ul, ol) :is(ul, ol) :is(ul, ol)  :is(ul, ol) ol li::before,
+    .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-6.cm-line div.cm-fold-indicator ~ span.cm-formatting.cm-formatting-list-ol,
+    .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-6.cm-line span.cm-hmd-list-indent ~ span.cm-formatting.cm-formatting-list-ol {
+        color: var(--rainbow-6);
+    }
+
+    /* 彩色无序列表符号 */
+    --list-ul-marker-color:var(--rainbow-1);
+
+    .has-list-bullet .list-bullet::after,
+    .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
+    .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-1.cm-line>span.cm-formatting:first-of-type .list-bullet::after {
+        color: var(--rainbow-1);
+    }
+
+    .has-list-bullet .has-list-bullet .list-bullet::after,
+    .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
+    .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-2.cm-line span.cm-hmd-list-indent ~ span.cm-formatting .list-bullet::after {
+        color: var(--rainbow-2);
+    }
+
+    .has-list-bullet .has-list-bullet .has-list-bullet .list-bullet::after,
+    .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
+    .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-3.cm-line span.cm-hmd-list-indent ~ span.cm-formatting .list-bullet::after {
+        color: var(--rainbow-3);
+    }
+
+    .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .list-bullet::after,
+    .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-4.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
+    .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-4.cm-line span.cm-hmd-list-indent ~ span.cm-formatting .list-bullet::after {
+        color: var(--rainbow-4);
+    }
+
+    .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .list-bullet::after,
+    .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-5.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
+    .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-5.cm-line span.cm-hmd-list-indent ~ span.cm-formatting .list-bullet::after {
+        color: var(--rainbow-5);
+    }
+
+    .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .has-list-bullet .list-bullet::after,
+    .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-6.cm-line div.cm-fold-indicator ~ span.cm-formatting .list-bullet::after,
+    .markdown-source-view.mod-cm6 .HyperMD-list-line.HyperMD-list-line-6.cm-line span.cm-hmd-list-indent ~ span.cm-formatting .list-bullet::after {
+        color: var(--rainbow-6);
+    } 
+
+    /* 彩色层级线 */
+    :is(ul, ol) > li,
+    .cm-hmd-list-indent .cm-indent:nth-child(1)::before {
+    --indentation-guide-color: var(--rainbow-1);
+    }
+
+    :is(ul ul, ol ol) > li,
+    .cm-hmd-list-indent .cm-indent:nth-child(2)::before {
+    --indentation-guide-color: var(--rainbow-2);
+    }
+
+    :is(ul ul ul, ol ol ol) > li,
+    .cm-hmd-list-indent .cm-indent:nth-child(3)::before {
+    --indentation-guide-color: var(--rainbow-3);
+    }
+
+    :is(ul ul ul ul, ol ol ol ol) > li,
+    .cm-hmd-list-indent .cm-indent:nth-child(4)::before {
+    --indentation-guide-color: var(--rainbow-4);
+    }
+
+    :is(ul ul ul ul ul, ol ol ol ol ol) > li,
+    .cm-hmd-list-indent .cm-indent:nth-child(5)::before {
+    --indentation-guide-color: var(--rainbow-5);
+    }
+
+    :is(ul ul ul ul ul ul, ol ol ol ol ol ol) > li,
+    .cm-hmd-list-indent .cm-indent:nth-child(6)::before {
+    --indentation-guide-color: var(--rainbow-6);
+    }
+}
+
+
+/*---------------------下划线样式（绿色下划线）--------------------------*/
+
+u {
+  text-decoration: none !important; /* 去掉默认的下划线 */
+  border-bottom: 0.1px solid #529808 !important; /* 设置下划线颜色 */
+  padding-bottom: 0em !important; /* 调整下划线与文字之间的距离 */
+  display: inline-block !important; /* 确保 padding-bottom 生效 */
+}

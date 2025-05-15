@@ -1,0 +1,83 @@
+{
+  "pictureBedFlag": false,
+  "pictureBedSetting": {
+    "url": "http://127.0.0.1:36677/upload"
+  },
+  "pictureBedType": "PicGo",
+  "arraySettings": [
+    {
+      "arrayName": "ArrayType1",
+      "arrayStart": "",
+      "arrayElementStart": "[[",
+      "arraySpiltV2": ",",
+      "arrayElementEnd": "]]",
+      "arrayEnd": "",
+      "index": 1
+    },
+    {
+      "arrayName": "ArrayType2",
+      "arrayStart": "",
+      "arrayElementStart": "",
+      "arraySpiltV2": " / ",
+      "arrayElementEnd": "",
+      "arrayEnd": "",
+      "index": 2
+    }
+  ],
+  "onlineSettingsFileName": "obsidian_douban_plugin_online_settings.json",
+  "onlineSettingsGistId": "",
+  "movieTemplateFile": "Templates/T-电影模板.md",
+  "bookTemplateFile": "Templates/T-书籍模板.md",
+  "musicTemplateFile": "",
+  "noteTemplateFile": "",
+  "gameTemplateFile": "",
+  "teleplayTemplateFile": "Templates/T-电影模板.md",
+  "searchUrl": "https://www.douban.com/search?q=",
+  "dateFormat": "yyyy/MM/DD",
+  "timeFormat": "HH:mm:ss",
+  "arrayStart": "",
+  "arrayElementStart": "\\n  - ",
+  "arraySpiltV2": "",
+  "arrayElementEnd": "",
+  "arrayEnd": "",
+  "personNameMode": "CH",
+  "dataFilePath": "06Movies",
+  "dataFileNamePath": "/{{title}}",
+  "statusBar": true,
+  "debugMode": false,
+  "customProperties": [
+    {
+      "name": "myRating",
+      "value": "{{myRating}}",
+      "field": "all"
+    },
+    {
+      "name": "myComment",
+      "value": "{{myComment}}",
+      "field": "all"
+    },
+    {
+      "name": "myType",
+      "value": "music",
+      "field": "music"
+    },
+    {
+      "name": "myType",
+      "value": "note",
+      "field": "note"
+    }
+  ],
+  "loginCookiesContent": "",
+  "loginHeadersContent": "",
+  "cacheImage": false,
+  "cacheHighQuantityImage": true,
+  "attachmentPath": "assets",
+  "syncHandledDataArray": [],
+  "scoreSetting": {
+    "starFull": "⭐",
+    "starEmpty": "☆",
+    "displayStarEmpty": false,
+    "maxStar": 5
+  },
+  "searchDefaultType": "all"
+}

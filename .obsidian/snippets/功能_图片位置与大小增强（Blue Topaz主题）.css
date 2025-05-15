@@ -1,0 +1,407 @@
+/*=========================图片位置与大小增强（Blue Topaz主题）开始=========================*/
+
+/*=================图片位置排列增强==================/
+/*-- reduce left padding --*/
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting.cm-formatting-header {
+  font-size: 0.6rem !important;
+  opacity: 0.5;
+}
+
+div.CodeMirror-activeline .CodeMirror-line span.cm-formatting.cm-formatting-header {
+  font-size: 0.6rem !important;
+  opacity: 1;
+}
+
+span.cm-formatting.cm-formatting-header {
+  opacity: 0.45;
+}
+
+body.image-border img{
+  border: 1px solid rgba(var(--mono-rgb-100),0.1);
+  filter: drop-shadow(0px 0px 3px rgba(var(--mono-rgb-100),0.2));
+}
+
+/* images : reduce displayed size of embedded files, zoom on hover */
+body:not(.obsidian-default-image) :is(.markdown-preview-view,.markdown-rendered)  :not(.canvas-node-content)> img:not([class*="emoji"]) {
+  /*max-width: var(--image-max-width);*/
+  margin-left: auto;
+  margin-right: auto;
+}
+body:not(.obsidian-default-image) .print :is(.markdown-preview-view,.markdown-rendered) img:not([class*="emoji"]) {
+  display: block;
+}
+body:not(.obsidian-default-image) .view-content  :not(.canvas-node-content)>img:not([class*="emoji"]) {
+  cursor: zoom-in;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+body:not(.image-zoom) .markdown-reading-view button img,
+body:not(.image-zoom) .markdown-reading-view .callout-title-inner img {
+  pointer-events: none;
+}
+
+body:not(.image-zoom) .markdown-reading-view img:not([class*="emoji"]):active,
+.workspace-leaf-content[data-type="image"] img:active {
+  cursor: zoom-out !important;
+  position: fixed;
+  object-fit: contain;
+  max-height: 100%;
+  max-width: 100%;
+  height: 100%;
+  width: 100%;
+  margin: 1px auto 0;
+  padding: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 200;
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4MCIgaGVpZ2h0PSI4MCIgdmlld0JveD0iMCAwIDgwIDgwIj4KICA8ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgPHJlY3Qgd2lkdGg9IjgwIiBoZWlnaHQ9IjgwIiBmaWxsPSIjRjJGNEY2Ii8+CiAgICA8ZyBmaWxsPSIjRkZGIj4KICAgICAgPHJlY3Qgd2lkdGg9IjIiIGhlaWdodD0iNzkiIHg9Ijc4Ii8+CiAgICAgIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjE5IiB4PSIxOSIvPgogICAgICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxOSIgeD0iMzkiLz4KICAgICAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTkiIHg9IjU5Ii8+CiAgICAgIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjE5IiB4PSIxOSIgeT0iMjAiLz4KICAgICAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTkiIHg9IjM5IiB5PSIyMCIvPgogICAgICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxOSIgeD0iNTkiIHk9IjIwIi8+CiAgICAgIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjE5IiB4PSIxOSIgeT0iNDAiLz4KICAgICAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTkiIHg9IjM5IiB5PSI0MCIvPgogICAgICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxOSIgeD0iNTkiIHk9IjQwIi8+CiAgICAgIDxyZWN0IHdpZHRoPSIxIiBoZWlnaHQ9IjE5IiB4PSIxOSIgeT0iNjAiLz4KICAgICAgPHJlY3Qgd2lkdGg9IjEiIGhlaWdodD0iMTkiIHg9IjM5IiB5PSI2MCIvPgogICAgICA8cmVjdCB3aWR0aD0iMSIgaGVpZ2h0PSIxOSIgeD0iNTkiIHk9IjYwIi8+CiAgICAgIDxyZWN0IHdpZHRoPSI3OSIgaGVpZ2h0PSIxIiB5PSIxOSIvPgogICAgICA8cmVjdCB3aWR0aD0iNzkiIGhlaWdodD0iMSIgeT0iMzkiLz4KICAgICAgPHJlY3Qgd2lkdGg9Ijc5IiBoZWlnaHQ9IjEiIHk9IjU5Ii8+CiAgICA8L2c+CiAgICA8cmVjdCB3aWR0aD0iODAiIGhlaWdodD0iMiIgeT0iNzgiIGZpbGw9IiNGRkYiLz4KICA8L2c+Cjwvc3ZnPgo=");
+}
+
+body:not(.obsidian-default-image) .internal-embed.image-embed.is-loaded img:not([class*="emoji"]) {
+  /*max-width: var(--image-max-width);*/
+  margin: 3px auto;
+  display: block;
+}
+
+.internal-embed[alt$="inline"],
+.internal-embed[alt$="Inline"],
+.internal-embed[alt$="INLINE"],
+.internal-embed[alt$="inl"] {
+  display: inline ;
+}
+
+body:not(.obsidian-default-image) .markdown-source-view.mod-cm6 img:not([class*="emoji"]) {
+  display: block;
+  margin: auto !important;
+  cursor: help;
+}
+
+body.hide-vault-name .nav-folder.mod-root>.nav-folder-title {
+  display: none;
+}
+
+body.file-name-wrapped .nav-file-title-content,
+body.file-name-wrapped .nav-folder-title-content {
+  white-space: normal;
+}
+
+.nav-file-title-content.is-being-renamed {
+  margin-left: 0px;
+  text-indent: 0px;
+  color: black !important;
+}
+
+/* ============ */
+/*image position*/
+/* ============ */
+img[alt$="left"]:not([class*="emoji"]),
+img[alt$="Left"]:not([class*="emoji"]),
+img[alt$="LEFT"]:not([class*="emoji"]),
+img[alt$="L"]:not([class*="emoji"]),
+.markdown-source-view.mod-cm6 img[alt$="left"]:not([class*="emoji"]),
+.markdown-source-view.mod-cm6 img[alt$="Left"]:not([class*="emoji"]),
+.markdown-source-view.mod-cm6 img[alt$="LEFT"]:not([class*="emoji"]),
+.markdown-source-view.mod-cm6 img[alt$="L"]:not([class*="emoji"]),
+.internal-embed.image-embed.is-loaded[alt$="left"] img[alt$="left"]:not([class*="emoji"]),
+.internal-embed.image-embed.is-loaded[alt$="Left"] img[alt$="Left"]:not([class*="emoji"]),
+.internal-embed.image-embed.is-loaded[alt$="LEFT"] img[alt$="LEFT"]:not([class*="emoji"]),
+.internal-embed.image-embed.is-loaded[alt$="L"] img[alt$="L"]:not([class*="emoji"]),
+body:not(.image-zoom) .view-content img[alt$="left"]:not([class*="emoji"]),
+body:not(.image-zoom) .view-content img[alt$="Left"]:not([class*="emoji"]),
+body:not(.image-zoom) .view-content img[alt$="LEFT"]:not([class*="emoji"]),
+body:not(.image-zoom) .view-content img[alt$="L"]:not([class*="emoji"]) {
+  margin: auto !important;
+  margin-left: 0 !important;
+  display: block;
+}
+
+img[alt$="right"]:not([class*="emoji"]),
+img[alt$="Right"]:not([class*="emoji"]),
+img[alt$="RIGHT"]:not([class*="emoji"]),
+img[alt$="R"]:not([class*="emoji"]),
+.markdown-source-view.mod-cm6 img[alt$="right"]:not([class*="emoji"]),
+.markdown-source-view.mod-cm6 img[alt$="Right"]:not([class*="emoji"]),
+.markdown-source-view.mod-cm6 img[alt$="RIGHT"]:not([class*="emoji"]),
+.markdown-source-view.mod-cm6 img[alt$="R"]:not([class*="emoji"]),
+.internal-embed.image-embed.is-loaded[alt$="right"] img[alt$="right"]:not([class*="emoji"]),
+.internal-embed.image-embed.is-loaded[alt$="Right"] img[alt$="Right"]:not([class*="emoji"]),
+.internal-embed.image-embed.is-loaded[alt$="RIGHT"] img[alt$="RIGHT"]:not([class*="emoji"]),
+.internal-embed.image-embed.is-loaded[alt$="R"] img[alt$="R"]:not([class*="emoji"]),
+body:not(.image-zoom) .view-content img[alt$="right"]:not([class*="emoji"]),
+body:not(.image-zoom) .view-content img[alt$="Right"]:not([class*="emoji"]),
+body:not(.image-zoom) .view-content img[alt$="RIGHT"]:not([class*="emoji"]),
+body:not(.image-zoom) .view-content img[alt$="R"]:not([class*="emoji"]) {
+  margin: auto !important;
+  margin-right: 0 !important;
+  display: block;
+}
+
+img[alt$="centre"]:not([class*="emoji"]),
+img[alt$="center"]:not([class*="emoji"]),
+img[alt$="CENTRE"]:not([class*="emoji"]),
+img[alt$="CENTER"]:not([class*="emoji"]),
+img[alt$="Center"]:not([class*="emoji"]),
+img[alt$="Centre"]:not([class*="emoji"]),
+img[alt$="C"]:not([class*="emoji"]),
+.markdown-source-view.mod-cm6 img[alt$="centre"]:not([class*="emoji"]),
+.markdown-source-view.mod-cm6 img[alt$="center"]:not([class*="emoji"]),
+.markdown-source-view.mod-cm6 img[alt$="Centre"]:not([class*="emoji"]),
+.markdown-source-view.mod-cm6 img[alt$="Center"]:not([class*="emoji"]),
+.markdown-source-view.mod-cm6 img[alt$="CENTRE"]:not([class*="emoji"]),
+.markdown-source-view.mod-cm6 img[alt$="CENTER"]:not([class*="emoji"]),
+.markdown-source-view.mod-cm6 img[alt$="C"]:not([class*="emoji"]),
+.internal-embed.image-embed.is-loaded[alt$="centre"] img[alt$="right"]:not([class*="emoji"]),
+.internal-embed.image-embed.is-loaded[alt$="center"] img[alt$="Right"]:not([class*="emoji"]),
+.internal-embed.image-embed.is-loaded[alt$="Centre"] img[alt$="RIGHT"]:not([class*="emoji"]),
+.internal-embed.image-embed.is-loaded[alt$="Center"] img[alt$="R"]:not([class*="emoji"]),
+.internal-embed.image-embed.is-loaded[alt$="CENTRE"] img[alt$="Right"]:not([class*="emoji"]),
+.internal-embed.image-embed.is-loaded[alt$="CENTER"] img[alt$="RIGHT"]:not([class*="emoji"]),
+.internal-embed.image-embed.is-loaded[alt$="C"] img[alt$="R"]:not([class*="emoji"]),
+body:not(.image-zoom) .view-content img[alt$="centre"]:not([class*="emoji"]),
+body:not(.image-zoom) .view-content img[alt$="center"]:not([class*="emoji"]),
+body:not(.image-zoom) .view-content img[alt$="Centre"]:not([class*="emoji"]),
+body:not(.image-zoom) .view-content img[alt$="Center"]:not([class*="emoji"]),
+body:not(.image-zoom) .view-content img[alt$="CENTRE"]:not([class*="emoji"]),
+body:not(.image-zoom) .view-content img[alt$="CENTER"]:not([class*="emoji"]),
+body:not(.image-zoom) .view-content img[alt$="C"]:not([class*="emoji"]) {
+  margin: auto !important;
+  display: block;
+}
+
+img[alt$="inline"]:not([class*="emoji"]),
+img[alt$="Inline"]:not([class*="emoji"]),
+img[alt$="INLINE"]:not([class*="emoji"]),
+img[alt$="inl"]:not([class*="emoji"]),
+img[alt$="INL"]:not([class*="emoji"]),
+img[alt$="Inl"]:not([class*="emoji"]) {
+  display: inline !important;
+  padding: 0.05em 0.05em !important;
+  vertical-align: bottom;
+}
+
+img[alt$="inlineL"]:not([class*="emoji"]),
+img[alt$="InlineL"]:not([class*="emoji"]),
+img[alt$="INLINEL"]:not([class*="emoji"]),
+img[alt$="inlL"]:not([class*="emoji"]),
+img[alt$="INLL"]:not([class*="emoji"]),
+img[alt$="InlL"]:not([class*="emoji"]) {
+  float: left;
+  padding: 0 0.05em 0.05em 0 !important;
+}
+
+img[alt$="inlineR"]:not([class*="emoji"]),
+img[alt$="InlineR"]:not([class*="emoji"]),
+img[alt$="INLINER"]:not([class*="emoji"]),
+img[alt$="inlR"]:not([class*="emoji"]),
+img[alt$="INLR"]:not([class*="emoji"]),
+img[alt$="InlR"]:not([class*="emoji"]) {
+  float: right;
+  padding: 0 0 0.05em 0.05em !important;
+}
+
+img.excalidraw-svg-right,
+img.excalidraw-svg-Right,
+img.excalidraw-svg-RIGHT,
+img.excalidraw-svg-R {
+  float: right !important;
+}
+
+img.excalidraw-svg-left,
+img.excalidraw-svg-Left,
+img.excalidraw-svg-LEFT,
+img.excalidraw-svg-L {
+  float: left !important;
+}
+
+img.excalidraw-svg-right,
+img.excalidraw-svg-Right,
+img.excalidraw-svg-RIGHT,
+img.excalidraw-svg-R,
+img.excalidraw-svg-left,
+img.excalidraw-svg-Left,
+img.excalidraw-svg-LEFT,
+img.excalidraw-svg-L {
+  display: table;
+  width: 100%
+}
+
+/*=================图片自适应横排==================/
+/* image-grid-1 */
+/* adapted from https://github.com/Lithou/Sandbox/blob/main/.obsidian/snippets/pub-Image%20Flags.css */
+body span[alt*="+grid"] {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 5px;
+}
+
+.markdown-source-view.is-live-preview .internal-embed.image-embed.is-loaded[alt*="+grid"] {
+  display: inline-table;
+  vertical-align: middle;
+  max-width: 25%;
+}
+
+/* cssclass: image-grid */
+/* image-grid-2 */
+/* adapted from https://github.com/iEchoxu/obsidian_orange/blob/main/.obsidian/snippets/image-grid.css */
+/* description.zh: 在图片格式里添加 🔸|+grid 使复数的图片排成一行, e.g. ![[*.jpg|+grid]] 。或者在YAML种输入 ❗cssclass：img-grid❗最好安装 Contextual Typography 插件实现更好的并排效果 */
+
+.img-grid :is(.markdown-preview-section,.markdown-rendered)>div>p>.image-embed[alt*="."]:last-child {
+  padding-right: 0;
+}
+.img-grid :is(.markdown-preview-section,.markdown-rendered)>div>p>.image-embed[alt*="."]:first-child {
+  padding-left: 0;
+}
+.img-grid :is(.markdown-preview-section,.markdown-rendered)>div hr {
+  width: 100%;
+}
+.img-grid span.image-embed[alt*="."] {
+  display: table-cell;
+}
+.img-grid img[alt*="."] {
+  max-height: 100vh;
+  object-fit: cover;
+}
+
+.img-grid .markdown-preview-section .el-embed-image img:not([width]),.img-grid .markdown-preview-section video{
+  width:100%
+}
+.img-grid .markdown-preview-section>.el-embed-image>p{
+  display:grid;
+  grid-column-gap:0.5rem;
+  grid-row-gap:0;
+  grid-template-columns:repeat(auto-fit,minmax(0,1fr))
+}
+.img-grid .markdown-preview-section>.el-embed-image>p>br{
+  display:none
+}
+.img-grid .markdown-preview-section>.el-embed-image>p>img{
+  object-fit:cover;
+  align-self:stretch
+}
+.img-grid .markdown-preview-section>.el-embed-image>p>.internal-embed img{
+  object-fit:cover;
+  height:100%
+}
+
+.img-grid-ratio .markdown-preview-section>.el-embed-image>p>.internal-embed img
+,.img-grid.img-grid-ratio .markdown-preview-section>.el-embed-image>p>.internal-embed img{
+  object-fit:contain;
+  height:100%;
+  align-self:center
+}
+@media (max-width:400pt){
+  .el-embed-image{
+    margin-top:.25rem
+  }
+  .img-grid .markdown-preview-section>.el-embed-image>p{
+    grid-column-gap:0.25rem
+  }
+}
+
+/* img captions */
+/* modified from Discordian theme by @radekkozak */
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="center"],
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="centre"],
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="Centre"],
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="Center"],
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="CENTRE"],
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="CENTER"],
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="C"] {
+  clear: both;
+  margin: 0 auto !important;
+  width: fit-content;
+  display: block;
+}
+
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="center"]::after,
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="centre"]::after,
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="Centre"]::after,
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="Center"]::after,
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="CENTRE"]::after,
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="CENTER"]::after,
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="C"]::after {
+  content: attr(alt);
+  margin: 0.5rem 0;
+  display: block;
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="left"],
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="LEFT"],
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="Left"],
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="L"] {
+  position: relative;
+  float: left;
+  margin: 0.5rem 1rem 0.5rem 0 !important;
+  clear: both;
+  display: table;
+}
+
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="left"]::after,
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="LEFT"]::after,
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="Left"]::after,
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="L"]::after {
+  content: attr(alt);
+  padding: 0 0.5rem;
+  margin: 0.5rem 0 1rem;
+  display: table-caption;
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="right"],
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="RIGHT"],
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="Right"],
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="R"] {
+  position: relative;
+  float: right;
+  margin: 0.5rem 0 0.5rem 1rem !important;
+  clear: both;
+  display: table;
+}
+
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="right"]::after,
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="RIGHT"]::after,
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="Right"]::after,
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="R"]::after {
+  content: attr(alt);
+  padding: 0 0.5rem;
+  margin: 0.5rem 0 1rem;
+  display: table-caption;
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="inline"],
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="Inline"],
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="INLINE"],
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="inl"],
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="INL"],
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="Inl"] {
+  clear: both;
+  margin: 0 auto !important;
+  width: fit-content;
+  display: inline-table;
+}
+
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="inline"]::after,
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="Inline"]::after,
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="INLINE"]::after,
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="inl"]::after,
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="INL"]::after,
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view.mod-cm6.is-live-preview) .image-embed[src$="Inl"]::after {
+  content: attr(alt);
+  padding: 0 0.7em;
+  margin: 0.5rem 0;
+  display: block;
+  caption-side: bottom;
+  text-align: center;
+  font-size: 0.85rem;
+}
+/*===================图片位置与大小增强（Blue Topaz主题） 结束==================*/

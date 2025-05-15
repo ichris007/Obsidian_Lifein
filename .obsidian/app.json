@@ -1,0 +1,19 @@
+{
+  "alwaysUpdateLinks": true,
+  "newFileLocation": "current",
+  "attachmentFolderPath": "Attachments",
+  "showFrontmatter": true,
+  "readableLineLength": false,
+  "showLineNumber": true,
+  "pdfExportSettings": {
+    "includeName": false,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  },
+  "showUnsupportedFiles": false,
+  "propertiesInDocument": "visible",
+  "spellcheck": false,
+  "showInlineTitle": false
+}

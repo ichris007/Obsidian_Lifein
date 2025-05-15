@@ -1,0 +1,13 @@
+{
+  "pinned": [
+    "editing-toolbar:editor:insert-link",
+    "editing-toolbar:editor:insert-embed",
+    "editing-toolbar:codeblock",
+    "quickadd:choice:cafc95fd-2a61-4d66-8269-b261c4fab5ab",
+    "templater-obsidian:create-new-note-from-template",
+    "templater-obsidian:insert-templater",
+    "obsidian-tasks-plugin:edit-task",
+    "quickadd:choice:1ac1b6f0-9e20-43e9-9f5a-7642cb062b1d",
+    "quickadd:choice:88491416-b31b-47df-b683-1dec62a1a939"
+  ]
+}
