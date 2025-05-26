@@ -19,7 +19,7 @@ Lifein适合这些人：
 - 想建立属于自己的知识体系和人生导航系统的人
 - 对Obsidian感兴趣，但不知道如何入门的人
 
-这次发布的[Lifein](https://github.com/ichris007/Obsidian_Lifein)v0.5是我现有系统的基础部分，接下来会陆续更新更多功能。
+[2025-05-26](https://github.com/ichris007/Obsidian_Lifein/blob/main/Settings/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97.md)：[Lifein](https://github.com/ichris007/Obsidian_Lifein)已经更新到了v0.6.0，接下来会陆续更新更多功能。
 
 也欢迎大家提出需求和相互交流。
 
@@ -29,14 +29,15 @@ Lifein适合这些人：
 - *系统基本都是模块化的，可以根据自己的需求灵活调整。* 希望你把它变成自己的成长系统。
 
 ### 1）核心功能和亮点
-[更新日志](https://github.com/ichris007/Obsidian_Lifein/blob/main/Settings/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97.md)：
+
 - 系统构建：聚焦在人生三大领域系统构建聚焦在人生三大领域：工作、生活、个人成长，并结合项目管理、任务管理、日记系统、内容创作系统、书籍/读书笔记管理、影视剧/观后感记录、习惯追踪、知识管理，打造一个一站式的数字空间。
-- 本次示例库包含功能：日记及周回顾、项目管理、任务管理、习惯追踪、书籍管理、影视剧管理；
+- 本次示例库包含功能：日记及周回顾、项目管理、任务管理、习惯追踪、书籍管理、影视剧管理、人脉管理；
 	- 卡片式任务管理面版，清晰查看、追踪待办任务；
 	- 简单清晰的日记模板，让每天的输入有法可循；
 	- 自动化分类的周回顾，无压复盘；
 	- 书籍库、影视库自动添加新书/新剧，畅游知识海洋、纵览影视佳片；
-	- 轻易上手的知识管理体验，从信息收集到知识关联，消除信息孤岛，沉浸式、体系化学习；
+	- 微信读书同步书单、划线高亮和评论，漂亮、简洁的布局让你回顾亮点更容易，书单和笔记热力图让你读书更有成就感；
+	- 轻易上手的知识管理体验，从信息收集到知识关联，消除信息孤岛，沉浸式、体系化学习。
 - 其它亮点
 <details>	
 
@@ -60,6 +61,8 @@ Lifein适合这些人：
 - 给库（Vault）和新建标签页（New Tab）加logo和背景图
  </details>
 
+[更新日志 2025-05-26](https://github.com/ichris007/Obsidian_Lifein/blob/main/Settings/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97.md)
+
 ### 2）本库的系统配置和说明
 使用本系统前，请了解系统配置和说明，便于更好地上手。
 - [目录结构及功能指南](https://github.com/ichris007/Obsidian_Lifein/blob/main/Settings/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE/Lifein_%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84%E5%8F%8A%E5%8A%9F%E8%83%BD%E6%8C%87%E5%8D%97.md)
@@ -77,6 +80,11 @@ Lifein适合这些人：
 你现在准备动手了，了解以下内容用起来更快！
 - [一些技巧](https://github.com/ichris007/Obsidian_Lifein/blob/main/Settings/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE/%E4%B8%80%E4%BA%9B%E6%8A%80%E5%B7%A7.md)
 - [常见问题](https://github.com/ichris007/Obsidian_Lifein/blob/main/Settings/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98.md)
+
+一些使用教程（陆续补充）
+- [Lifein_习惯追踪代码说明](https://github.com/ichris007/Obsidian_Lifein/blob/main/Settings/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE/%E6%A8%A1%E5%9D%97%E5%92%8C%E4%BB%A3%E7%A0%81%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/Lifein_%E4%B9%A0%E6%83%AF%E8%BF%BD%E8%B8%AA%E4%BB%A3%E7%A0%81%E8%AF%B4%E6%98%8E.md)
+- [微信阅读导入模板使用方法](https://github.com/ichris007/Obsidian_Lifein/blob/main/Settings/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE/%E6%A8%A1%E5%9D%97%E5%92%8C%E4%BB%A3%E7%A0%81%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/%E5%BE%AE%E4%BF%A1%E9%98%85%E8%AF%BB%E5%AF%BC%E5%85%A5%E6%A8%A1%E6%9D%BF%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.md)
+- [通过点击按钮改变笔记状态](https://github.com/ichris007/Obsidian_Lifein/blob/main/Settings/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE/%E6%A8%A1%E5%9D%97%E5%92%8C%E4%BB%A3%E7%A0%81%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/%E9%80%9A%E8%BF%87%E7%82%B9%E5%87%BB%E6%8C%89%E9%92%AE%E6%94%B9%E5%8F%98%E7%AC%94%E8%AE%B0%E7%8A%B6%E6%80%81.md)
 
 ### 4）声明 
 - 本系统主要基于Minimal主题进行布局、样式和配色配置，特别是深色模式显示效果更好。（个别配置在浅色模式下显示可能不完美,不影响使用）
@@ -116,4 +124,12 @@ Lifein适合这些人：
 
 ![我的影视库1_深色](https://github.com/user-attachments/assets/d4d6c3b1-ed48-4764-9b04-bd71782396bd)
 ![我的影视库2_深色](https://github.com/user-attachments/assets/dae1f9f4-3204-413b-9a94-a576c8411b55)
+</details>
+
+#### 微信读书
+<details>
+<summary>点击看详情</summary>
+
+![微信读书管理面板](https://github.com/ichris007/Obsidian_Lifein/blob/main/Attachments/%E5%BE%AE%E4%BF%A1%E9%98%85%E8%AF%BB%E5%AF%BC%E5%85%A5%E6%A8%A1%E6%9D%BF%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%9520250525-2.jpg)
+![微信读书导入书籍页面](https://github.com/ichris007/Obsidian_Lifein/blob/main/Attachments/%E5%BE%AE%E4%BF%A1%E9%98%85%E8%AF%BB%E5%AF%BC%E5%85%A5%E6%A8%A1%E6%9D%BF%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%9520250525-1.jpg)
 </details>
