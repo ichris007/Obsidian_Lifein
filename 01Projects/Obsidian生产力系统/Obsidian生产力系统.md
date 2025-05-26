@@ -12,12 +12,13 @@ aliases:
 stars: 3星级
 number headings: auto, first-level 2, max 6, contents ^toc, skip ^skipped, start-at 1, _.1.1
 created date: 2025-02-24 18:33
-modified date: 2025-05-07 19:03:11
-project: 
+modified date: 2025-05-23 18:54:23
+project:
+  - "[[Obsidian生产力系统]]"
 start_date: 2025-02-24T18:18:00
 stop_date: 2025-10-30
-showDone: true
-cssclasses: []
+showDone: false
+cssclasses: 
 ---
 
 ## 任务清单^skipped
@@ -307,7 +308,7 @@ table without id
   stop_date AS 停止时间,
   round(max((date(today) - date(start_date)).days, 0)) + "天" AS 已启动
 from ""
-where contains(project, link(this.file.name)) AND contains(tags, "Project") AND file.name != this.file.name
+where project AND contains(project, link(this.file.name)) AND icontains(tags, "Project") AND file.name != this.file.name
 sort stars desc, file.ctime desc
 ```
 

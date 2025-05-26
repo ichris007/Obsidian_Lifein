@@ -56,7 +56,7 @@ table without id
   stop_date AS 停止时间,
   round(max((date(today) - date(start_date)).days, 0)) + "天" AS 已启动
 from ""
-where contains(project, link(this.file.name)) AND contains(tags, "Project")
+where project AND contains(project, link(this.file.name)) AND contains(tags, "Project")
 sort stars desc, file.ctime desc
 ```
 
@@ -72,7 +72,7 @@ table without id
   stop_date AS 停止时间,
   round(max((date(today) - date(start_date)).days, 0)) + "天" AS 已启动
 from ""
-where project = this.project AND contains(tags, "Project") AND file.name != this.file.name
+where project AND project = this.project AND contains(tags, "Project") AND file.name != this.file.name
 sort stars desc, file.ctime desc
 ```
 

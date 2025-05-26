@@ -27,7 +27,7 @@ tags:
 ## 1 内容简介
 **{{title}} [{{datePublished}}] | [ {{time}} ]** ![bookcover|inlR|220]({{imageData.url}})
 {{desc}}
-## 2 心得体会
+## 2 观影体会
 
 <% await tp.file.move("/06Movies/" + tp.file.title) %>
 

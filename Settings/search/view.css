@@ -1,0 +1,282 @@
+
+    .flex-container {
+        display: flex;
+        flex-direction: column;       /* 垂直排列 */
+        gap: 12px;                   /* 行间距 */
+        padding: 8px;            /* 设置容器内边距 */
+        height: 100%;        /* 设置容器高度，例如 100% */
+        width: 100%;          /* 设置容器宽度，例如 100% */
+        /* background-color: #f9f9f9;  设置容器背景颜色 */
+        overflow: auto;        /* 如果内容溢出，添加滚动条 */
+        border-radius: 0px;    /* 设置容器圆角 */
+        border: 1px solid #ccc; 
+    }
+    
+
+    .inputFilter-field {
+        padding: 8px;
+        width: 500px;          /* 设置容器宽度，例如 100% */
+        border: 1px solid #ccc;
+        margin-left: -5px;   /* 左边距 */
+        margin-right: 10px;  /* 右边距 */
+        border-radius: 4px;
+    }
+
+    .inputFilter-row4-01 {
+        padding: 8px;
+        width: 280px;          /* 设置容器宽度，例如 100% */
+        border: 1px solid #ccc;
+        margin-left: -20px;   /* 左边距 */
+        margin-right: 10px;  /* 右边距 */
+        border-radius: 4px;
+    }
+
+    .inputFilter-row4-02 {
+        padding: 8px;
+        width: 160px;          /* 设置容器宽度，例如 100% */
+        border: 1px solid #ccc;
+        margin-left: 0px;   /* 左边距 */
+        margin-right: -30px;  /* 右边距 */
+        border-radius: 4px;
+    }
+
+	.inputFilter-row4-03 {
+        padding: 8px;
+        width: 250px;          /* 设置容器宽度，例如 100% */
+        border: 1px solid #ccc;
+        margin-left: -5px;   /* 左边距 */
+        margin-right: 10px;  /* 右边距 */
+        border-radius: 4px;
+    }
+
+	
+    .label-row4-00 {
+        font-size: 14px; /* 字体大小 */
+        color: yellow; /* 字体颜色 */
+        margin-right: 1px;   /* 与输入框的间距 */
+        margin-left: 10px;    /* 左侧间距 */ 
+        width: 60px;          /* 设置容器宽度，例如 100% */
+        display: flex;
+        align-items: center; /* 垂直对齐 */
+    }
+
+
+
+
+    .label-row4-01 {
+        font-size: 14px; /* 字体大小 */
+        color: yellow; /* 字体颜色 */
+        margin-right: 1px;   /* 与输入框的间距 */
+        margin-left: -10px;    /* 左侧间距 */ 
+        width: 60px;          /* 设置容器宽度，例如 100% */
+        display: flex;
+        align-items: center; /* 垂直对齐 */
+    }
+
+
+    .label-row4-02 {
+        font-size: 14px; /* 字体大小 */
+        color: yellow; /* 字体颜色 */
+        margin-right: -25px;   /* 与输入框的间距 */
+        margin-left: -15px;    /* 左侧间距 */ 
+        width: 60px;          /* 设置容器宽度，例如 100% */
+        display: flex;
+        align-items: center; /* 垂直对齐 */
+    }
+
+
+    .label-row4-03 {
+        font-size: 14px; /* 字体大小 */
+        color: yellow; /* 字体颜色 */
+        margin-right: -10px;   /* 与输入框的间距 */
+        margin-left: 30px;    /* 左侧间距 */ 
+        width: 60px;          /* 设置容器宽度，例如 100% */
+        display: flex;
+        align-items: center; /* 垂直对齐 */
+    }
+    
+    .label-row5-01 {
+        font-size: 14px; /* 字体大小 */
+        color: yellow; /* 字体颜色 */
+        margin-right: px;   /* 与输入框的间距 */
+        margin-left: 10px;    /* 左侧间距 */ 
+        width: 70px;          /* 设置容器宽度，例如 100% */
+        display: flex;
+        align-items: center; /* 垂直对齐 */
+    }
+
+    .label-row5-02 {
+        font-size: 14px; /* 字体大小 */
+        color: yellow; /* 字体颜色 */
+        margin-right: -10px;   /* 与输入框的间距 */
+        margin-left: 10px;    /* 左侧间距 */ 
+        width: 60px;          /* 设置容器宽度，例如 100% */
+        display: flex;
+        align-items: center; /* 垂直对齐 */
+    }
+
+
+
+    .label-row5-03 {
+        font-size: 14px; /* 字体大小 */
+        color: yellow; /* 字体颜色 */
+        margin-right:-22px;   /* 与输入框的间距 */
+        margin-left: 15px;    /* 左侧间距 */ 
+        width: 80px;          /* 设置容器宽度，例如 100% */
+        display: flex;
+        align-items: center; /* 垂直对齐 */
+    }
+
+
+    .label-row5-04 {
+        font-size: 14px; /* 字体大小 */
+        color: yellow; /* 字体颜色 */
+        margin-right: -20px;   /* 与输入框的间距 */
+        margin-left: 8px;    /* 左侧间距 */ 
+        width: 60px;          /* 设置容器宽度，例如 100% */
+        display: flex;
+        align-items: center; /* 垂直对齐 */
+    }
+
+
+	/* 日期输入框样式 */
+	input[type="date"] {
+	    width: 120px; /* 设置宽度 */
+	    padding: 8px 12px; /* 设置内边距 */
+	    margin-left: 10px;    /* 左侧间距 */ 
+	    margin-right: -10px;   /* 与输入框的间距 */
+	    height: 30px;        /* 设置容器高度，例如 100% */
+	    line-height: 10;
+	    vertical-align:middle;
+	}
+
+
+	/* 月份输入框样式 */
+	input[type="month"] {
+	    width: 120px; /* 设置宽度 */
+	    padding: 6px 10px; /* 设置内边距 */
+	    margin-right: -15px;   /* 与输入框的间距 */
+	    margin-left: px;    /* 左侧间距 */ 
+	    height: 25px;        /* 设置容器高度，例如 100% */
+	    font-size: 14px; /* 字体大小 */
+		vertical-align:middle;
+	}
+
+
+	/* 周输入框样式 */
+	input[type="week"] {
+	    width: 140px; /* 设置宽度 */
+	    padding: 7px 11px; /* 设置内边距 */
+	    margin: 0 9px; /* 设置左右间距 */
+	    border: 1px solid #bbb; /* 边框样式 */
+	    height: 25px;        /* 设置容器高度，例如 100% */
+	    border-radius: 4px; /* 圆角 */
+	    vertical-align:middle;
+	}
+
+
+
+
+	.inputFilter-Keyfield {
+        padding: 8px;
+        width: 400px;          /* 设置容器宽度，例如 100% */
+        border: 1px solid #ccc;
+        margin-left: -5px;   /* 左边距 */
+        margin-right: 10px;  /* 右边距 */
+        border-radius: 4px;
+    }
+
+	.inputPageMax-field{
+        padding: 8px;
+        width: 80px;          /* 设置容器宽度，例如 100% */
+        border: 1px solid #ccc;
+        margin-left: -5px;   /* 左边距 */
+        margin-right: 10px;  /* 右边距 */
+        border-radius: 4px;
+    } 
+
+
+
+
+    .select-field {
+        font-size: 19 px; /* 调整字体大小 */
+        line-height: 2;       /* 设置行高，确保文字垂直居中 */
+        width: 600px;          /* 设置容器宽度，例如 100% */
+        margin-left: -10px;    /* 左侧间距 */
+        margin-right: 10px;   /* 与输入框的间距 */
+        padding: 3px;         /* 设置内边距 */
+        border: 0px solid #ccc;    /* 设置边框 */
+        border-radius: 2px;       /* 设置圆角 */
+        flex: 1; /* 使下拉选项框占据剩余空间 */
+        box-sizing: border-box; /* 确保内边距和边框包括在总宽度和高度内 */
+        text-align: center; /* 文本居中对齐 */
+        
+        
+    }
+
+
+
+
+
+
+    .button-class {
+	    box-sizing: border-box;
+        background-color: #007BFF;
+        color: white;
+        cursor: pointer;
+        width: 120px;          /* 设置容器宽度，例如 100% */
+        padding: 10px 20px; /* 确保按钮内填充一致 */
+        border: none; /* 确保没有边框变化 */
+        
+        display: inline-block; /* 保持按钮内联块状 */
+         /* width: auto; 保持自动宽度 */
+        line-height: 0; /* 设置行高，确保文本垂直居中 */
+	}
+	
+	.button-class:hover {
+	    background-color: #0056b3;
+	    padding: 10px 20px;    /* 确保悬停时填充一致 */
+	    border: none;          /* 确保悬停时没有边框变化 */	    
+        width: 120px;          /* 设置容器宽度，例如 100% */
+        /*width: auto;保持自动宽度  */
+       
+	    
+	}
+
+	
+
+	.button-class { margin:1 px; /* 添加外边距，防止与其他元素重叠 */ }
+
+
+    .label-field {
+        font-size: 14px; /* 字体大小 */
+        color: yellow; /* 字体颜色 */
+        margin-right: 1px;   /* 与输入框的间距 */
+        margin-left: 10px;    /* 左侧间距 */ 
+        width: 80px;          /* 设置容器宽度，例如 100% */
+        display: flex;
+        align-items: center; /* 垂直对齐 */
+    }
+
+
+
+	.label-Keyfield {
+        font-size: 14px; /* 字体大小 */
+        color: yellow; /* 字体颜色 */
+        margin-right: 6px;   /* 与输入框的间距 */
+        margin-left: 10px;    /* 左侧间距 */ 
+        width: 80px;          /* 设置容器宽度，例如 100% */
+        display: flex;
+        align-items: center; /* 垂直对齐 */
+    }
+
+	
+    .label-pagesize {
+        font-size: 14px; /* 字体大小 */
+        color: yellow; /* 字体颜色 */
+        margin-right: 1px;   /* 与输入框的间距 */
+        margin-left: 10px;    /* 左侧间距 */ 
+        width: 80px;          /* 设置容器宽度，例如 100% */
+        display: flex;
+        align-items: center; /* 垂直对齐 */
+    }

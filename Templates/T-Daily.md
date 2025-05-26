@@ -16,6 +16,7 @@ number headings: off
 听播客: 
 睡眠时长: 
 体重: 
+冥想: "20"
 ---
 ![[Banner06.jpg##bannerimg]]
 |<< [[<% tp.date.now("WW_YYYYMMDD", -1) %>|前一天]] | <% tp.date.now("YYYY年M月D日, dddd")%>, [[<% moment(tp.file.title, "WW_YYYYMMDD").format("GGGG[W]WW") %>|周回顾]]  | [[<% tp.date.now("WW_YYYYMMDD", +1) %>|后一天]] >>| 
@@ -29,7 +30,7 @@ number headings: off
 [[添加任务按钮]]
 ```
 
-#### 日常任务
+#### 日常和工作任务
 ![[task_board#日常任务]]
 
 #### 项目任务

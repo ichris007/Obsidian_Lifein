@@ -17,6 +17,8 @@ tags:
   - note
 project: 
   - <% tp.system.prompt("所属项目:") %>
+meeting: 
+  - <% tp.system.prompt("所属会议:") %>
 aliases: 
 stars: <% tp.system.suggester(["3星级","4星级","5星级"],["3星级","4星级","5星级"]) %>
 number headings: auto, first-level 2, max 6, contents ^toc, skip ^skipped, start-at 1, _.1.1

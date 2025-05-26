@@ -7,7 +7,7 @@ cssclasses:
   - hide-properties
   - callouts-outlined
 number headings: off
-modified date: 2025-05-15 21:07:02
+modified date: 2025-05-24 22:08:11
 obsidianUIMode: preview
 ---
 ![[Banner06.jpg##bannerimg]]
@@ -58,7 +58,7 @@ obsidianUIMode: preview
 >> ```dataview
 >> list
 >> from "0Inbox"
->> where icontains(tags, "ToRead") 
+>> where icontains(tags, "ToRead")  OR icontains(status, "ToRead")
 >> sort file.cday desc
 >> limit 5
 >> ```
@@ -153,4 +153,3 @@ let finalText = totalDays + totalMd + "、" + totalTag + "、" + totalTask;
 //设置字体大小（比如 1.2em）
 dv.el("div", finalText, { attr: { style: "font-size: 0.9em;" } });
 ```
-

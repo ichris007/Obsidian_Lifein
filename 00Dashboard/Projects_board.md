@@ -4,7 +4,9 @@ cssclasses:
   - bannerimg
   - callouts-outlined
   - hide-properties
-modified date: 2025-05-10 19:03:41
+modified date: 2025-05-24 13:04:11
+tags:
+  - index
 ---
 ![[banner05.jpg##bannerimg]] 
 

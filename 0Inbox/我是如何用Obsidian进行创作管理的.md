@@ -1,8 +1,15 @@
 ---
-source: "https://www.edony.ink/how-creating-content-with-the-help-of-obsidian/"
+source: https://www.edony.ink/how-creating-content-with-the-help-of-obsidian/
 tags:
-  - "ToRead"
+  - note
+status: ToRead
+modified date: 2025-05-24 21:32:32
 ---
+```meta-bind
+INPUT[toggle(onValue(Read), offValue(ToRead)):status]
+```
+
+
 Obsidian 是我主要写东西的地方，为了有条不紊地进行松烟阁文章的输出，我借助 Obsidian 构建了自己的写东西的日常流程：
 
 ![](https://www.edony.ink/content/images/2024/07/image-7.png)
