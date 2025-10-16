@@ -49,37 +49,23 @@ tags:
 《{{title}}》
 {{desc}}
 
-## 2 微信读书
+## 2 微信读书笔记
 
-```dataviewjs
-// 获取当前笔记名，去除扩展名
-const currentNoteName = dv.current().file.name;
-
-// 用于从书名中提取冒号前部分（或整个文件名）
-function getMainTitle(fileName) {
-  return fileName.split("：")[0].split(":")[0].trim();
-}
-
-// 获取所有 weread 标签的笔记，且路径包含“微信阅读”
-const pages = dv.pages('#weread')
-  .where(p => p.file.path.includes("微信阅读"))  // 目录筛选
-  .where(p => {
-    const title = getMainTitle(p.file.name);
-    return title === currentNoteName;
-  });
-
-// 渲染表格
-dv.table(["书名", "作者", "出版社", "出版时间", "笔记数量", "评论数量"],
-  pages.map(p => [
-    p.file.link,
-    p.author ?? '',
-    p.publisher ?? '',
-    p.publishtime ?? '',
-    p.noteCount ?? 0,
-    p.reviewCount ?? 0
-  ])
-);
-
+```dataview
+TABLE without id
+	file.folder  AS 目录,
+	file.link AS 书名,
+	author AS 作者,
+	noteCount AS 笔记数量,
+	reviewCount AS 评论数量,
+	file.cday AS 创建时间,
+	file.mday AS 修改时间
+FROM "05Books/weread"
+WHERE icontains(
+	replace(replace(replace(lower(file.name), " ", ""), "-", ""), "_", ""),
+	replace(replace(replace(lower(this.file.name), " ", ""), "-", ""), "_", "")
+)
+SORT contains(file.folder, "05Books/w e re a d") DESC, file.mday DESC
 ```
 
 ## 3 我的评论

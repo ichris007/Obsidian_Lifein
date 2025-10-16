@@ -1,0 +1,17 @@
+views:
+  - type: table
+    name: 稍后阅读
+    filters:
+      and:
+        - or:
+            - tag.contains("ToRead")
+            - file.tags.contains("ToRead")
+    order:
+      - file.name
+      - stars
+      - file.ctime
+    sort:
+      - property: file.ctime
+        direction: DESC
+      - property: file.name
+        direction: ASC

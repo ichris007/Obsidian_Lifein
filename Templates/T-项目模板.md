@@ -83,7 +83,7 @@ table without id
   regexreplace(L.text, "#\S+", "") as 内容
 from "00Journal/01DailyNotes"
 flatten file.lists as L
-where contains(L.text, "[[" + this.file.name + "]]") 
+where contains(L.text, "[[" + this.file.name + "]]") OR contains(L.text, "#" + this.file.name)
 sort file.ctime desc
 ```
 

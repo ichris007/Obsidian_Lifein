@@ -1,0 +1,48 @@
+views:
+  - type: table
+    name: 最近编辑
+    filters:
+      and:
+        - file.name != this.file.name
+        - file.mtime >= now() - "30 d"
+    order:
+      - file.name
+      - file.mtime
+      - file.folder
+    sort:
+      - property: file.mtime
+        direction: DESC
+    limit: 50
+    columnSize:
+      file.name: 243
+      file.mtime: 161
+  - type: table
+    name: 今日创建
+    filters:
+      and:
+        - file.name != this.file.name
+        - file.ctime.date() == date(this.date)
+    order:
+      - file.name
+      - file.folder
+      - file.ctime
+    sort:
+      - property: file.ctime
+        direction: DESC
+    columnSize:
+      file.name: 338
+  - type: table
+    name: 今日修改
+    filters:
+      and:
+        - file.name != this.file.name
+        - file.mtime.date() == date(this.date)
+    order:
+      - file.name
+      - file.folder
+      - file.mtime
+    sort:
+      - property: file.mtime
+        direction: DESC
+    columnSize:
+      file.name: 338

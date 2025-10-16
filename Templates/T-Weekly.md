@@ -18,7 +18,6 @@ cssclasses:
 
 ### 本周回顾
 
-![[Tasks_weekly_panel]]
 
 #### 项目
 ```dataview
@@ -89,9 +88,8 @@ SORT date(file.name) DESC
 
 #### 习惯追踪
 
-![[习惯追踪#习惯追踪]]
+点击查看[[习惯追踪]]
 
-![[习惯追踪#健康追踪]]
 
 
 ### 本周复盘
