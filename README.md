@@ -19,7 +19,13 @@ Lifein适合这些人：
 - 想建立属于自己的知识体系和人生导航系统的人
 - 对Obsidian感兴趣，但不知道如何入门的人
 
-[2025-05-26](https://github.com/ichris007/Obsidian_Lifein/blob/main/Settings/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97.md)：[Lifein](https://github.com/ichris007/Obsidian_Lifein)已经更新到了v0.6.0，接下来会陆续更新更多功能。
+[2025-10-18](https://github.com/ichris007/Obsidian_Lifein/blob/main/Settings/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97.md)：[Lifein](https://github.com/ichris007/Obsidian_Lifein)已经更新到了v0.6.1，接下来会陆续更新更多功能。
+- 此次更新内容的部分展示（点击看详情👇）
+<details>
+<summary>点击看详情</summary>
+	
+![PixPin_2025-10-19_23-08-21](https://github.com/user-attachments/assets/eb9766f1-0c99-4a2a-9d01-9551efff586a)
+</details>
 
 也欢迎大家提出需求和相互交流。
 
@@ -58,10 +64,11 @@ Lifein适合这些人：
 - 改善笔记链接超长网址编辑体验
 - 减小无序/有序列表在文字/标题后的空白
 - 多彩有序/无序列表
+- 隐藏标签符号#，文档更干净
 - 给库（Vault）和新建标签页（New Tab）加logo和背景图
  </details>
 
-[更新日志 2025-05-26](https://github.com/ichris007/Obsidian_Lifein/blob/main/Settings/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97.md)
+[更新日志 2025-10-18](https://github.com/ichris007/Obsidian_Lifein/blob/main/Settings/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97.md)
 
 ### 2）本库的系统配置和说明
 使用本系统前，请了解系统配置和说明，便于更好地上手。
@@ -107,7 +114,8 @@ Lifein适合这些人：
 <details>
 <summary>点击看详情</summary>
 
-![日记_浅色](https://github.com/user-attachments/assets/b509a74f-bea6-4b95-9b75-9ca748128e18) ![周记_浅色](https://github.com/user-attachments/assets/528d8f88-737e-4fa2-be25-9be33861c6da)
+![日记系统_浅色](https://github.com/user-attachments/assets/aa618f32-af0c-4b70-be1b-339090a382cf)
+![周记_浅色](https://github.com/user-attachments/assets/528d8f88-737e-4fa2-be25-9be33861c6da)
 </details>
 
 #### 书籍
