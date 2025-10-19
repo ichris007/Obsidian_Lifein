@@ -67,7 +67,6 @@
   "minimal-style@@tabs-style": "tabs-default",
   "minimal-style@@tag-radius": "14px",
   "minimal-style@@tag-border-width": "1px",
-  "minimal-advanced@@styled-scrollbars": true,
   "minimal-advanced@@cursor": "default",
   "things-style-optimize@@paragraph-margin-top": "1px",
   "things-style-optimize@@paragraph-margin-bottom": "2px",

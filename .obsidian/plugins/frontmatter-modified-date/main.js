@@ -27,7 +27,7 @@ __export(main_exports, {
   default: () => FrontmatterModified
 });
 module.exports = __toCommonJS(main_exports);
-var import_obsidian2 = require("obsidian");
+var import_obsidian3 = require("obsidian");
 
 // src/settings.ts
 var import_obsidian = require("obsidian");
@@ -111,8 +111,7 @@ var FrontmatterModifiedSettingTab = class extends import_obsidian.PluginSettingT
 will register this as a modification and update the frontmatter. If you don't want this to happen, and only
 want the frontmatter when you are making changes inside Obsidian, you can try this mode. It watches for typing 
 events, and then updates the frontmatter only when you type. This means that some events like updating your note 
-or properties using your mouse will not cause the modified field to update. You will need to restart Obsidian 
-after this change.`).addToggle((toggle) => {
+or properties using your mouse will not cause the modified field to update.`).addToggle((toggle) => {
       toggle.setValue(this.plugin.settings.useKeyupEvents).onChange(async (value) => {
         this.plugin.settings.useKeyupEvents = value;
         await this.plugin.saveSettings();
@@ -125,47 +124,52 @@ after this change.`).addToggle((toggle) => {
   }
 };
 
+// src/editor.ts
+var import_view = require("@codemirror/view");
+var import_obsidian2 = require("obsidian");
+var userChangeListenerExtension = (plugin) => import_view.ViewPlugin.define((view) => {
+  return new UserChangeListener(plugin, view);
+});
+var UserChangeListener = class {
+  constructor(plugin, view) {
+    this.plugin = plugin;
+    this.file = view.state.field(import_obsidian2.editorInfoField).file;
+  }
+  update(update) {
+    if (!this.file || !this.plugin.settings.useKeyupEvents) {
+      return;
+    }
+    if (isUserChange(update)) {
+      this.plugin.updateFrontmatter(this.file).then();
+    }
+  }
+};
+function isUserChange(update) {
+  if (!update.docChanged || update.transactions.some((tr) => tr.isUserEvent("set"))) {
+    return false;
+  }
+  return update.transactions.some((tr) => {
+    return tr.isUserEvent("input") || tr.isUserEvent("delete") || tr.isUserEvent("move");
+  });
+}
+
 // src/main.ts
-var FrontmatterModified = class extends import_obsidian2.Plugin {
+var FrontmatterModified = class extends import_obsidian3.Plugin {
   constructor() {
     super(...arguments);
     this.timer = {};
   }
   async onload() {
     await this.loadSettings();
+    this.registerEditorExtension(userChangeListenerExtension(this));
     if (!this.settings.useKeyupEvents) {
       this.registerEvent(this.app.workspace.on("editor-change", (_editor, info) => {
-        if (info.file instanceof import_obsidian2.TFile) {
+        if (info.file instanceof import_obsidian3.TFile) {
           this.updateFrontmatter(info.file);
         }
       }));
-    } else if (this.settings.useKeyupEvents) {
-      this.registerDomEvent(document, "input", (event) => {
-        if (/^.$/u.test(event.data || "")) {
-          this.handleTypingEvent(event);
-        }
-      });
-      this.registerDomEvent(document, "paste", (event) => {
-        this.handleTypingEvent(event);
-      });
     }
     this.addSettingTab(new FrontmatterModifiedSettingTab(this.app, this));
-  }
-  /**
-   * Receive a typing event and initiate the frontmatter update process
-   */
-  handleTypingEvent(event) {
-    var _a;
-    try {
-      if ((_a = event == null ? void 0 : event.target) == null ? void 0 : _a.closest(".markdown-source-view > .cm-editor")) {
-        const file = this.app.workspace.getActiveFile();
-        if (file instanceof import_obsidian2.TFile) {
-          this.updateFrontmatter(file).then();
-        }
-      }
-    } catch (e) {
-      console.log(e);
-    }
   }
   async loadSettings() {
     this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
@@ -191,7 +195,7 @@ var FrontmatterModified = class extends import_obsidian2.Plugin {
       } else if ((_b = cache == null ? void 0 : cache.frontmatter) == null ? void 0 : _b[this.settings.excludeField]) {
       } else if (this.settings.excludedFolders.some((folder) => file.path.startsWith(folder + "/"))) {
       } else {
-        const now = (0, import_obsidian2.moment)();
+        const now = (0, import_obsidian3.moment)();
         const isAppendArray = this.settings.storeHistoryLog || ((_c = cache == null ? void 0 : cache.frontmatter) == null ? void 0 : _c[this.settings.appendField]) === true;
         const desc = this.settings.historyNewestFirst;
         let secondsSinceLastUpdate = Infinity;
@@ -201,7 +205,7 @@ var FrontmatterModified = class extends import_obsidian2.Plugin {
           if (isAppendArray && Array.isArray(previousEntry)) {
             previousEntry = previousEntry[desc ? 0 : previousEntry.length - 1];
           }
-          previousEntryMoment = (0, import_obsidian2.moment)(previousEntry, this.settings.momentFormat);
+          previousEntryMoment = (0, import_obsidian3.moment)(previousEntry, this.settings.momentFormat);
           if (previousEntryMoment.isValid()) {
             secondsSinceLastUpdate = now.diff(previousEntryMoment, "seconds");
           }
@@ -229,7 +233,7 @@ var FrontmatterModified = class extends import_obsidian2.Plugin {
           this.app.fileManager.processFrontMatter(file, (frontmatter) => {
             frontmatter[this.settings.frontmatterProperty] = newEntry;
             if (!this.settings.onlyUpdateExisting && this.settings.createdDateProperty && !frontmatter[this.settings.createdDateProperty]) {
-              frontmatter[this.settings.createdDateProperty] = this.formatFrontmatterDate((0, import_obsidian2.moment)(file.stat.ctime || now));
+              frontmatter[this.settings.createdDateProperty] = this.formatFrontmatterDate((0, import_obsidian3.moment)(file.stat.ctime || now));
             }
           });
         }

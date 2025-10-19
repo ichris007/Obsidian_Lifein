@@ -1,16 +1,4 @@
-/*------------------------------------------------------------------------------
-                     Daily Note Themes by CyanVoxel v1.0.5
-
-These are a set of 7 main CSS classes that can be used to apply individual color
-schemes to daily notes for each day of the week.
-To customize the colors for each day, just swamp out the colors values under
-the main "day of the week" classes.
-
-NOTE: By default, this snippet relies on the "Bai Jamjuree" or
-"JetBrainsMono Nerd Font Mono" fonts. If you don't wish to use these, then just
-change or remove those font-family lines from this snippet.
-                
-------------------------------------------------------------------------------*/
+/*-------------------Daily Note Themes------------------------------------------------*/
 :root {
   /* --highlight: #ffffff;
   --primary: #aaaaaa;
@@ -105,23 +93,53 @@ change or remove those font-family lines from this snippet.
   font-family: "Bai Jamjuree", "JetBrainsMono Nerd Font Mono", "JetBrains Mono";
   padding-top: 0;
 }
+
+/*------------------------------------------
+  h4 样式 + 横虚线（精简稳健版）
+------------------------------------------*/
+
+/* 1️⃣ h4 基础样式 */
 .daily :is(h4, .HyperMD-header.HyperMD-header-4) {
-  /* background-color: var(--primary);*/
-  color: var(--dark);
-  /* border-color: var(--primary); */
-  /* font-family: "JetBrainsMono Nerd Font Mono", "JetBrains Mono", monospace; */
   font-weight: 500;
-  margin-bottom: 0;
-  padding-top: 0;
-  font-size: 13px;
-  width: fit-content;
-  padding-left: 6px;
-  padding-right: 6px;
-  border: solid; 
+  font-size: 16px;
+  padding: 0 6px;
+  margin: 8px 0 6px;
+  border: 1px solid var(--primary);
   border-radius: 4px;
-  border-width: 1px; 
-  word-wrap: normal;
+  background: transparent;
+  position: relative; /* 为 ::after 伪元素定位提供参考 */
+  width: 100%;
 }
+
+/* 2️⃣ h4 下方虚线横线 - 预览模式 */
+.daily :is(h4, .HyperMD-header.HyperMD-header-4)::after {
+  content: "";
+  display: block;              /* 伪元素独占一行 */
+  height: 0;                   /* 高度由 border 控制 */
+  width: 35%;                  /* 横线长度，可根据需要调整 */
+  border-bottom: 1.5px dashed currentColor; /* 虚线 + 继承文字颜色 */
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+  margin-top: 2px;             /* 与标题文字间距 */
+  margin-bottom: 5px;          /* 下方间距 */
+  position: relative;           /* 相对定位即可 */
+  opacity: 0.9;                /* 透明度，可调节 */
+}
+
+/* 3️⃣ 编辑模式（Live Preview）兼容 */
+.daily .is-live-preview .HyperMD-header-4::after {
+  content: "";
+  display: block;
+  height: 0;
+  width: 35%;
+  border-bottom: 1.5px dashed currentColor;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15);
+  margin-top: 2px;
+  margin-bottom: 7px;
+  position: relative;
+  opacity: 0.9;
+}
+
+
 .daily p {
   margin-top: 4px;
   margin-bottom: 4px;

@@ -145,7 +145,7 @@ settings:
 
 /* 编辑模式下非段落元素（如列表）的行间距 */
 .cm-s-obsidian .CodeMirror-line:not(.CodeMirror-line-wrapping) {
-    padding-bottom: 0.75em; /* 如果您希望这里有间距的话 */
+    padding-bottom: 0.75em !important; /* 如果您希望这里有间距的话 */
 }
 
 /* 调整编辑模式下列表的间距，使其与预览模式类似 */

@@ -1,0 +1,26 @@
+views:
+  - type: cards
+    name: 书籍总库
+    filters:
+      and:
+        - file.inFolder("05Books")
+        - or:
+            - this.关键词.isEmpty()
+            - file.name.contains(this.关键词)
+            - aliases.contains(this.关键词)
+            - file.tags.join(" ").contains(this.searchTerm)
+        - '!file.tags.contains("index")'
+        - '!file.path.contains("weread")'
+    order:
+      - file.name
+      - 作者
+      - 豆瓣评分
+    sort:
+      - property: file.ctime
+        direction: DESC
+    image: note.封面
+    imageAspectRatio: 1.45
+    cardSize: 120
+    columnSize:
+      note.豆瓣评分: 67
+    imageFit: contain

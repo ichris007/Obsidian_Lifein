@@ -1,45 +1,59 @@
 {
-  "collapse-filter": true,
+  "collapse-filter": false,
   "search": "",
   "showTags": true,
   "showAttachments": false,
-  "hideUnresolved": true,
+  "hideUnresolved": false,
   "showOrphans": true,
   "collapse-color-groups": false,
   "colorGroups": [
     {
-      "query": "tag:#Movie  ",
+      "query": "[\"category\":朋友]",
       "color": {
         "a": 1,
         "rgb": 14048348
       }
     },
     {
-      "query": "path:05Books  ",
+      "query": "tag:#book  ",
       "color": {
         "a": 1,
-        "rgb": 13850092
+        "rgb": 7271055
+      }
+    },
+    {
+      "query": "tag:#Movie  ",
+      "color": {
+        "a": 1,
+        "rgb": 7836733
       }
     },
     {
       "query": "tag:#note  ",
       "color": {
         "a": 1,
-        "rgb": 6490069
+        "rgb": 11362519
       }
     },
     {
-      "query": "tag:#blog  ",
+      "query": "path:00Journal  ",
       "color": {
         "a": 1,
-        "rgb": 14260237
+        "rgb": 16114954
       }
     },
     {
-      "query": "tag:影视",
+      "query": "path:02Business  ",
       "color": {
         "a": 1,
-        "rgb": 595667
+        "rgb": 6073814
+      }
+    },
+    {
+      "query": "path:03Life  ",
+      "color": {
+        "a": 1,
+        "rgb": 6053078
       }
     }
   ],
@@ -53,6 +67,6 @@
   "repelStrength": 10,
   "linkStrength": 1,
   "linkDistance": 250,
-  "scale": 0.06861271852772331,
+  "scale": 0.04536606705702101,
   "close": true
 }

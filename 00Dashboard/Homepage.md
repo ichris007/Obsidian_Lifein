@@ -7,7 +7,7 @@ cssclasses:
   - hide-properties
   - callouts-outlined
 number headings: off
-modified date: 2025-05-24 22:08:11
+modified date: 2025-10-19 19:27:49
 obsidianUIMode: preview
 ---
 ![[Banner06.jpg##bannerimg]]
@@ -16,14 +16,6 @@ obsidianUIMode: preview
 ```
 
 ![[像素风格年倒计时]]
-> [!multi-column]
-> > [!!blank-container] 倒计时
->> ![[倒计时]]
->
->>[!!blank-container] 系统概况
->> ![[天气]]
->> 
->
 
 <br>
 

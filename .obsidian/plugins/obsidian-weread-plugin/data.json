@@ -1,6 +1,6 @@
 {
   "cookies": [],
-  "noteLocation": "05Books/微信阅读",
+  "noteLocation": "05Books/weread",
   "dailyNotesLocation": "/",
   "insertAfter": "<!-- start of weread -->",
   "insertBefore": "<!-- end of weread -->",
@@ -8,15 +8,15 @@
   "lastCookieTime": 0,
   "isCookieValid": false,
   "user": "YOUR_NAME",
-  "userVid": "YOUR_VID",
-  "template": "---\nisbn: {{metaData.isbn}}\nlastReadDate: {{metaData.lastReadDate}}\n---\n# 元数据\n> [!abstract] {{metaData.title}}\n> - ![ {{metaData.title}}|200]({{metaData.cover}})\n> - 书名： {{metaData.title}}\n> - 作者： {{metaData.author}}\n\n# 高亮划线\n{% for chapter in chapterHighlights %}\n{% if chapter.level == 1 %}## {{chapter.chapterTitle}}{% elif chapter.level == 2 %}### {{chapter.chapterTitle}}{% elif chapter.level == 3 %}#### {{chapter.chapterTitle}}{% endif %}\n{% for highlight in chapter.highlights %}{% if highlight.reviewContent %}\n> 📌 {{ highlight.markText |trim }} ^{{highlight.bookmarkId}}\n- 💭 {{highlight.reviewContent}} - ⏱ {{highlight.createTime}} {% else %}\n> 📌 {{ highlight.markText |trim }} \n> ⏱ {{highlight.createTime}} ^{{highlight.bookmarkId}}{% endif %}\n{% endfor %}{% endfor %}\n# 读书笔记\n{% for chapter in bookReview.chapterReviews %}{% if chapter.reviews or chapter.chapterReview %}\n## {{chapter.chapterTitle}}\n{% if chapter.chapterReviews %}{% for chapterReview in chapter.chapterReviews %}\n### 章节评论 No.{{loop.index}}\n- {{chapterReview.content}} ^{{chapterReview.reviewId}}\n    - ⏱ {{chapterReview.createTime}} {% endfor %}{% endif %}{% if chapter.reviews %}{% for review in chapter.reviews %}\n### 划线评论\n> 📌 {{review.abstract |trim }}  ^{{review.reviewId}}\n    - 💭 {{review.content}}\n    - ⏱ {{review.createTime}}\n{% endfor %} {% endif %} {% endif %} {% endfor %}\n# 本书评论\n{% if bookReview.bookReviews %}{% for bookReview in bookReview.bookReviews %}\n## 书评 No.{{loop.index}} \n{{bookReview.mdContent}} ^{{bookReview.reviewId}}\n⏱ {{bookReview.createTime}}\n{% endfor %}{% endif %}\n",
+  "userVid": "",
+  "template": "---\nauthor:  {{metaData.author}}\ncover: {{metaData.cover}}\nisbn: {{metaData.isbn}}\ncategory: {{metaData.category}}\npublisher:  {{metaData.publisher}}\npublishTime: {{metaData.publishTime}}\nprogress: {{metaData.progress}}\nreadingTime: {{metaData.readingTime}}\nreadingDate: {{metaData.readingDate}}\nfinishedDate:  {{metaData.finishedDate}}\nlastReadDate: {{metaData.lastReadDate}}\nnoteCount: {{metaData.noteCount}}\nreviewCount: {{metaData.reviewCount}}\ntags: weread\n---\n>[!rnb|noicon] \n># {{metaData.title}}\n>` {{metaData.author}}`\n\n>[!nb|noicon]\n>\n\n>[!weread1|noicon] \n> {{metaData.intro}}\n\n\n>[!weread2|noicon] [![cover|100]({{metaData.cover}})]({{metaData.cover}})\n> - 作者： {{metaData.author}}\n> - 出版时间： {{metaData.publishTime}}\n> - ISBN： {{metaData.isbn}}\n> - 分类： {{metaData.category}}\n> - 出版社： {{metaData.publisher}}\n> - 划线数量：{{metaData.noteCount}}\n> - 笔记数量： {{metaData.reviewCount}}\n\n>[!nb|noicon]\n>\n\n>[!rnb|noicon] \n>## 笔记\n\n>[!nb|noicon]\n>\n\n{%- set allNotes = [] -%}\n\n{%- for highlightItem in chapterHighlights -%}\n{%- for highlight in highlightItem.highlights -%} \n{%- set allNotes = allNotes.concat({'type': 'highlight', 'data': highlight, 'range': highlight.range.split(\"-\")[0] | int}) -%}\n{%- endfor -%}\n{%- endfor -%}\n\n{%- for reviewitem in bookReview.chapterReviews -%}\n{%- for review in reviewitem.reviews -%} \n{%- set allNotes = allNotes.concat({'type': 'review', 'data': review,'range': review.range.split(\"-\")[0] | int}) -%}\n{%- endfor -%}\n{%- for chapterReview in reviewitem.chapterReviews -%} \n{%- set allNotes = allNotes.concat({'type': 'chapterReview', 'data': chapterReview}) -%}\n{%- endfor -%}\n{%- endfor -%}\n\n{%- set allNotes = allNotes|sort(attribute='data.chapterUid')|groupby('data.chapterUid') -%}\n\n{% for chapterUid, notes in allNotes %} \n### {{ notes[0].data.chapterTitle }}\n\n{%- for note in notes|sort(attribute='range') %}\n\n{% if note.type == 'highlight' and not note.data.reviewContent %}\n\n#### 高亮\n> {{ note.data.markText | trim }} <!-- {{note.data.createTime}} -->\n{% elif note.type == 'review' %}\n#### 评论\n- {{ note.data.abstract | trim }} \n\t- {{ note.data.content }} <!-- {{note.data.createTime}} -->\n{% elif note.type == 'chapterReview' %}\n#### 章节评论\n- {{ note.data.content }} <!-- {{note.data.createTime}} -->\n{%- endif %}\n{%- endfor %}\n{% endfor %}\n\n{%- for bookReview in bookReview.bookReviews %} {% if bookReview.mdContent.length %}\n## 书评 \n`写于{{bookReview.createTime}}` \n{{bookReview.mdContent}} \n{% endif %} {% endfor %}",
   "noteCountLimit": -1,
-  "subFolderType": "-1",
+  "subFolderType": "category",
   "fileNameType": "BOOK_NAME",
   "dailyNotesToggle": false,
-  "notesBlacklist": "纳瓦尔宝典",
+  "notesBlacklist": "",
   "showEmptyChapterTitleToggle": false,
   "convertTags": false,
   "saveArticleToggle": false,
-  "saveReadingInfoToggle": false
+  "saveReadingInfoToggle": true
 }

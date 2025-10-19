@@ -1,0 +1,11 @@
+.DS_Store
+_gsdata_
+.trash
+workspace.json
+/**/workspace.json
+vault-stats.json
+.obsidian\plugins\obsidian-hypothesis-plugin\data.json
+.obsidian/todoist-token
+.obsidian\todoist-token
+.obsidian\plugins\longform\data.json
+.SynologyWorkingDirectory

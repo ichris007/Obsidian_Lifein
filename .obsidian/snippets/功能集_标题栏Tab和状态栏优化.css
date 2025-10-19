@@ -51,6 +51,27 @@ body {
   padding: 0 !important;
 }
  
+/*------------------------活动和聚焦Tab底部高亮和背景凸显-------------------------------*/
+/* 普通活动标签（未聚焦或默认） */
+.workspace-tab-header.is-active {
+    font-weight: 600;
+    border-bottom: 2px solid var(--text-accent);/* 底部高亮线 */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);/* 轻微阴影 */
+    background-color: var(--background-modifier-active); /* 默认非聚焦背景 */
+    position: relative; /* 确保伪元素不影响布局 */
+}
+
+/* 去掉默认底部伪元素造成的浅色方块 */
+.workspace-tab-header.is-active::before,
+.workspace-tab-header.is-active::after {
+    display: none;
+}
+
+/* 当窗口或标签栏聚焦时：反转背景色，更深以凸显聚焦 */
+.workspace-tabs:focus-within .workspace-tab-header.is-active {
+    background-color: var(--background-primary); /* 聚焦状态背景颜色 */
+}
+
 
 /*------------------------隐藏状态栏，鼠标悬停显示-------------------------------*/
 .status-bar:not(:hover){

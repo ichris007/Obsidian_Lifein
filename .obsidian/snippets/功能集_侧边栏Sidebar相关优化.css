@@ -96,7 +96,8 @@ div[data-path='Attachments'] + div.nav-folder-children
 .nav-folder:has([data-path="0Inbox"])::after,
 .nav-folder:has([data-path="01Projects"])::after,
 .nav-folder:has([data-path="04Growth"])::after,
-.nav-folder:has([data-path="06Movies"])::after {
+.nav-folder:has([data-path="06Movies"])::after,
+.nav-folder:has([data-path="08Meetings"])::after {
     content: '';
     display: block;
     height: 1px;
@@ -162,14 +163,227 @@ display:none;
  
 }
 
+
 /*编辑模式缩小行距*/
 .workspace-split:not(.mod-root) .markdown-source-view.sidetools .markdown-preview-section  .cm-content,
 .workspace-split:not(.mod-root) .markdown-source-view.sidetools  .cm-editor,
 .workspace-split:not(.mod-root) .markdown-source-view.sidetools  .cm-scroller
 {	
-  font-size: 12px;
+  font-size: 15px;
   margin: 0;
   padding: 0!important;
+}
+
+/*阅读模式缩小行距*/
+.markdown-preview-view.sidetools {
+  line-height: 1.3 !important;
+  font-size: 11px !important;
+}å
+
+.markdown-preview-view.sidetools .markdown-preview-section {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.markdown-preview-view.sidetools p,
+.markdown-preview-view.sidetools ul,
+.markdown-preview-view.sidetools ol,
+.markdown-preview-view.sidetools li,
+.markdown-preview-view.sidetools blockquote {
+  margin: 0.3em 0 !important;
+  line-height: 1.3 !important;
+  font-size: 15px !important;
+}
+
+/* ============================ 侧边栏任务列表样式  start========================== */
+/* 侧边栏任务样式 - 基于原样式优化 */
+.sidebar-tasks {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding: 10px !important;
+  font-size: 13px !important;
+  color: var(--text-muted) !important;
+  font-family: inherit !important;
+}
+
+/* 重置标题样式 - 彻底清除伪元素和主题影响 */
+.sidebar-tasks h2 {
+  all: unset !important;
+  display: block !important;
+  font-size: 14px !important;
+  color: var(--text-muted) !important;
+  border-bottom: 1px solid var(--text-muted) !important;
+  margin-bottom: 0.3rem !important; /* 减小标题下方的空白 */
+  padding-bottom: 3px !important; /* 减小内边距 */
+  width: 100% !important;
+  max-width: 100% !important;
+  font-weight: normal !important;
+  background: transparent !important;
+  position: relative !important;
+}
+
+/* 彻底清除所有伪元素 */
+.sidebar-tasks h2::before,
+.sidebar-tasks h2::after,
+.sidebar-tasks h2:before,
+.sidebar-tasks h2:after {
+  display: none !important;
+  content: none !important;
+  background: none !important;
+  border: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  position: static !important;
+}
+
+/* 任务项容器 */
+.sidebar-tasks .task-group {
+  margin-bottom: 0.5rem !important; /* 减小容器间距 */
+  font-size: 13px !important;
+  color: var(--text-muted) !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* 单个任务项 */
+.sidebar-tasks .task-item {
+  padding: 2px 3px !important; /* 减小垂直内边距 */
+  width: 100% !important;
+  max-width: 100% !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.3rem !important;
+  box-sizing: border-box !important;
+  margin: 1px 0 !important; /* 减小任务项之间的间距 */
+}
+
+.sidebar-tasks .task-item:hover {
+  color: var(--text-normal) !important;
+  background-color: var(--background-secondary-alt) !important;
+}
+
+/* 时间样式 */
+.sidebar-tasks .task-time {
+  display: inline-block !important;
+  font-size: 14px !important;
+  font-family: monospace, serif !important;
+  color: var(--text-muted) !important;
+  min-width: 40px !important;
+}
+
+/* 标题容器 */
+.sidebar-tasks .task-title-container {
+  display: inline-flex !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  flex-grow: 1 !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  max-width: 100% !important;
+}
+
+.sidebar-tasks .task-title {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  flex-grow: 1 !important;
+  text-align: left !important;
+  color: var(--text-normal) !important;
+}
+
+/* 文件链接样式 */
+.sidebar-tasks .task-file {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+  color: var(--text-faint) !important;
+}
+
+/* 无任务状态 */
+.sidebar-tasks .no-tasks {
+  font-style: italic !important;
+  color: var(--text-muted) !important;
+  padding: 4px 0 !important; /* 减小无任务状态的间距 */
+  width: 100% !important;
+  margin: 1px 0 !important;
+}
+
+.sidebar-tasks .no-tasks:hover {
+  color: var(--text-muted) !important;
+  background-color: transparent !important;
+}
+
+/* 任务列表特别处理 - 修复复选框被覆盖的问题 */
+.sidebar-tasks .task-list,
+.sidebar-tasks .task-list-item {
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: 15px !important;
+  margin-left: 0 !important;
+  box-sizing: border-box !important;
+  margin-top: 0.2rem !important; /* 减小任务列表上方的空白 */
+  margin-bottom: 0.2rem !important; /* 减小任务列表下方的空白 */
+}
+
+/* 任务列表项 */
+.sidebar-tasks .task-list-item {
+  padding: 1px 3px 1px 15px !important; /* 减小任务项的垂直内边距 */
+  margin-left: 0 !important;
+  position: relative !important;
+  line-height: 1.3 !important; /* 调整行高 */
+}
+
+/* 复选框样式调整 */
+.sidebar-tasks input[type="checkbox"] {
+  margin-left: -15px !important;
+  margin-right: 6px !important; /* 减小复选框右侧间距 */
+  position: relative !important;
+  z-index: 1 !important;
+  transform: scale(0.9) !important; /* 可选：稍微缩小复选框 */
+}
+
+/* 任务计数样式 - 减小与上方任务列表的间距 */
+.sidebar-tasks .task-count {
+  margin-top: 0.2rem !important; /* 减小任务计数上方的空白 */
+  margin-bottom: 0.5rem !important;
+  padding: 2px 0 !important;
+  font-size: 12px !important; /* 可选：稍微调小字体 */
+  color: var(--text-faint) !important;
+}
+
+/* 确保所有内容都横向占满但保持原有间距 */
+.sidebar-tasks > * {
+  width: 100% !important;
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* 覆盖可能的容器限制，但保持原有间距 */
+.sidebar-tasks * {
+  max-width: 100% !important;
+  box-sizing: border-box !important;
+}
+
+/* ============================ 侧边栏任务列表样式  end========================== */
+
+/* ------ 减小分割线 <hr> 高度 -------------*/
+/* 阅读模式 */
+.markdown-preview-view.sidetools hr {
+  margin: 8px 0 !important;     /* 上下间距尽量小 */
+  border: none;                 /* 移除默认边框 */
+  border-top: 1px solid #ccc;   /* 设置更细的线条 */
+  height: 1px;                  /* 控制线的高度 */
+  opacity: 0.3;                 /* 可选：淡化视觉效果 */
+}
+
+/* 编辑模式（如 Live Preview 模式） */
+.workspace-split:not(.mod-root) .markdown-source-view.sidetools hr {
+  margin: 4px 0 !important;
+  height: 1px !important;
+  border: none;
+  border-top: 1px solid #ccc;
+  opacity: 0.5;
 }
 
 

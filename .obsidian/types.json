@@ -110,6 +110,10 @@
     "出版时间": "number",
     "总页数": "number",
     "我的评分": "text",
-    "year": "number"
+    "year": "number",
+    "听播客2": "checkbox",
+    "最后跟进时间": "date",
+    "最后联系时间": "date",
+    "初识时间": "date"
   }
 }

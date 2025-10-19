@@ -1,6 +1,6 @@
 {
-  "accentColor": "#f5e0dc",
-  "theme": "moonstone",
+  "accentColor": "#d034e5",
+  "theme": "system",
   "cssTheme": "Minimal",
   "enabledCssSnippets": [
     "鼠标移动到图片自动放大",
@@ -93,7 +93,6 @@
     "Card_layout_dataview",
     "Plugin_表格美化",
     "Plugin_DV表格美化",
-    "功能集_侧边栏Sidebar相关优化",
     "vault-logo",
     "UI_Dust Calendar美化",
     "Plugin_Meta_bind",
@@ -103,14 +102,14 @@
     "UI_Boarder主题标题样式",
     "UI_Minimal_Cards",
     "vault_NewTab_logo",
-    "Plugin_Tasks紧凑样式",
     "UI_Border主题标题样式",
     "Vault_NewTab_logo",
-    "功能_像素风格年倒计时样式"
+    "功能_像素风格年倒计时样式",
+    "功能集_侧边栏Sidebar相关优化"
   ],
   "showViewHeader": true,
   "translucency": false,
-  "baseFontSize": 16,
+  "baseFontSize": 15,
   "baseFontSizeAction": true,
   "nativeMenus": true,
   "textFontFamily": "",

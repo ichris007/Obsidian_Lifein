@@ -12,9 +12,9 @@
           "enableLinkUpdate": false,
           "enableBracketHighlight": true,
           "highlightNonMatchingBrackets": true,
-          "inverseFold": false,
           "enableSelectionMatching": false,
           "unwrapcode": false,
+          "hideFenceLines": false,
           "buttons": {
             "alwaysShowButtons": false,
             "alwaysShowCopyCodeButton": false,
@@ -22,6 +22,13 @@
             "enableDeleteCodeButton": false,
             "enableWrapCodeButton": false
           },
+          "folding": {
+            "inverseFold": false,
+            "rememberFoldState": true,
+            "scope": "nofoldspecified",
+            "persistence": "session"
+          },
+          "inverseFold": false,
           "enableDeleteCodeButton": false,
           "enableCopyCodeButton": false,
           "textHighlight": true
@@ -53,15 +60,34 @@
           "enableHighlight": true
         },
         "inlineCode": {
-          "enableInlineCodeStyling": false
+          "enableInlineCodeStyling": false,
+          "enableSyntaxHighlight": true,
+          "showIcons": false,
+          "enableCopyOnClick": true,
+          "copyModifierKey": "ctrl"
         },
         "printing": {
           "enablePrintToPDFStyling": false,
           "forceCurrentColorUse": false,
-          "uncollapseDuringPrint": true
+          "uncollapseDuringPrint": true,
+          "printAnnotationsAsComments": false,
+          "avoidPageBreaks": false
         },
         "common": {
           "enableInSourceMode": false
+        },
+        "prompts": {
+          "editedDefaults": {},
+          "customPrompts": {},
+          "includePromptsInCopy": false
+        },
+        "groupedCodeBlocks": {
+          "rememberTabState": true,
+          "persistence": "session"
+        },
+        "annotations": {
+          "convertAllComments": false,
+          "excludeAnnotationsFromCopy": false
         },
         "enableEditorActiveLineHighlight": true
       },
@@ -96,6 +122,161 @@
             "backgroundColor": "--code-background",
             "textColor": "--code-normal"
           },
+          "prompts": {
+            "promptColors": {
+              "bash": {
+                "prompt-user": "#61afef",
+                "prompt-host": "#e5c07b",
+                "prompt-path": "#98c379"
+              },
+              "bashalt": {
+                "prompt-user": "#61afef",
+                "prompt-host": "#d19a66",
+                "prompt-path": "#56b6c2"
+              },
+              "kali": {
+                "prompt-user": "#2679F2",
+                "prompt-host": "#2679F2",
+                "prompt-path": "#F3F3F4",
+                "prompt-kali-symbol": "#2679F2",
+                "prompt-dollar": "#2679F2",
+                "prompt-dash": "#56AA9B",
+                "prompt-bracket-open": "#56AA9B",
+                "prompt-bracket-close": "#56AA9B",
+                "prompt-square-open": "#56AA9B",
+                "prompt-square-close": "#56AA9B"
+              },
+              "zshgit": {
+                "prompt-path": "#61afef",
+                "prompt-branch": "#c678dd",
+                "prompt-zsh-status-error": "#ff5555",
+                "prompt-zsh-status-ok": "#50fa7b",
+                "prompt-zsh-symbol": "#00ff00",
+                "prompt-symbol": "#8be9fd"
+              },
+              "zsh": {
+                "prompt-user": "#56b6c2",
+                "prompt-host": "#e06c75",
+                "prompt-path": "#98c379",
+                "prompt-percent": "#abb2bf"
+              },
+              "fish": {
+                "prompt-path": "#61afef"
+              },
+              "ps": {
+                "prompt-path": "#5b9bd5",
+                "prompt-symbol": "#e5c07b",
+                "prompt-greater-than": "#e5c07b"
+              },
+              "cmd": {
+                "prompt-path": "#87ceeb ",
+                "prompt-greater-than": "#aaaaaa"
+              },
+              "docker": {
+                "prompt-user": "#61afef",
+                "prompt-host": "#e06c75",
+                "prompt-path": "#98c379"
+              },
+              "postgres": {
+                "prompt-db": "#fabd2f"
+              },
+              "msf": {
+                "prompt-msf": "#f3f3f4",
+                "prompt-keyword": "#f3f3f4",
+                "prompt-module": "#E20303",
+                "prompt-greater-than": "#f3f3f4",
+                "prompt-bracket-open": "#f3f3f4",
+                "prompt-bracket-close": "#f3f3f4"
+              },
+              "cstrike": {
+                "prompt-beacon": "#f3f3f4",
+                "prompt-greater-than": "#f3f3f4"
+              },
+              "global": {
+                "prompt-at": "#777777",
+                "prompt-colon": "#777777",
+                "prompt-dollar": "#777777",
+                "prompt-hash": "#777777",
+                "prompt-dash": "#777777",
+                "prompt-bracket-open": "#777777",
+                "prompt-bracket-close": "#777777",
+                "prompt-square-open": "#777777",
+                "prompt-square-close": "#777777",
+                "prompt-greater-than": "#777777",
+                "prompt-symbol": "#888888",
+                "prompt-user": "#777777",
+                "prompt-host": "#777777",
+                "prompt-path": "#777777",
+                "prompt-branch": "#777777",
+                "prompt-db": "#777777",
+                "prompt-zsh-symbol": "#777777",
+                "prompt-zsh-status-error": "#777777",
+                "prompt-zsh-status-ok": "#777777",
+                "prompt-msf": "#777777",
+                "prompt-keyword": "#777777",
+                "prompt-module": "#777777",
+                "prompt-beacon": "#777777",
+                "prompt-kali-symbol": "#777777",
+                "prompt-percent": "#777777"
+              }
+            },
+            "rootPromptColors": {
+              "bash": {
+                "prompt-user": "#e63946",
+                "prompt-host": "#e5c07b",
+                "prompt-path": "#ffb347",
+                "prompt-hash": "#ff5555"
+              },
+              "bashalt": {
+                "prompt-user": "#e63946",
+                "prompt-host": "#d19a66",
+                "prompt-path": "#ffb347",
+                "prompt-hash": "#ff5555"
+              },
+              "kali": {
+                "prompt-user": "#e63946",
+                "prompt-host": "#e63946",
+                "prompt-path": "#ffb347",
+                "prompt-kali-symbol": "#e63946",
+                "prompt-hash": "#ff5555",
+                "prompt-dash": "#3370D7",
+                "prompt-bracket-open": "#3370D7",
+                "prompt-bracket-close": "#3370D7",
+                "prompt-square-open": "#3370D7",
+                "prompt-square-close": "#3370D7"
+              },
+              "zsh": {
+                "prompt-user": "#e63946",
+                "prompt-path": "#ffb347",
+                "prompt-hash": "#ff5555",
+                "prompt-end": "#ff5555"
+              },
+              "docker": {
+                "prompt-user": "#e63946",
+                "prompt-container": "#e06c75",
+                "prompt-path": "#ffb347",
+                "prompt-hash": "#ff5555"
+              },
+              "global": {}
+            },
+            "editedPromptColors": {},
+            "editedRootPromptColors": {}
+          },
+          "groupedCodeBlocks": {
+            "activeTabBackgroundColor": "#3A3A3A",
+            "hoverTabBackgroundColor": "#333333",
+            "hoverTabTextColor": "#CCCCCC"
+          },
+          "annotations": {
+            "colors": {
+              "note": "#027aff",
+              "warn": "#e9973f",
+              "error": "#fb464c",
+              "todo": "#44cf6e",
+              "question": "#a882ff",
+              "see": "#53dfdd"
+            }
+          },
           "editorActiveLineColor": "--color-base-20",
           "languageSpecificColors": {}
         },
@@ -129,6 +310,162 @@
             "backgroundColor": "--code-background",
             "textColor": "--code-normal"
           },
+          "prompts": {
+            "promptColors": {
+              "bash": {
+                "prompt-user": "#61afef",
+                "prompt-host": "#e5c07b",
+                "prompt-path": "#98c379"
+              },
+              "bashalt": {
+                "prompt-user": "#61afef",
+                "prompt-host": "#d19a66",
+                "prompt-path": "#56b6c2",
+                "prompt-hash": "#ff5555"
+              },
+              "kali": {
+                "prompt-user": "#2679F2",
+                "prompt-host": "#2679F2",
+                "prompt-path": "#5c6370",
+                "prompt-kali-symbol": "#2679F2",
+                "prompt-dollar": "#2679F2",
+                "prompt-dash": "#56AA9B",
+                "prompt-bracket-open": "#56AA9B",
+                "prompt-bracket-close": "#56AA9B",
+                "prompt-square-open": "#56AA9B",
+                "prompt-square-close": "#56AA9B"
+              },
+              "zshgit": {
+                "prompt-path": "#61afef",
+                "prompt-branch": "#c678dd",
+                "prompt-zsh-status-error": "#ff5555",
+                "prompt-zsh-status-ok": "#50fa7b",
+                "prompt-zsh-symbol": "#00ff00",
+                "prompt-symbol": "#8be9fd"
+              },
+              "zsh": {
+                "prompt-user": "#56b6c2",
+                "prompt-host": "#e06c75",
+                "prompt-path": "#98c379",
+                "prompt-percent": "#abb2bf"
+              },
+              "fish": {
+                "prompt-path": "#61afef"
+              },
+              "ps": {
+                "prompt-path": "#5b9bd5",
+                "prompt-symbol": "#e5c07b",
+                "prompt-greater-than": "#e5c07b"
+              },
+              "cmd": {
+                "prompt-path": "#87ceeb ",
+                "prompt-greater-than": "#aaaaaa"
+              },
+              "docker": {
+                "prompt-user": "#61afef",
+                "prompt-host": "#e06c75",
+                "prompt-path": "#98c379"
+              },
+              "postgres": {
+                "prompt-db": "#fabd2f"
+              },
+              "msf": {
+                "prompt-msf": "#5C6370",
+                "prompt-keyword": "#5C6370",
+                "prompt-module": "#E20303",
+                "prompt-greater-than": "#5C6370",
+                "prompt-bracket-open": "#5C6370",
+                "prompt-bracket-close": "#5C6370"
+              },
+              "cstrike": {
+                "prompt-beacon": "#5C6370",
+                "prompt-greater-than": "#5C6370"
+              },
+              "global": {
+                "prompt-at": "#777777",
+                "prompt-colon": "#777777",
+                "prompt-dollar": "#777777",
+                "prompt-hash": "#777777",
+                "prompt-dash": "#777777",
+                "prompt-bracket-open": "#777777",
+                "prompt-bracket-close": "#777777",
+                "prompt-square-open": "#777777",
+                "prompt-square-close": "#777777",
+                "prompt-greater-than": "#777777",
+                "prompt-symbol": "#888888",
+                "prompt-user": "#777777",
+                "prompt-host": "#777777",
+                "prompt-path": "#777777",
+                "prompt-branch": "#777777",
+                "prompt-db": "#777777",
+                "prompt-zsh-symbol": "#777777",
+                "prompt-zsh-status-error": "#777777",
+                "prompt-zsh-status-ok": "#777777",
+                "prompt-msf": "#777777",
+                "prompt-keyword": "#777777",
+                "prompt-module": "#777777",
+                "prompt-beacon": "#777777",
+                "prompt-kali-symbol": "#777777",
+                "prompt-percent": "#777777"
+              }
+            },
+            "rootPromptColors": {
+              "bash": {
+                "prompt-user": "#e63946",
+                "prompt-host": "#e5c07b",
+                "prompt-path": "#ffb347",
+                "prompt-hash": "#ff5555"
+              },
+              "bashalt": {
+                "prompt-user": "#e63946",
+                "prompt-host": "#d19a66",
+                "prompt-path": "#ffb347",
+                "prompt-hash": "#ff5555"
+              },
+              "kali": {
+                "prompt-user": "#e63946",
+                "prompt-host": "#e63946",
+                "prompt-path": "#ffb347",
+                "prompt-kali-symbol": "#e63946",
+                "prompt-hash": "#ff5555",
+                "prompt-dash": "#3370D7",
+                "prompt-bracket-open": "#3370D7",
+                "prompt-bracket-close": "#3370D7",
+                "prompt-square-open": "#3370D7",
+                "prompt-square-close": "#3370D7"
+              },
+              "zsh": {
+                "prompt-user": "#e63946",
+                "prompt-path": "#ffb347",
+                "prompt-hash": "#ff5555",
+                "prompt-end": "#ff5555"
+              },
+              "docker": {
+                "prompt-user": "#e63946",
+                "prompt-container": "#e06c75",
+                "prompt-path": "#ffb347",
+                "prompt-hash": "#ff5555"
+              },
+              "global": {}
+            },
+            "editedPromptColors": {},
+            "editedRootPromptColors": {}
+          },
+          "groupedCodeBlocks": {
+            "activeTabBackgroundColor": "#E6E6E6",
+            "hoverTabBackgroundColor": "#F0F0F0",
+            "hoverTabTextColor": "#888888"
+          },
+          "annotations": {
+            "colors": {
+              "note": "#086ddd",
+              "warn": "#ec7500",
+              "error": "#e93147",
+              "todo": "#08b94e",
+              "question": "#7852ee",
+              "see": "#00bfbc"
+            }
+          },
           "editorActiveLineColor": "--color-base-20",
           "languageSpecificColors": {}
         }
@@ -146,9 +483,9 @@
           "enableLinkUpdate": false,
           "enableBracketHighlight": true,
           "highlightNonMatchingBrackets": true,
-          "inverseFold": false,
           "enableSelectionMatching": false,
           "unwrapcode": false,
+          "hideFenceLines": false,
           "buttons": {
             "alwaysShowButtons": false,
             "alwaysShowCopyCodeButton": false,
@@ -156,6 +493,13 @@
             "enableDeleteCodeButton": false,
             "enableWrapCodeButton": false
           },
+          "folding": {
+            "inverseFold": false,
+            "rememberFoldState": true,
+            "scope": "nofoldspecified",
+            "persistence": "session"
+          },
+          "inverseFold": false,
           "enableDeleteCodeButton": false,
           "enableCopyCodeButton": false,
           "textHighlight": true
@@ -187,15 +531,34 @@
           "enableHighlight": false
         },
         "inlineCode": {
-          "enableInlineCodeStyling": false
+          "enableInlineCodeStyling": false,
+          "enableSyntaxHighlight": true,
+          "showIcons": false,
+          "enableCopyOnClick": true,
+          "copyModifierKey": "ctrl"
         },
         "printing": {
           "enablePrintToPDFStyling": false,
           "forceCurrentColorUse": false,
-          "uncollapseDuringPrint": true
+          "uncollapseDuringPrint": true,
+          "printAnnotationsAsComments": false,
+          "avoidPageBreaks": false
         },
         "common": {
           "enableInSourceMode": false
+        },
+        "prompts": {
+          "editedDefaults": {},
+          "customPrompts": {},
+          "includePromptsInCopy": false
+        },
+        "groupedCodeBlocks": {
+          "rememberTabState": true,
+          "persistence": "session"
+        },
+        "annotations": {
+          "convertAllComments": false,
+          "excludeAnnotationsFromCopy": false
         },
         "enableEditorActiveLineHighlight": true
       },
@@ -230,6 +593,161 @@
             "backgroundColor": "#054b5c",
             "textColor": "#DADADA"
           },
+          "prompts": {
+            "promptColors": {
+              "bash": {
+                "prompt-user": "#61afef",
+                "prompt-host": "#e5c07b",
+                "prompt-path": "#98c379"
+              },
+              "bashalt": {
+                "prompt-user": "#61afef",
+                "prompt-host": "#d19a66",
+                "prompt-path": "#56b6c2"
+              },
+              "kali": {
+                "prompt-user": "#2679F2",
+                "prompt-host": "#2679F2",
+                "prompt-path": "#F3F3F4",
+                "prompt-kali-symbol": "#2679F2",
+                "prompt-dollar": "#2679F2",
+                "prompt-dash": "#56AA9B",
+                "prompt-bracket-open": "#56AA9B",
+                "prompt-bracket-close": "#56AA9B",
+                "prompt-square-open": "#56AA9B",
+                "prompt-square-close": "#56AA9B"
+              },
+              "zshgit": {
+                "prompt-path": "#61afef",
+                "prompt-branch": "#c678dd",
+                "prompt-zsh-status-error": "#ff5555",
+                "prompt-zsh-status-ok": "#50fa7b",
+                "prompt-zsh-symbol": "#00ff00",
+                "prompt-symbol": "#8be9fd"
+              },
+              "zsh": {
+                "prompt-user": "#56b6c2",
+                "prompt-host": "#e06c75",
+                "prompt-path": "#98c379",
+                "prompt-percent": "#abb2bf"
+              },
+              "fish": {
+                "prompt-path": "#61afef"
+              },
+              "ps": {
+                "prompt-path": "#5b9bd5",
+                "prompt-symbol": "#e5c07b",
+                "prompt-greater-than": "#e5c07b"
+              },
+              "cmd": {
+                "prompt-path": "#87ceeb ",
+                "prompt-greater-than": "#aaaaaa"
+              },
+              "docker": {
+                "prompt-user": "#61afef",
+                "prompt-host": "#e06c75",
+                "prompt-path": "#98c379"
+              },
+              "postgres": {
+                "prompt-db": "#fabd2f"
+              },
+              "msf": {
+                "prompt-msf": "#f3f3f4",
+                "prompt-keyword": "#f3f3f4",
+                "prompt-module": "#E20303",
+                "prompt-greater-than": "#f3f3f4",
+                "prompt-bracket-open": "#f3f3f4",
+                "prompt-bracket-close": "#f3f3f4"
+              },
+              "cstrike": {
+                "prompt-beacon": "#f3f3f4",
+                "prompt-greater-than": "#f3f3f4"
+              },
+              "global": {
+                "prompt-at": "#777777",
+                "prompt-colon": "#777777",
+                "prompt-dollar": "#777777",
+                "prompt-hash": "#777777",
+                "prompt-dash": "#777777",
+                "prompt-bracket-open": "#777777",
+                "prompt-bracket-close": "#777777",
+                "prompt-square-open": "#777777",
+                "prompt-square-close": "#777777",
+                "prompt-greater-than": "#777777",
+                "prompt-symbol": "#888888",
+                "prompt-user": "#777777",
+                "prompt-host": "#777777",
+                "prompt-path": "#777777",
+                "prompt-branch": "#777777",
+                "prompt-db": "#777777",
+                "prompt-zsh-symbol": "#777777",
+                "prompt-zsh-status-error": "#777777",
+                "prompt-zsh-status-ok": "#777777",
+                "prompt-msf": "#777777",
+                "prompt-keyword": "#777777",
+                "prompt-module": "#777777",
+                "prompt-beacon": "#777777",
+                "prompt-kali-symbol": "#777777",
+                "prompt-percent": "#777777"
+              }
+            },
+            "rootPromptColors": {
+              "bash": {
+                "prompt-user": "#e63946",
+                "prompt-host": "#e5c07b",
+                "prompt-path": "#ffb347",
+                "prompt-hash": "#ff5555"
+              },
+              "bashalt": {
+                "prompt-user": "#e63946",
+                "prompt-host": "#d19a66",
+                "prompt-path": "#ffb347",
+                "prompt-hash": "#ff5555"
+              },
+              "kali": {
+                "prompt-user": "#e63946",
+                "prompt-host": "#e63946",
+                "prompt-path": "#ffb347",
+                "prompt-kali-symbol": "#e63946",
+                "prompt-hash": "#ff5555",
+                "prompt-dash": "#3370D7",
+                "prompt-bracket-open": "#3370D7",
+                "prompt-bracket-close": "#3370D7",
+                "prompt-square-open": "#3370D7",
+                "prompt-square-close": "#3370D7"
+              },
+              "zsh": {
+                "prompt-user": "#e63946",
+                "prompt-path": "#ffb347",
+                "prompt-hash": "#ff5555",
+                "prompt-end": "#ff5555"
+              },
+              "docker": {
+                "prompt-user": "#e63946",
+                "prompt-container": "#e06c75",
+                "prompt-path": "#ffb347",
+                "prompt-hash": "#ff5555"
+              },
+              "global": {}
+            },
+            "editedPromptColors": {},
+            "editedRootPromptColors": {}
+          },
+          "groupedCodeBlocks": {
+            "activeTabBackgroundColor": "#B58900",
+            "hoverTabBackgroundColor": "#00AAAA",
+            "hoverTabTextColor": "#FFFFFF"
+          },
+          "annotations": {
+            "colors": {
+              "note": "#027aff",
+              "warn": "#e9973f",
+              "error": "#fb464c",
+              "todo": "#44cf6e",
+              "question": "#a882ff",
+              "see": "#53dfdd"
+            }
+          },
           "editorActiveLineColor": "#468eeb33",
           "languageSpecificColors": {}
         },
@@ -263,6 +781,162 @@
             "backgroundColor": "#E9DFBA",
             "textColor": "#866704"
           },
+          "prompts": {
+            "promptColors": {
+              "bash": {
+                "prompt-user": "#61afef",
+                "prompt-host": "#e5c07b",
+                "prompt-path": "#98c379"
+              },
+              "bashalt": {
+                "prompt-user": "#61afef",
+                "prompt-host": "#d19a66",
+                "prompt-path": "#56b6c2",
+                "prompt-hash": "#ff5555"
+              },
+              "kali": {
+                "prompt-user": "#2679F2",
+                "prompt-host": "#2679F2",
+                "prompt-path": "#586e75",
+                "prompt-kali-symbol": "#2679F2",
+                "prompt-dollar": "#2679F2",
+                "prompt-dash": "#56AA9B",
+                "prompt-bracket-open": "#56AA9B",
+                "prompt-bracket-close": "#56AA9B",
+                "prompt-square-open": "#56AA9B",
+                "prompt-square-close": "#56AA9B"
+              },
+              "zshgit": {
+                "prompt-path": "#61afef",
+                "prompt-branch": "#c678dd",
+                "prompt-zsh-status-error": "#ff5555",
+                "prompt-zsh-status-ok": "#50fa7b",
+                "prompt-zsh-symbol": "#00ff00",
+                "prompt-symbol": "#8be9fd"
+              },
+              "zsh": {
+                "prompt-user": "#56b6c2",
+                "prompt-host": "#e06c75",
+                "prompt-path": "#98c379",
+                "prompt-percent": "#abb2bf"
+              },
+              "fish": {
+                "prompt-path": "#61afef"
+              },
+              "ps": {
+                "prompt-path": "#5b9bd5",
+                "prompt-symbol": "#e5c07b",
+                "prompt-greater-than": "#e5c07b"
+              },
+              "cmd": {
+                "prompt-path": "#87ceeb ",
+                "prompt-greater-than": "#aaaaaa"
+              },
+              "docker": {
+                "prompt-user": "#61afef",
+                "prompt-host": "#e06c75",
+                "prompt-path": "#98c379"
+              },
+              "postgres": {
+                "prompt-db": "#fabd2f"
+              },
+              "msf": {
+                "prompt-msf": "#586E75",
+                "prompt-keyword": "#586E75",
+                "prompt-module": "#E20303",
+                "prompt-greater-than": "#586E75",
+                "prompt-bracket-open": "#586E75",
+                "prompt-bracket-close": "#586E75"
+              },
+              "cstrike": {
+                "prompt-beacon": "#586E75",
+                "prompt-greater-than": "#586E75"
+              },
+              "global": {
+                "prompt-at": "#777777",
+                "prompt-colon": "#777777",
+                "prompt-dollar": "#777777",
+                "prompt-hash": "#777777",
+                "prompt-dash": "#777777",
+                "prompt-bracket-open": "#777777",
+                "prompt-bracket-close": "#777777",
+                "prompt-square-open": "#777777",
+                "prompt-square-close": "#777777",
+                "prompt-greater-than": "#777777",
+                "prompt-symbol": "#888888",
+                "prompt-user": "#777777",
+                "prompt-host": "#777777",
+                "prompt-path": "#777777",
+                "prompt-branch": "#777777",
+                "prompt-db": "#777777",
+                "prompt-zsh-symbol": "#777777",
+                "prompt-zsh-status-error": "#777777",
+                "prompt-zsh-status-ok": "#777777",
+                "prompt-msf": "#777777",
+                "prompt-keyword": "#777777",
+                "prompt-module": "#777777",
+                "prompt-beacon": "#777777",
+                "prompt-kali-symbol": "#777777",
+                "prompt-percent": "#777777"
+              }
+            },
+            "rootPromptColors": {
+              "bash": {
+                "prompt-user": "#e63946",
+                "prompt-host": "#e5c07b",
+                "prompt-path": "#ffb347",
+                "prompt-hash": "#ff5555"
+              },
+              "bashalt": {
+                "prompt-user": "#e63946",
+                "prompt-host": "#d19a66",
+                "prompt-path": "#ffb347",
+                "prompt-hash": "#ff5555"
+              },
+              "kali": {
+                "prompt-user": "#e63946",
+                "prompt-host": "#e63946",
+                "prompt-path": "#ffb347",
+                "prompt-kali-symbol": "#e63946",
+                "prompt-hash": "#ff5555",
+                "prompt-dash": "#3370D7",
+                "prompt-bracket-open": "#3370D7",
+                "prompt-bracket-close": "#3370D7",
+                "prompt-square-open": "#3370D7",
+                "prompt-square-close": "#3370D7"
+              },
+              "zsh": {
+                "prompt-user": "#e63946",
+                "prompt-path": "#ffb347",
+                "prompt-hash": "#ff5555",
+                "prompt-end": "#ff5555"
+              },
+              "docker": {
+                "prompt-user": "#e63946",
+                "prompt-container": "#e06c75",
+                "prompt-path": "#ffb347",
+                "prompt-hash": "#ff5555"
+              },
+              "global": {}
+            },
+            "editedPromptColors": {},
+            "editedRootPromptColors": {}
+          },
+          "groupedCodeBlocks": {
+            "activeTabBackgroundColor": "#FFD700",
+            "hoverTabBackgroundColor": "#A6A18F",
+            "hoverTabTextColor": "#C25F30"
+          },
+          "annotations": {
+            "colors": {
+              "note": "#086ddd",
+              "warn": "#ec7500",
+              "error": "#e93147",
+              "todo": "#08b94e",
+              "question": "#7852ee",
+              "see": "#00bfbc"
+            }
+          },
           "editorActiveLineColor": "#60460633",
           "languageSpecificColors": {}
         }
@@ -282,9 +956,9 @@
         "enableLinkUpdate": false,
         "enableBracketHighlight": true,
         "highlightNonMatchingBrackets": true,
-        "inverseFold": false,
         "enableSelectionMatching": false,
         "unwrapcode": false,
+        "hideFenceLines": false,
         "buttons": {
           "alwaysShowButtons": false,
           "alwaysShowCopyCodeButton": false,
@@ -292,6 +966,13 @@
           "enableDeleteCodeButton": false,
           "enableWrapCodeButton": false
         },
+        "folding": {
+          "inverseFold": false,
+          "rememberFoldState": true,
+          "scope": "nofoldspecified",
+          "persistence": "session"
+        },
+        "inverseFold": false,
         "enableDeleteCodeButton": false,
         "enableCopyCodeButton": false,
         "textHighlight": true
@@ -323,15 +1004,34 @@
         "enableHighlight": true
       },
       "inlineCode": {
-        "enableInlineCodeStyling": false
+        "enableInlineCodeStyling": false,
+        "enableSyntaxHighlight": true,
+        "showIcons": false,
+        "enableCopyOnClick": true,
+        "copyModifierKey": "ctrl"
       },
       "printing": {
         "enablePrintToPDFStyling": false,
         "forceCurrentColorUse": false,
-        "uncollapseDuringPrint": true
+        "uncollapseDuringPrint": true,
+        "printAnnotationsAsComments": false,
+        "avoidPageBreaks": false
       },
       "common": {
         "enableInSourceMode": false
+      },
+      "prompts": {
+        "editedDefaults": {},
+        "customPrompts": {},
+        "includePromptsInCopy": false
+      },
+      "groupedCodeBlocks": {
+        "rememberTabState": true,
+        "persistence": "session"
+      },
+      "annotations": {
+        "convertAllComments": false,
+        "excludeAnnotationsFromCopy": false
       },
       "enableEditorActiveLineHighlight": true
     },
@@ -366,6 +1066,25 @@
           "backgroundColor": "--code-background",
           "textColor": "--code-normal"
         },
+        "prompts": {
+          "editedPromptColors": {},
+          "editedRootPromptColors": {}
+        },
+        "groupedCodeBlocks": {
+          "activeTabBackgroundColor": "#3A3A3A",
+          "hoverTabBackgroundColor": "#333333",
+          "hoverTabTextColor": "#CCCCCC"
+        },
+        "annotations": {
+          "colors": {
+            "note": "#027aff",
+            "warn": "#e9973f",
+            "error": "#fb464c",
+            "todo": "#44cf6e",
+            "question": "#a882ff",
+            "see": "#53dfdd"
+          }
+        },
         "editorActiveLineColor": "--color-base-20",
         "languageSpecificColors": {}
       },
@@ -399,6 +1118,25 @@
           "backgroundColor": "--code-background",
           "textColor": "--code-normal"
         },
+        "prompts": {
+          "editedPromptColors": {},
+          "editedRootPromptColors": {}
+        },
+        "groupedCodeBlocks": {
+          "activeTabBackgroundColor": "#E6E6E6",
+          "hoverTabBackgroundColor": "#F0F0F0",
+          "hoverTabTextColor": "#888888"
+        },
+        "annotations": {
+          "colors": {
+            "note": "#086ddd",
+            "warn": "#ec7500",
+            "error": "#e93147",
+            "todo": "#08b94e",
+            "question": "#7852ee",
+            "see": "#00bfbc"
+          }
+        },
         "editorActiveLineColor": "--color-base-20",
         "languageSpecificColors": {}
       }
@@ -406,10 +1144,11 @@
   },
   "ThemeName": "Obsidian",
   "newThemeName": "",
+  "newPromptName": "",
   "alternateHighlightColorName": "",
   "languageBorderColorName": "",
-  "foldAllCommand": false,
   "settingsType": "codeblock",
   "langSpecificSettingsType": "",
-  "languageSpecificLanguageName": ""
+  "languageSpecificLanguageName": "",
+  "foldAllCommand": false
 }

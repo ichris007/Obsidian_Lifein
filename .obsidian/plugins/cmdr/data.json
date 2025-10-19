@@ -87,8 +87,14 @@
     },
     {
       "id": "quickadd:choice:776db2f2-ab07-4124-b89d-bfa55e185021",
-      "icon": "lucide-switch-camera",
+      "icon": "lucide-moon",
       "name": "切换深浅色",
+      "mode": "any"
+    },
+    {
+      "id": "theme:switch",
+      "icon": "lucide-switch-camera",
+      "name": "更换主题",
       "mode": "any"
     }
   ],

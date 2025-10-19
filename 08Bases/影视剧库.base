@@ -1,0 +1,23 @@
+views:
+  - type: cards
+    name: 影视库
+    filters:
+      and:
+        - file.inFolder("06Movies")
+        - or:
+            - this.searchTerm.isEmpty()
+            - file.name.contains(this.searchTerm)
+            - aliases.contains(this.searchTerm)
+            - file.tags.join(" ").contains(this.searchTerm)
+            - director.contains(this.searchTerm)
+        - '!file.tags.contains("index")'
+    order:
+      - file.name
+      - 豆瓣评分
+      - 影视类型
+    sort:
+      - property: file.ctime
+        direction: DESC
+    image: note.封面
+    imageAspectRatio: 1.25
+    cardSize: 130

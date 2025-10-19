@@ -3,7 +3,6 @@
   "various-complements",
   "quickadd",
   "obsidian-paste-image-rename",
-  "obsidian-projects",
   "cmdr",
   "dataview",
   "obsidian-style-settings",
@@ -31,6 +30,7 @@
   "codeblock-customizer",
   "recent-files-obsidian",
   "obsidian-view-mode-by-frontmatter",
-  "obsidian-hover-editor",
-  "mysnippets-plugin"
+  "mysnippets-plugin",
+  "any-block",
+  "obsidian-weread-plugin"
 ]

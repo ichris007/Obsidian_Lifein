@@ -1,13 +1,14 @@
 {
   "pinned": [
+    "quickadd:choice:8f4a38b7-0e00-457d-8400-fca78ad55d95",
+    "quickadd:choice:ea3c2614-be20-4a2a-a2fd-aa0e51b8a28e",
+    "quickadd:choice:376ee47e-0103-4c71-b8f7-3025db72e0f0",
     "editing-toolbar:editor:insert-link",
     "editing-toolbar:editor:insert-embed",
     "editing-toolbar:codeblock",
     "quickadd:choice:cafc95fd-2a61-4d66-8269-b261c4fab5ab",
     "templater-obsidian:create-new-note-from-template",
     "templater-obsidian:insert-templater",
-    "obsidian-tasks-plugin:edit-task",
-    "quickadd:choice:1ac1b6f0-9e20-43e9-9f5a-7642cb062b1d",
-    "quickadd:choice:88491416-b31b-47df-b683-1dec62a1a939"
+    "obsidian-tasks-plugin:edit-task"
   ]
 }
