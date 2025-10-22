@@ -19,10 +19,25 @@ Lifein适合这些人：
 - 想建立属于自己的知识体系和人生导航系统的人
 - 对Obsidian感兴趣，但不知道如何入门的人
 
-[2025-10-18](https://github.com/ichris007/Obsidian_Lifein/blob/main/Settings/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97.md)：[Lifein](https://github.com/ichris007/Obsidian_Lifein)已经更新到了v0.6.1，接下来会陆续更新更多功能。
+[2025-10-22](https://github.com/ichris007/Obsidian_Lifein/blob/main/Settings/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97.md)：[Lifein](https://github.com/ichris007/Obsidian_Lifein) 更新到了v0.6.1。
+- 此次主要更新了「日记皮肤」，每周7天日记皮肤不重样，自动更换（点击看详情👇）
+- 下载整个 **示例库**，点击[这里](https://github.com/ichris007/Obsidian_Lifein/releases/tag/Lifein0.6.1)
+- 只更新 **「日记皮肤」**，[看这里](https://forum-zh.obsidian.md/t/topic/54946)
+<details>
+<summary>点击看效果</summary>
+
+    浅色主题：
+![日记_浅色_对比图](https://github.com/user-attachments/assets/566d5ef3-9c45-4f63-a62e-bcd1c7297812)
+
+    深色主题：
+![日记_深色_对比图](https://github.com/user-attachments/assets/7f6ecc01-dfa0-44ff-b2ee-c875d005f3af)
+
+</details>
+
+[2025-10-19](https://github.com/ichris007/Obsidian_Lifein/blob/main/Settings/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97.md)：[Lifein](https://github.com/ichris007/Obsidian_Lifein)更新到了v0.6.0。
 - 此次更新内容的部分展示（点击看详情👇）
 <details>
-<summary>点击看详情</summary>
+<summary>点击看效果</summary>
 	
 ![PixPin_2025-10-19_23-08-21](https://github.com/user-attachments/assets/eb9766f1-0c99-4a2a-9d01-9551efff586a)
 </details>
