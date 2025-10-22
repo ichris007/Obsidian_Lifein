@@ -1,75 +1,344 @@
-/*-------------------Daily Note Themes------------------------------------------------*/
+/*------------------------------------------------------------------------------
+                     Daily Note Themes by CyanVoxel v1.0.5
+                     Enhanced Dual Theme by Alan V2 
+                     https://github.com/ichris007/Obsidian_Lifein
+
+这是一套7种主题配置，可为日记中的每一天应用专属颜色方案，通过在`cssclasses`中定义即可。
+要调整每日颜色，只需修改对应"星期几"类中的颜色值。
+                
+------------------------------------------------------------------------------*/
+
+
+/* ===== 基础变量定义 ===== */
 :root {
-  /* --highlight: #ffffff;
-  --primary: #aaaaaa;
-  --dark: #333333;*/
+  /* 浅色主题默认配色 */
+  --light-highlight: #333333;
+  --light-primary: #666666; 
+  --light-bg: #ffffff;
+  --light-accent: #4a90e2;
+  
+  /* 深色主题默认配色 */
+  --dark-highlight: #ffffff;
+  --dark-primary: #aaaaaa;
+  --dark-bg: #1a1a1a;
+  --dark-accent: #6ab0f3;
 }
 
+
+
+/* ===== 基础每日笔记样式 ===== */
 .daily {
-  /* --dark: var(--dark);
-  color: var(--highlight);
-  background-color: var(--dark);
-  --text-normal: var(--highlight);
-  --text-muted: var(--highlight);
-  --text-faint: var(--highlight);
-  --checklist-done-color: var(--highlight);
-  --metadata-label-text-color: var(--highlight);
-  --metadata-input-text-color: var(--highlight);
-  --tag-color: var(--dark);
-  --tag-background: var(--primary);
-  --hr-color: var(--primary);
-  --blockquote-border-color: var(--primary);
-  --interactive-accent: var(--primary);
-  --collapse-icon-color-collapsed: var(--primary);
-  --checkbox-color: var(--primary);
-  --checkbox-marker-color: var(--dark);
-  --checkbox-color-hover: var(--highlight);
-  --checkbox-border-color: var(--highlight);
-  --list-marker-color: var(--highlight);
-  --code-background: black;
-  --code-normal: var(--primary);
-
-  --background-modifier-border-focus: var(--primary);
-  --background-modifier-border: color-mix(in srgb, var(--highlight) 60%, transparent);
-  --background-modifier-hover: color-mix(in srgb, var(--highlight) 60%, transparent);
-  --pill-cover-hover: color-mix(in srgb, var(--highlight) 60%, transparent);*/
+  /* 默认使用浅色主题 */
+  color: var(--light-highlight);
+  background-color: var(--light-bg);
+  
+  /* 文字系统 */
+  --text-normal: var(--light-highlight);
+  --text-muted: color-mix(in srgb, var(--light-highlight) 70%, transparent);
+  --text-faint: color-mix(in srgb, var(--light-highlight) 50%, transparent);
+  
+  /* 交互元素 */
+  --checklist-done-color: var(--light-primary);
+  --metadata-label-text-color: var(--light-highlight);
+  --metadata-input-text-color: var(--light-highlight);
+  --interactive-accent: var(--light-accent);
+  
+  /* 标签样式 - 修改：使用更柔和的配色 */
+  --tag-color: color-mix(in srgb, var(--light-highlight) 70%, transparent); /* 修改：文字颜色改为70%透明度，更柔和 */
+  --tag-background: color-mix(in srgb, var(--light-primary) 15%, transparent); /* 修改：背景色改为15%透明度，更淡雅 */
+  --tag-border: color-mix(in srgb, var(--light-primary) 30%, transparent); /* 新增：添加细边框增强可读性 */
+  --tag-border-radius: 12px; /* 新增：圆角更明显 */
+  --tag-padding: 2px 8px; /* 新增：内边距调整 */
+  --tag-font-size: 0.85em; /* 新增：字体稍小 */
+  --tag-font-weight: 450; /* 新增：字重适中 */
+  
+  /* 装饰元素 */
+  --hr-color: color-mix(in srgb, var(--light-primary) 60%, transparent);
+  --blockquote-border-color: var(--light-accent);
+  
+  /* 折叠图标 */
+  --collapse-icon-color-collapsed: var(--light-primary);
+  
+  /* 复选框系统 */
+  --checkbox-color: var(--light-primary);
+  --checkbox-marker-color: var(--light-bg);
+  --checkbox-color-hover: var(--light-accent);
+  --checkbox-border-color: color-mix(in srgb, var(--light-highlight) 40%, transparent);
+  
+  /* 代码块 */
+  --code-background: #f5f5f5;
+  --code-normal: var(--light-highlight);
+  
+  /* 交互状态 */
+  --background-modifier-border-focus: var(--light-accent);
+  --background-modifier-border: color-mix(in srgb, var(--light-highlight) 20%, transparent);
+  --background-modifier-hover: color-mix(in srgb, var(--light-accent) 15%, transparent);
+  --pill-cover-hover: color-mix(in srgb, var(--light-accent) 20%, transparent);
+  
+  /* === 新增：嵌入块颜色匹配 === */
+  --embed-background: color-mix(in srgb, var(--light-bg) 98%, var(--light-highlight));
+  --embed-border-left: color-mix(in srgb, var(--light-accent) 60%, transparent);
+  --embed-border-right: color-mix(in srgb, var(--light-highlight) 10%, transparent);
+  --embed-border-top: color-mix(in srgb, var(--light-highlight) 10%, transparent);
+  --embed-border-bottom: color-mix(in srgb, var(--light-highlight) 10%, transparent);
+  --embed-font-style: normal;
+  --embed-link-color: var(--light-accent);
+  --embed-link-color-hover: color-mix(in srgb, var(--light-accent) 80%, var(--light-highlight));
+  --embed-title-color: var(--light-primary);
+  --embed-block-shadow: 0 1px 3px color-mix(in srgb, var(--light-highlight) 10%, transparent);
 }
 
-.sunday, .Sunday {
-  --highlight: #f39caa;
-  --primary: #f6466f;
-  --dark: #2d0916;
+/* ===== 深色主题覆盖 ===== */
+body.theme-dark .daily {
+  color: var(--dark-highlight);
+  background-color: var(--dark-bg);
+  
+  --text-normal: var(--dark-highlight);
+  --text-muted: color-mix(in srgb, var(--dark-highlight) 70%, transparent);
+  --text-faint: color-mix(in srgb, var(--dark-highlight) 50%, transparent);
+  
+  --checklist-done-color: var(--dark-primary);
+  --metadata-label-text-color: var(--dark-highlight);
+  --metadata-input-text-color: var(--dark-highlight);
+  --interactive-accent: var(--dark-accent);
+  
+  /* 标签样式 - 修改：深色主题下也使用柔和配色 */
+  --tag-color: color-mix(in srgb, var(--dark-highlight) 80%, transparent); /* 修改：文字颜色改为80%透明度，在深色背景下更清晰 */
+  --tag-background: color-mix(in srgb, var(--dark-primary) 20%, transparent); /* 修改：背景色改为20%透明度，保持淡雅 */
+  --tag-border: color-mix(in srgb, var(--dark-primary) 40%, transparent); /* 新增：深色主题边框稍明显 */
+  --tag-border-radius: 12px; /* 新增：圆角保持一致 */
+  --tag-padding: 2px 8px; /* 新增：内边距保持一致 */
+  --tag-font-size: 0.85em; /* 新增：字体大小保持一致 */
+  --tag-font-weight: 450; /* 新增：字重保持一致 */
+  
+  --hr-color: color-mix(in srgb, var(--dark-primary) 60%, transparent);
+  --blockquote-border-color: var(--dark-accent);
+  
+  --collapse-icon-color-collapsed: var(--dark-primary);
+  
+  --checkbox-color: var(--dark-primary);
+  --checkbox-marker-color: var(--dark-bg);
+  --checkbox-color-hover: var(--dark-accent);
+  --checkbox-border-color: color-mix(in srgb, var(--dark-highlight) 40%, transparent);
+  
+  --code-background: #000000;
+  --code-normal: var(--dark-primary);
+  
+  --background-modifier-border-focus: var(--dark-accent);
+  --background-modifier-border: color-mix(in srgb, var(--dark-highlight) 20%, transparent);
+  --background-modifier-hover: color-mix(in srgb, var(--dark-accent) 15%, transparent);
+  --pill-cover-hover: color-mix(in srgb, var(--dark-accent) 20%, transparent);
+  
+  /* === 新增：深色主题嵌入块颜色匹配 === */
+  --embed-background: color-mix(in srgb, var(--dark-bg) 95%, var(--dark-highlight));
+  --embed-border-left: color-mix(in srgb, var(--dark-accent) 70%, transparent);
+  --embed-border-right: color-mix(in srgb, var(--dark-highlight) 15%, transparent);
+  --embed-border-top: color-mix(in srgb, var(--dark-highlight) 15%, transparent);
+  --embed-border-bottom: color-mix(in srgb, var(--dark-highlight) 15%, transparent);
+  --embed-font-style: normal;
+  --embed-link-color: var(--dark-accent);
+  --embed-link-color-hover: color-mix(in srgb, var(--dark-accent) 80%, var(--dark-highlight));
+  --embed-title-color: var(--dark-primary);
+  --embed-block-shadow: 0 1px 3px color-mix(in srgb, var(--dark-highlight) 20%, transparent);
 }
-.monday, .Monday {
-  --highlight: #fcadaa;
-  --primary: #f65848;
-  --dark: #3c0e0b;
+
+/* ===== 浅色主题每日配色 ===== */
+
+/* 星期日 - 柔和粉色系 */
+.daily.sunday, .daily.Sunday {
+  --light-highlight: #8b4513;
+  --light-primary: #d46a6a;
+  --light-bg: #fff0f5;
+  --light-accent: #c71585;
 }
-.tuesday, .Tuesday {
-  --highlight: #aedbfa;
-  --primary: #3b87f0;
-  --dark: #070615;
+
+/* 星期一 - 清新蓝色系 */
+.daily.monday, .daily.Monday {
+  --light-highlight: #1e3a5f;
+  --light-primary: #4a7b9d;
+  --light-bg: #f0f8ff;
+  --light-accent: #1e90ff;
 }
-.wednesday, .Wednesday {
-  --highlight: #fff3c4;
-  --primary: #ffd63d;
-  --dark: #2c1404;
+
+/* 星期二 - 活力绿色系 */
+.daily.tuesday, .daily.Tuesday {
+  --light-highlight: #2d5016;
+  --light-primary: #5a9e4d;
+  --light-bg: #f0fff0;
+  --light-accent: #32cd32;
 }
-.thursday, .Thursday {
-  --highlight: #f7b79b;
-  --primary: #ed6022;
-  --dark: #210b04;
+
+/* 星期三 - 温暖橙色系 */
+.daily.wednesday, .daily.Wednesday {
+  --light-highlight: #8b5a2b;
+  --light-primary: #d49c6a;
+  --light-bg: #fffaf0;
+  --light-accent: #ff8c00;
 }
-.friday, .Friday {
-  --highlight: #e9f9b7;
-  --primary: #92e649;
-  --dark: #192108;
+
+/* 星期四 - 优雅紫色系 */
+.daily.thursday, .daily.Thursday {
+  --light-highlight: #4b2c5e;
+  --light-primary: #8a6dae;
+  --light-bg: #f8f0ff;
+  --light-accent: #9370db;
 }
-.saturday, .Saturday{
-  --highlight: #f39caa;
-  --primary: #e22c3c;
-  --dark: #100305;
+
+/* 星期五 - 快乐黄色系 */
+.daily.friday, .daily.Friday {
+  --light-highlight: #8b7500;
+  --light-primary: #d4c16a;
+  --light-bg: #fffdf0;
+  --light-accent: #ffd700;
 }
+
+/* 星期六 - 浪漫红色系 */
+.daily.saturday, .daily.Saturday {
+  --light-highlight: #8b1a1a;
+  --light-primary: #d46a6a;
+  --light-bg: #fff0f0;
+  --light-accent: #dc143c;
+}
+
+/* ===== 深色主题每日配色 ===== */
+
+/* 星期日 - 深粉色系 */
+body.theme-dark .daily.sunday, 
+body.theme-dark .daily.Sunday {
+  --dark-highlight: #ffb6c1;
+  --dark-primary: #ff69b4;
+  --dark-bg: #2d0916;
+  --dark-accent: #ff1493;
+}
+
+/* 星期一 - 深蓝色系 */
+body.theme-dark .daily.monday, 
+body.theme-dark .daily.Monday {
+  --dark-highlight: #aedbfa;
+  --dark-primary: #3b87f0;
+  --dark-bg: #070615;
+  --dark-accent: #1e90ff;
+}
+
+/* 星期二 - 深绿色系 */
+body.theme-dark .daily.tuesday, 
+body.theme-dark .daily.Tuesday {
+  --dark-highlight: #98fb98;
+  --dark-primary: #32cd32;
+  --dark-bg: #0a1f0a;
+  --dark-accent: #00ff00;
+}
+
+/* 星期三 - 深橙色系 */
+body.theme-dark .daily.wednesday, 
+body.theme-dark .daily.Wednesday {
+  --dark-highlight: #fff3c4;
+  --dark-primary: #ffd63d;
+  --dark-bg: #2c1404;
+  --dark-accent: #ffa500;
+}
+
+/* 星期四 - 深紫色系 */
+body.theme-dark .daily.thursday, 
+body.theme-dark .daily.Thursday {
+  --dark-highlight: #d8bfd8;
+  --dark-primary: #9370db;
+  --dark-bg: #1a0a2a;
+  --dark-accent: #8a2be2;
+}
+
+/* 星期五 - 深黄色系 */
+body.theme-dark .daily.friday, 
+body.theme-dark .daily.Friday {
+  --dark-highlight: #e9f9b7;
+  --dark-primary: #92e649;
+  --dark-bg: #192108;
+  --dark-accent: #adff2f;
+}
+
+/* 星期六 - 深红色系 */
+body.theme-dark .daily.saturday, 
+body.theme-dark .daily.Saturday {
+  --dark-highlight: #f39caa;
+  --dark-primary: #e22c3c;
+  --dark-bg: #100305;
+  --dark-accent: #ff0000;
+}
+
+/* ===== 嵌入块具体样式 ===== */
+.daily .internal-embed {
+  background-color: var(--embed-background);
+  border: 1px solid var(--embed-border-right);
+  box-shadow: var(--embed-block-shadow);
+  border-radius: 4px;
+  padding: 12px 15px;
+  margin: 8px 0;
+}
+
+.daily .internal-embed .markdown-embed-title {
+  color: var(--embed-title-color);
+  font-weight: 600;
+  font-size: 0.9em;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--embed-border-right);
+  padding-bottom: 4px;
+}
+
+.daily .internal-embed .markdown-embed-link {
+  color: var(--embed-link-color);
+}
+
+.daily .internal-embed .markdown-embed-link:hover {
+  color: var(--embed-link-color-hover);
+}
+
+.daily .internal-embed .markdown-preview-view {
+  color: var(--text-normal);
+  font-style: var(--embed-font-style);
+}
+
+/* ===== 内部链接样式 - 保持Obsidian默认 ===== */
+.daily :is(a.internal-link, .cm-hmd-internal-link) {
+  /* 不添加任何自定义样式，使用主题默认 */
+}
+
+/* ===== 平滑过渡效果 ===== */
+.daily {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.daily * {
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.daily .internal-embed {
+  transition: all 0.3s ease;
+}
+
+
+/* ===== 响应式优化 ===== */
+@media (prefers-color-scheme: light) {
+  body:not(.theme-dark):not(.theme-light) .daily {
+    /* 系统偏好浅色主题时的默认样式 */
+    --light-highlight: #333333;
+    --light-primary: #666666; 
+    --light-bg: #ffffff;
+    --light-accent: #4a90e2;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body:not(.theme-dark):not(.theme-light) .daily {
+    /* 系统偏好深色主题时的默认样式 */
+    --dark-highlight: #ffffff;
+    --dark-primary: #aaaaaa;
+    --dark-bg: #1a1a1a;
+    --dark-accent: #6ab0f3;
+  }
+}
+
+
+/*=======================主题样式结束================================*/
 
 .daily :is(h1, .HyperMD-header.HyperMD-header-1) {
   color: var(--primary);
@@ -101,10 +370,10 @@
 /* 1️⃣ h4 基础样式 */
 .daily :is(h4, .HyperMD-header.HyperMD-header-4) {
   font-weight: 500;
-  font-size: 16px;
+  font-size: 15px;
   padding: 0 6px;
-  margin: 8px 0 6px;
-  border: 1px solid var(--primary);
+  margin: 20px 0px 0px 0px; /*影响嵌入块标题4的对齐*/
+  border: none;/* 0px solid var(--primary)*/
   border-radius: 4px;
   background: transparent;
   position: relative; /* 为 ::after 伪元素定位提供参考 */
@@ -139,6 +408,17 @@
   opacity: 0.9;
 }
 
+
+/* 4️⃣ 编辑模式下标题4上方增加间距 */
+/* 针对编辑模式下的 h4 标题，增加上边距 */
+.daily .cm-line.HyperMD-header.HyperMD-header-4 {
+margin-top: 20px !important; /* 增加上方间距，可根据需要调整数值 */
+}
+
+/* 如果还需要为编辑模式下的 h4 容器增加间距 */
+.daily .is-live-preview .HyperMD-header-4 {
+margin-top: 20px !important; /* 确保编辑模式下也有足够的上方间距 */
+}
 
 .daily p {
   margin-top: 4px;
@@ -175,3 +455,4 @@
   svg {
   color: color-mix(in srgb, var(--highlight) 60%, transparent);
 }
+

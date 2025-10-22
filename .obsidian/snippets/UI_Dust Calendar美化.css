@@ -13,6 +13,7 @@
 
   & .calendar-header-content-year {
     width: 4rem;
+    font-size:14px;
   }
 
   & .calendar-header-block-quarter {
@@ -21,10 +22,12 @@
 
   & .calendar-header-content-quarter {
     width: 1rem;
+    font-size:14px;
   }
 
   & .calendar-header-content-month {
     width: 2rem;
+    font-size:14px;
   }
 
   & .calendar-header-row .statistic-label:empty {

@@ -229,31 +229,61 @@ body.theme-light .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-
 }
 
 
-
-/* ======================== 嵌入embed样式 ：预览和编辑模式下的卡片样式======================= */
+/* ======================== 嵌入块增强样式：统一美观的嵌入卡片设计 ======================== */
+/* 说明：为Obsidian嵌入块提供统一的卡片式设计，适配所有模式和场景，支持浅色/暗色主题 */
 
 /* === 基础嵌入块样式：阅读模式 === */
 .markdown-preview-view .markdown-embed,
 .markdown-preview-view .file-embed {
-  border: 1px solid var(--background-modifier-border);
-  border-radius: 2px;
-  margin-top: 0px;
+  /* 边框与背景 */
+  border: 1px solid var(--embed-border-color, var(--background-modifier-border)); /* 使用自定义边框颜色，回退到默认 */
+  background-color: var(--embed-background, var(--background-primary)); /* 自定义背景色，回退到主题默认 */
+  
+  /* 立体视觉效果 */
+  box-shadow: var(--embed-block-shadow, 0 1px 3px rgba(0, 0, 0, 0.1)); /* 添加轻微阴影增强层次感 */
+  border-radius: 6px; /* 适中的圆角，现代设计 */
+  
+  /* 间距与布局 */
+  padding: 12px 16px; /* 舒适的内边距，提升可读性 */
+  margin: 10px 0; /* 统一的外边距 */
   display: block;
-  background-color: var(--background-primary); /* 适配所有主题 */
 }
 
 /* === 实时预览模式下的嵌入块 === */
 .mod-cm6 .markdown-embed {
-  border-left: none;
-  border: 1px solid var(--background-modifier-border);
-  border-radius: 2px;
-  background-color: var(--background-primary); /* 实时预览也适配主题 */
+  /* 保持与预览模式一致的视觉设计 */
+  border: 1px solid var(--embed-border-color, var(--background-modifier-border));
+  background-color: var(--embed-background, var(--background-primary));
+  box-shadow: var(--embed-block-shadow, 0 1px 3px rgba(0, 0, 0, 0.1));
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin: 10px 0;
 }
 
-/* === 隐藏嵌入标题和首个标题 === */
-.markdown-embed-title,
-.markdown-embed .mod-header + div > :is(h1, h2, h3, h4, h5, h6) {
-  display: none;
+/* === 嵌入标题样式增强 === */
+.markdown-embed-title {
+  /* 标题文字样式 */
+  color: var(--embed-title-color, var(--text-accent)); /* 自定义标题色，回退到强调色 */
+  font-weight: 600; /* 中等粗体，清晰易读 */
+  font-size: 0.95em; /* 稍小的字号，区分于正文 */
+  
+  /* 标题布局与分隔 */
+  margin-bottom: 10px; /* 标题与内容的间距 */
+  border-bottom: 1px solid var(--embed-border-color, var(--background-modifier-border)); /* 底部边框分隔 */
+  padding-bottom: 6px; /* 边框与文字的间距 */
+}
+
+/* === 嵌入链接样式 === */
+.markdown-embed-link {
+  color: var(--embed-link-color, var(--text-accent)); /* 链接颜色 */
+  opacity: 0.7; /* 半透明效果，不喧宾夺主 */
+  transition: all 0.2s ease; /* 平滑过渡动画 */
+}
+
+.markdown-embed-link:hover {
+  color: var(--embed-link-color-hover, var(--text-accent-hover)); /* 悬停颜色 */
+  opacity: 1; /* 悬停时完全显示 */
+  text-decoration: underline; /* 添加下划线提示 */
 }
 
 /* === 嵌入内容块常规样式 === */
@@ -261,34 +291,18 @@ body.theme-light .cm-s-obsidian span.cm-inline-code:not(.cm-formatting):not(.cm-
   padding: 0;
   max-width: 100%;
   overflow: auto;
-  background-color: inherit;
+  background-color: inherit; /* 继承父元素背景色 */
+  
+  /* 内容文字样式 */
+  color: var(--embed-text-color, var(--text-normal)); /* 自定义文字颜色 */
+  font-style: var(--embed-font-style, normal); /* 可自定义字体样式 */
 }
 
-/* === Callout 中的嵌入块 === */
-.callout .markdown-embed-content {
-  max-height: 350px;
-  overflow: auto;
-  padding: 0;
-  background-color: inherit;
-  border-radius: 0;
+/* === 隐藏嵌入标题和首个标题的优化 === */
+.markdown-embed-title,
+.markdown-embed .mod-header + div > :is(h1, h2, h3, h4, h5, h6) {
+  display: none; /* 隐藏冗余标题，保持内容整洁 */
 }
-
-/* === Canvas 节点中的嵌入块 === */
-.canvas-node-content .markdown-embed {
-  background-color: var(--background-primary);
-  border: 1px solid var(--background-modifier-border);
-  border-radius: 6px;
-  padding: 0.5em;
-}
-
-/* === Excalidraw 中嵌入块兼容 === */
-.Excalidraw-Markdown .markdown-embed {
-  background-color: var(--background-primary);
-  border: 1px solid var(--background-modifier-border);
-  border-radius: 6px;
-  padding: 0.5em;
-}
-
 
 /*---------------------优化无序/有序列表在文字/标题后的间距--------------------------*/
 

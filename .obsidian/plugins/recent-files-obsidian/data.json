@@ -1,10 +1,6 @@
 {
   "recentFiles": [
     {
-      "basename": "42_20251019",
-      "path": "00Journal/01DailyNotes/2025/10/42_20251019.md"
-    },
-    {
       "basename": "从这里开始",
       "path": "从这里开始.md"
     },
@@ -13,16 +9,52 @@
       "path": "Settings/系统设置/更新日志.md"
     },
     {
+      "basename": "43_20251022",
+      "path": "00Journal/01DailyNotes/2025/10/43_20251022.md"
+    },
+    {
+      "basename": "43_20251020",
+      "path": "00Journal/01DailyNotes/2025/10/43_20251020.md"
+    },
+    {
+      "basename": "43_20251021",
+      "path": "00Journal/01DailyNotes/2025/10/43_20251021.md"
+    },
+    {
       "basename": "T-Daily",
       "path": "Templates/T-Daily.md"
     },
     {
-      "basename": "18_20250502",
-      "path": "00Journal/01DailyNotes/2025/05/18_20250502.md"
+      "basename": "42_20251019",
+      "path": "00Journal/01DailyNotes/2025/10/42_20251019.md"
+    },
+    {
+      "basename": "2025W42",
+      "path": "00Journal/02WeeklyReview/2025W42.md"
+    },
+    {
+      "basename": "T-Weekly",
+      "path": "Templates/T-Weekly.md"
     },
     {
       "basename": "当日日程",
       "path": "00Dashboard/Sidebar/当日日程.md"
+    },
+    {
+      "basename": "纳瓦尔宝典",
+      "path": "05Books/纳瓦尔宝典.md"
+    },
+    {
+      "basename": "书架总览",
+      "path": "00Dashboard/Books_dashboard/书架总览.md"
+    },
+    {
+      "basename": "原子習慣",
+      "path": "05Books/原子習慣.md"
+    },
+    {
+      "basename": "18_20250502",
+      "path": "00Journal/01DailyNotes/2025/05/18_20250502.md"
     },
     {
       "basename": "新建笔记测试",
@@ -35,10 +67,6 @@
     {
       "basename": "42_20251018",
       "path": "00Journal/01DailyNotes/2025/10/42_20251018.md"
-    },
-    {
-      "basename": "书架总览",
-      "path": "00Dashboard/Books_dashboard/书架总览.md"
     },
     {
       "basename": "Homepage",
@@ -93,10 +121,6 @@
       "path": "00Journal/01DailyNotes/2025/10/42_20251015.md"
     },
     {
-      "basename": "T-Weekly",
-      "path": "Templates/T-Weekly.md"
-    },
-    {
       "basename": "习惯追踪",
       "path": "00Dashboard/习惯追踪.md"
     },
@@ -137,10 +161,6 @@
       "path": "07People/李丁丁.md"
     },
     {
-      "basename": "纳瓦尔宝典",
-      "path": "05Books/纳瓦尔宝典.md"
-    },
-    {
       "basename": "T-书籍模板",
       "path": "Templates/T-书籍模板.md"
     },
@@ -179,26 +199,6 @@
     {
       "basename": "22_20250526",
       "path": "00Journal/01DailyNotes/2025/05/22_20250526.md"
-    },
-    {
-      "basename": "Lifein_目录结构及功能指南",
-      "path": "Settings/系统设置/Lifein_目录结构及功能指南.md"
-    },
-    {
-      "basename": "系统设置导航",
-      "path": "Settings/系统设置/系统设置导航.md"
-    },
-    {
-      "basename": "模块和代码使用说明",
-      "path": "Settings/系统设置/模块和代码使用说明/模块和代码使用说明.md"
-    },
-    {
-      "basename": "T-人物模板",
-      "path": "Templates/T-人物模板.md"
-    },
-    {
-      "basename": "2025W21",
-      "path": "00Journal/02WeeklyReview/2025W21.md"
     }
   ],
   "omittedPaths": [],

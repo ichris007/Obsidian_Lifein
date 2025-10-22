@@ -6,7 +6,7 @@
       {
         "id": "31dbb22f6d4409f0",
         "type": "tabs",
-        "dimension": 50.943396226415096,
+        "dimension": 49.32956951305575,
         "children": [
           {
             "id": "27077bfebdb3112c",
@@ -30,7 +30,7 @@
       {
         "id": "26531c99216265b5",
         "type": "tabs",
-        "dimension": 49.056603773584904,
+        "dimension": 50.67043048694425,
         "children": [
           {
             "id": "6f643f6d689f47f8",
@@ -48,24 +48,8 @@
               "icon": "lucide-file",
               "title": "更新日志"
             }
-          },
-          {
-            "id": "9e04f82dcfe11c6a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "00Journal/01DailyNotes/2025/10/42_20251019.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "42_20251019"
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -149,7 +133,7 @@
       {
         "id": "3d225506e7f68edd",
         "type": "tabs",
-        "dimension": 33.85365853658537,
+        "dimension": 31.317073170731707,
         "children": [
           {
             "id": "1e13ff760f4a55b4",
@@ -332,7 +316,7 @@
       {
         "id": "2f8f9f15ce5d7be2",
         "type": "tabs",
-        "dimension": 20.29268292682927,
+        "dimension": 22.829268292682926,
         "children": [
           {
             "id": "d3054c5efa4ee8bd",
@@ -440,7 +424,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 223.5
+    "width": 248.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -458,21 +442,28 @@
       "templater-obsidian:Templater": false
     }
   },
-  "active": "e9abcb160998ff62",
+  "active": "27077bfebdb3112c",
   "lastOpenFiles": [
-    "从这里开始.md",
     "Settings/系统设置/更新日志.md",
+    "00Journal/01DailyNotes/2025/10/43_20251022.md",
+    "00Journal/01DailyNotes/2025/10/43_20251020.md",
+    "00Journal/01DailyNotes/2025/10/43_20251021.md",
+    "从这里开始.md",
     "Templates/T-Daily.md",
     "00Journal/01DailyNotes/2025/10/42_20251019.md",
-    "00Journal/01DailyNotes/2025/05/18_20250502.md",
+    "00Journal/02WeeklyReview/2025W42.md",
+    "Templates/T-Weekly.md",
     "00Dashboard/Sidebar/当日日程.md",
+    "05Books/纳瓦尔宝典.md",
+    "00Dashboard/Books_dashboard/书架总览.md",
+    "05Books/原子習慣.md",
+    "00Journal/01DailyNotes/2025/05/18_20250502.md",
     "03Life/新建笔记测试.md",
     "Lifein_v0.6.0_20251019.zip",
     "归档.zip",
     "Settings/系统设置/一些技巧.md",
     "Attachments/一些技巧20251019.jpg",
     "00Journal/01DailyNotes/2025/10/42_20251018.md",
-    "00Dashboard/Books_dashboard/书架总览.md",
     "00Dashboard/Homepage.md",
     "00Dashboard/Movies_dashboard/电影库总览.md",
     "08Bases/影视剧库.base",
@@ -485,13 +476,6 @@
     "08Bases/影视剧.base",
     "Settings/系统设置/Lifein_内置样式.md",
     "00Journal/01DailyNotes/2025/05/18_20250503.md",
-    "00Journal/01DailyNotes/2025/05/19_20250505.md",
-    "00Journal/01DailyNotes/2025/05/18_20250504.md",
-    "00Journal/01DailyNotes/2025/10/42_20251015.md",
-    "Templates/T-Weekly.md",
-    "00Dashboard/习惯追踪.md",
-    "00Dashboard/无链接的独立文件.md",
-    "00Dashboard/任务日历面板.md",
     "08Bases/Inbox.base",
     "00Journal/01DailyNotes/2025/10",
     "08Bases/最近编辑.base",

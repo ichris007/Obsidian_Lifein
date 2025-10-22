@@ -236,6 +236,15 @@ display:none;
   position: static !important;
 }
 
+/*为首个子元素去掉冗余间距（多种结构保险） */ 
+.sidebar-tasks .task-group:first-child, 
+.sidebar-tasks .task-list:first-child, 
+.sidebar-tasks .task-list-item:first-child, 
+.sidebar-tasks .task-count:first-child { 
+  margin-top: -20px !important; /*管用*/ 
+  padding-top: 0 !important; 
+}
+
 /* 任务项容器 */
 .sidebar-tasks .task-group {
   margin-bottom: 0.5rem !important; /* 减小容器间距 */
@@ -364,6 +373,56 @@ display:none;
   max-width: 100% !important;
   box-sizing: border-box !important;
 }
+
+/* -------- 精准修复：标题 ↔ 任务列表、任务列表 ↔ 统计 的间距 ------ */
+
+/* 1️⃣ 标题下方：去除 margin，同时允许轻微 padding 做分隔 */
+.sidebar-tasks h2 {
+  margin-bottom: 0 !important;
+  padding-bottom: 2px !important;
+  line-height: 1.2 !important;
+}
+
+/* 2️⃣ 紧接标题的任务容器：归零上边距（无论类型） */
+.sidebar-tasks h2 + * {
+  margin-top: -10px !important;
+  padding-top: 0 !important;
+}
+
+/* 3️⃣ 所有任务列表容器统一去掉上下外边距 */
+.sidebar-tasks .task-group,
+.sidebar-tasks .task-list,
+.sidebar-tasks .task-list > ul,
+.sidebar-tasks .task-list > ol {
+  margin-top: -10px !important;
+  margin-bottom: 0 !important;
+  padding-top: -10px !important;
+  padding-bottom: 0 !important;
+}
+
+/* 4️⃣ 任务统计块上方空白：归零 */
+.sidebar-tasks .task-list + .task-count,
+.sidebar-tasks .task-group + .task-count,
+.sidebar-tasks .task-count {
+  margin-top: -20px !important;/*管用*/
+  padding-top: 0 !important;
+}
+
+/* 5️⃣ 防止 margin 折叠：给关键层加上 overflow 或 border */
+.sidebar-tasks h2,
+.sidebar-tasks .task-group,
+.sidebar-tasks .task-list,
+.sidebar-tasks .task-count {
+  display: block !important;
+  overflow: hidden !important;
+}
+
+/* 6️⃣ 父容器 gap 归零 */
+.sidebar-tasks {
+  gap: 0 !important;
+  row-gap: 0 !important;
+}
+
 
 /* ============================ 侧边栏任务列表样式  end========================== */
 
