@@ -10,13 +10,15 @@ Lifein寓意是“进入生活核心、融入人生系统”，也象征着 “�
 
 你好，我是科叔。欢迎使用我出品的**Lifein**。
 
-在过去的2年多时间里，我使用[Obsidian](https://obsidian.md)构建了自己的「生产力 & 人生管理系统」让我轻松应对工作、生活、个人成长等方方面面。
+在过去的3年多时间里，我使用[Obsidian](https://obsidian.md)构建了自己的「生产力 & 人生管理系统」让我轻松应对工作、生活、个人成长等方方面面。
+
+我把自己20多年不断探索知识管理系统的心路历程写成了一篇文章：[Obsidian：一个工具带来的生活转变](https://mp.weixin.qq.com/s/pDrWGw8MtdhQXpBH9B_Akw)。看完这篇文章，你会更理解Lifein系统设计的初衷和逻辑，可能会帮你更快上手。
 
 Lifein适合这些人：
 
 - 想系统性提升效率和思考能力的人
 - 追求长期成长和持续精进的人
-- 想建立属于自己的知识体系和人生导航系统的人
+- 想建立属于自己的知识体系和人生系统的人
 - 对Obsidian感兴趣，但不知道如何入门的人
 
 [2025-10-22](https://github.com/ichris007/Obsidian_Lifein/blob/main/Settings/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE/%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97.md)：[Lifein](https://github.com/ichris007/Obsidian_Lifein) 更新到了v0.6.1。
