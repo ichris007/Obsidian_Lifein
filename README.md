@@ -6,6 +6,8 @@ Lifein是一个基于Obsidian构建的「生产力系统 & 人生管理系统」
 Lifein寓意是“进入生活核心、融入人生系统”，也象征着 “生活在其中”。它不只是为了项目、任务、知识管理这类功能性的「个人生产力系统」（Productivity OS），而是希望它能在长期积累中，成为真正陪伴我成长的「人生管理系统」(Life OS)。
 > 工具不仅是外部辅助，更是生活方式的有机组成部分。
 
+---
+
 ## 1 说在前面
 
 你好，我是科叔。欢迎使用我出品的**Lifein**。
@@ -24,6 +26,8 @@ Lifein适合这些人：
 - 追求长期成长和持续精进的人
 - 想建立属于自己的知识体系和人生系统的人
 - 对Obsidian感兴趣，但不知道如何入门的人
+
+---
 
 ## 2 关于Lifein示例库
 
@@ -149,6 +153,7 @@ Lifein适合这些人：
 ![微信读书导入书籍页面](https://github.com/ichris007/Obsidian_Lifein/blob/main/Attachments/%E5%BE%AE%E4%BF%A1%E9%98%85%E8%AF%BB%E5%AF%BC%E5%85%A5%E6%A8%A1%E6%9D%BF%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%9520250525-1.jpg)
 </details>
 
+---
 
 ## 3 Lifein Suite
 
@@ -186,6 +191,8 @@ Lifein ATS 的核心特点：
 ### 3.2 Lifein X（未来）
 
 接下来，会推出更多应用场景的解决方案，敬请期待！
+
+---
 
 ## 4 使用Obsidian/Lifein的必要基础
 
