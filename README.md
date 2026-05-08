@@ -210,5 +210,5 @@ Lifein ATS 的核心特点：
 - [微信阅读导入模板使用方法](https://github.com/ichris007/Obsidian_Lifein/blob/main/Settings/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE/%E6%A8%A1%E5%9D%97%E5%92%8C%E4%BB%A3%E7%A0%81%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/%E5%BE%AE%E4%BF%A1%E9%98%85%E8%AF%BB%E5%AF%BC%E5%85%A5%E6%A8%A1%E6%9D%BF%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95.md)
 - [通过点击按钮改变笔记状态](https://github.com/ichris007/Obsidian_Lifein/blob/main/Settings/%E7%B3%BB%E7%BB%9F%E8%AE%BE%E7%BD%AE/%E6%A8%A1%E5%9D%97%E5%92%8C%E4%BB%A3%E7%A0%81%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E/%E9%80%9A%E8%BF%87%E7%82%B9%E5%87%BB%E6%8C%89%E9%92%AE%E6%94%B9%E5%8F%98%E7%AC%94%E8%AE%B0%E7%8A%B6%E6%80%81.md)
 
-## 4 近四年来，我关于Obsidian/Lifein使用的实践经验和深度思考
+## 5 近四年来，我关于Obsidian/Lifein使用的实践经验和深度思考
 [Lifein 人生管理系统 | 科叔的 Obsidian 生产力与知识管理实践](https://lifein.vip/)
